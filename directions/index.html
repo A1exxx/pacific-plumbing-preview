@@ -3,41 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Три направления | Pacific Plumbing</title>
+<title>Три стиля | Pacific Plumbing</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="../img/favicon.png">
 <style>
-:root{--bg:oklch(97% .004 220);--ink:oklch(20% .012 230);--ink-2:oklch(42% .012 230);--line:oklch(20% .012 230 / .12)}
+:root{--bg:oklch(97% .004 220);--card:oklch(99.5% .002 220);--ink:oklch(20% .012 230);--ink-2:oklch(42% .012 230);--line:oklch(20% .012 230 / .12)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-.wrap{width:min(1100px,100% - 32px);margin:0 auto;padding:28px 0 48px}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto;padding:28px 0 56px}
 h1{font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
-.lead{color:var(--ink-2);margin:0 0 24px;max-width:60ch}
-.grid{display:grid;gap:16px}
-.card{display:grid;grid-template-rows:auto 1fr;text-decoration:none;color:inherit;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px var(--line);transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s}
-.card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px var(--line),0 18px 40px -24px oklch(20% .012 230 / .45)}
-.thumb{aspect-ratio:16/10;display:grid;place-items:end start;padding:14px;color:#fff;font-weight:700;font-size:1.4rem;background-size:cover;background-position:center}
-.a .thumb{background-color:oklch(96% .004 160);background-image:url(../img/hands-640.webp);}
-.b .thumb{background-image:linear-gradient(transparent 40%,oklch(19% .018 170 / .85)),url(../img/house-640.webp)}
-.c .thumb{background-image:linear-gradient(transparent 40%,oklch(48% .09 205 / .85)),url(../img/hero-640.webp)}
-.a .thumb span{background:oklch(66% .19 45);color:oklch(22% .03 45);padding:4px 10px}
-.body{padding:16px 16px 18px}
-.body b{display:block;font-size:1.1rem;margin-bottom:4px}
-.body p{margin:0;color:var(--ink-2);font-size:.95rem}
-.back{display:inline-block;margin-top:22px;color:var(--ink-2)}
-@media (min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
+.lead{color:var(--ink-2);margin:0 0 26px;max-width:62ch}
+.grid{display:grid;gap:18px}
+.col{background:var(--card);border-radius:16px;box-shadow:0 0 0 1px var(--line);overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:16/9;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:14px}
+.thumb b{font-size:1.5rem;color:#fff;text-shadow:0 2px 12px rgb(0 0 0 / .5)}
+.a .thumb{background-image:linear-gradient(transparent 45%,rgb(0 0 0 / .55)),url(../img/hands-640.webp);background-position:50% 65%}
+.b .thumb{background-image:linear-gradient(transparent 40%,rgb(10 25 22 / .8)),url(../img/house-640.webp)}
+.c .thumb{background-image:linear-gradient(transparent 40%,rgb(10 90 100 / .75)),url(../img/hero-640.webp)}
+.body{padding:16px 16px 18px;display:grid;gap:10px;flex:1}
+.body h2{font-size:1.15rem;margin:0}
+.why{margin:0;color:var(--ink-2);font-size:.95rem}
+.links{display:grid;gap:8px;margin-top:4px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:46px;padding:0 14px;border-radius:10px;text-decoration:none;color:inherit;box-shadow:inset 0 0 0 1px var(--line);font-weight:600;transition:background .2s}
+.links a:hover{background:oklch(94% .01 220)}
+.links a.main{background:var(--ink);color:#fff;box-shadow:none}
+.links a.main:hover{background:oklch(30% .015 230)}
+.print{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.print a{display:block;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#fff}
+.print img{display:block;width:100%;height:auto}
+.cap{font-size:.82rem;color:var(--ink-2);margin:0}
+.note{margin-top:28px;color:var(--ink-2);font-size:.92rem;max-width:70ch}
+@media (min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Три направления первого экрана</h1>
-  <p class="lead">Откройте каждое с телефона и с компьютера. Выберите одно — по нему соберу весь сайт. Фото пока сгенерированы, потом заменим на настоящие.</p>
+  <h1>Три стиля сайта и печати</h1>
+  <p class="lead">У каждого стиля есть полный сайт из трёх страниц (главная, услуги, бесплатный расчёт), вешалка на ручку двери и листовка. Откройте с телефона, выберите один стиль — по нему доделаю сайт до запуска и соберу печатный PDF. Фото пока сгенерированные, перед запуском заменим настоящими.</p>
   <div class="grid">
-    <a class="card a" href="a.html"><div class="thumb"><span>A</span></div><div class="body"><b>A. «Заказ-наряд»</b><p>Строгий и деловой: как квитанция мастера, оранжевая кнопка звонка, сетка как на чертеже. Ощущение «серьёзная мастерская».</p></div></a>
-    <a class="card b" href="b.html"><div class="thumb">B</div><div class="body"><b>B. «Дождливый Беллингем»</b><p>Кино-кадр дома в сумерках, медь как у новых труб, журнальный шрифт. Ощущение «местный мастер для старых домов», упор на перекладку труб.</p></div></a>
-    <a class="card c" href="c.html"><div class="thumb">C</div><div class="body"><b>C. «Касатка»</b><p>Смелый фирменный стиль от его логотипа: крупный жирный шрифт, бирюзовая волна. Ощущение «яркий местный бренд».</p></div></a>
+    <section class="col a">
+      <div class="thumb"><b>A · «Заказ-наряд»</b></div>
+      <div class="body">
+        <h2>Серьёзная мастерская</h2>
+        <p class="why">Почему так: конкуренты в Беллингеме — шаблонные сайты больших компаний. Этот стиль выглядит как документ мастера: квитанция, номер, штамп «бесплатный расчёт». Внушает доверие тем, кто ценит порядок и чёткую цену.</p>
+        <div class="links">
+          <a class="main" href="../a/">Открыть сайт A <span>→</span></a>
+          <a href="a.html">Только первый экран <span>→</span></a>
+        </div>
+        <p class="cap">Печать: вешалка на дверь (лицо, оборот) и листовка (лицо, оборот)</p>
+        <div class="print">
+          <a href="../print/a/doorhanger.html"><img src="../print/previews/a-doorhanger-1.png" alt="Вешалка A, лицо" loading="lazy"></a>
+          <a href="../print/a/doorhanger.html"><img src="../print/previews/a-doorhanger-2.png" alt="Вешалка A, оборот" loading="lazy"></a>
+          <a href="../print/a/flyer.html"><img src="../print/previews/a-flyer-1.png" alt="Листовка A, лицо" loading="lazy"></a>
+          <a href="../print/a/flyer.html"><img src="../print/previews/a-flyer-2.png" alt="Листовка A, оборот" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+    <section class="col b">
+      <div class="thumb"><b>B · «Дождливый Беллингем»</b></div>
+      <div class="body">
+        <h2>Местный мастер для старых домов</h2>
+        <p class="why">Почему так: в Беллингеме много старых домов с изношенными трубами, а перекладка труб — его главная услуга. Кадр дома под дождём и медь новых труб сразу говорят «это про наш город и наши дома». Самый «дорогой» на вид.</p>
+        <div class="links">
+          <a class="main" href="../b/">Открыть сайт B <span>→</span></a>
+          <a href="b.html">Только первый экран <span>→</span></a>
+        </div>
+        <p class="cap">Печать: вешалка на дверь (лицо, оборот) и листовка (лицо, оборот)</p>
+        <div class="print">
+          <a href="../print/b/doorhanger.html"><img src="../print/previews/b-doorhanger-1.png" alt="Вешалка B, лицо" loading="lazy"></a>
+          <a href="../print/b/doorhanger.html"><img src="../print/previews/b-doorhanger-2.png" alt="Вешалка B, оборот" loading="lazy"></a>
+          <a href="../print/b/flyer.html"><img src="../print/previews/b-flyer-1.png" alt="Листовка B, лицо" loading="lazy"></a>
+          <a href="../print/b/flyer.html"><img src="../print/previews/b-flyer-2.png" alt="Листовка B, оборот" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+    <section class="col c">
+      <div class="thumb"><b>C · «Касатка»</b></div>
+      <div class="body">
+        <h2>Яркий местный бренд</h2>
+        <p class="why">Почему так: у него уже есть логотип с касаткой и картой штата. Стиль строится от логотипа: крупный жирный шрифт, бирюзовая волна, круглая наклейка «бесплатно». Лучше всего запоминается на вешалке и машине.</p>
+        <div class="links">
+          <a class="main" href="../c/">Открыть сайт C <span>→</span></a>
+          <a href="c.html">Только первый экран <span>→</span></a>
+        </div>
+        <p class="cap">Печать: вешалка на дверь (лицо, оборот) и листовка (лицо, оборот)</p>
+        <div class="print">
+          <a href="../print/c/doorhanger.html"><img src="../print/previews/c-doorhanger-1.png" alt="Вешалка C, лицо" loading="lazy"></a>
+          <a href="../print/c/doorhanger.html"><img src="../print/previews/c-doorhanger-2.png" alt="Вешалка C, оборот" loading="lazy"></a>
+          <a href="../print/c/flyer.html"><img src="../print/previews/c-flyer-1.png" alt="Листовка C, лицо" loading="lazy"></a>
+          <a href="../print/c/flyer.html"><img src="../print/previews/c-flyer-2.png" alt="Листовка C, оборот" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
   </div>
-  <a class="back" href="../">Текущая версия сайта</a>
+  <p class="note">Размеры печати: вешалка на дверь 4,25 × 11 дюймов (стандарт в США, около 11 × 28 см), листовка 5,5 × 8,5 дюйма (половина листа Letter). В макетах есть запас под обрез. QR-код ведёт на сайт pacificplumbingwa.com и помечен, чтобы было видно, сколько людей пришло с вешалок и с листовок.</p>
 </div>
 </body>
 </html>

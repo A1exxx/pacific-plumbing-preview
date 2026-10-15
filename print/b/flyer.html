@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flyer · Direction B | Pacific Plumbing print preview</title>
+<meta name="description" content="Print-ready half-letter flyer for Pacific Plumbing, Direction B Rain city. Trim 5.5 x 8.5 in with 0.125 in bleed.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Half letter: trim 5.5 x 8.5 in + 0.125 in bleed = 5.75 x 8.75 in page.
+   Safe zone: 0.25 in inside trim = 0.375 in from the page edge. */
+@page{size:5.75in 8.75in;margin:0}
+:root{
+  --night: oklch(19% 0.018 170);
+  --night-deep: oklch(15.5% 0.016 170);
+  --fog: oklch(95.5% 0.006 150);
+  --ink: oklch(22% 0.015 170);
+  --ink-2: oklch(38% 0.012 170);
+  --copper: oklch(68% 0.12 52);
+  --copper-ink: oklch(47% 0.11 46);
+  --copper-glow: oklch(80% 0.1 56);
+  --on-night: oklch(96% 0.008 150);
+  --on-night-2: oklch(86% 0.01 150);
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Public Sans", "Segoe UI", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html, body{margin:0;padding:0}
+body{background:oklch(86% 0.006 150);color:var(--ink);font-family:var(--sans);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+p, h1, h2, h3{margin:0}
+img{display:block}
+
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:.45in;padding:.4in .3in}
+.sheet-wrap{display:flex;flex-direction:column;gap:8px}
+.sheet-label{font:600 12px/1.2 var(--sans);color:oklch(35% .01 170)}
+.sheet{position:relative;width:5.75in;height:8.75in;overflow:hidden;background:var(--fog);box-shadow:0 10px 30px -12px oklch(0% 0 0 / .35)}
+
+.guide{position:absolute;pointer-events:none;z-index:20}
+.trim{inset:.125in;outline:1px solid oklch(62% .2 330 / .7)}
+.safe{inset:.375in;outline:1px dashed oklch(62% .15 250 / .7)}
+
+/* ---------- FRONT ---------- */
+.front{background:var(--night);color:var(--on-night)}
+.front .photo{position:absolute;left:0;top:0;width:5.75in;height:5.9in;object-fit:cover;object-position:50% 40%}
+.front .shade{position:absolute;inset:0;background:linear-gradient(180deg,
+  oklch(19% .018 170 / .88) 0in,
+  oklch(19% .018 170 / .62) .95in,
+  oklch(19% .018 170 / .18) 1.7in,
+  oklch(19% .018 170 / .1) 2.6in,
+  oklch(19% .018 170 / .35) 3.7in,
+  oklch(19% .018 170 / .86) 4.6in,
+  var(--night) 5.5in)}
+.front .brand{position:absolute;left:.375in;top:.375in;display:flex;align-items:center;gap:.1in}
+.front .brand img{width:.66in;height:.44in;filter:drop-shadow(0 1px 4px oklch(0% 0 0 / .5))}
+.front .brand span{font:600 16pt/1 var(--serif);letter-spacing:-.005em;text-shadow:0 1px 8px oklch(0% 0 0 / .6)}
+.front .where{position:absolute;right:.375in;top:.375in;height:.44in;display:flex;align-items:center;font:italic 500 11pt/1 var(--serif);color:var(--on-night);text-shadow:0 1px 8px oklch(0% 0 0 / .7)}
+.front .lower{position:absolute;left:.375in;right:.375in;bottom:.375in}
+.front .place{font:italic 500 11pt/1.2 var(--serif);color:var(--copper-glow);margin-bottom:.06in}
+.front h1{font:500 30pt/1 var(--serif);letter-spacing:-.022em;text-wrap:balance}
+.front h1 em{font-style:italic;color:var(--copper)}
+.band{display:flex;align-items:baseline;justify-content:space-between;gap:.2in;margin:.2in -.375in 0;padding:.15in .375in .17in;background:var(--copper);color:var(--night)}
+.band b{font:600 32pt/1 var(--serif);letter-spacing:-.015em;white-space:nowrap}
+.band span{font:600 10pt/1.3 var(--sans);max-width:2.2in;text-align:right}
+.contact{display:flex;align-items:flex-end;justify-content:space-between;gap:.2in;margin-top:.2in}
+.callwho{font:500 9pt/1.2 var(--sans);color:var(--on-night-2)}
+.bigphone{display:block;font:700 30pt/1.05 var(--sans);letter-spacing:-.01em;color:var(--on-night);font-variant-numeric:lining-nums tabular-nums;text-decoration:none;white-space:nowrap}
+.contact .facts{margin-top:.08in;font:400 9pt/1.35 var(--sans);color:var(--on-night-2)}
+.qrcol{display:flex;flex-direction:column;align-items:center;gap:.06in;flex:none}
+.qr{background:#fff;padding:.105in;border-radius:.04in}
+.qr img{width:.95in;height:.95in}
+.qrcol p{font:500 8.5pt/1.25 var(--sans);color:var(--on-night-2);text-align:center;max-width:1.2in}
+
+/* ---------- BACK ---------- */
+.back .strip{position:absolute;left:0;top:0;width:5.75in;height:1.45in;object-fit:cover;object-position:50% 55%}
+.back .content{position:absolute;left:.375in;right:.375in;top:1.68in}
+.back .place{font:italic 500 11pt/1.2 var(--serif);color:var(--copper-ink)}
+.back h2{font:500 21pt/1.05 var(--serif);letter-spacing:-.018em;margin-top:.04in}
+.back h2 em{font-style:italic;color:var(--copper-ink)}
+.svc{list-style:none;margin:.16in 0 0;padding:0;border-top:.75pt solid oklch(22% .015 170 / .25)}
+.svc li{display:grid;grid-template-columns:2.05in 1fr;gap:.14in;align-items:baseline;padding:.075in 0;border-bottom:.75pt solid oklch(22% .015 170 / .25)}
+.svc b{font:500 13pt/1.15 var(--serif)}
+.svc span{font:400 9pt/1.35 var(--sans);color:var(--ink-2)}
+.cols{display:grid;grid-template-columns:1fr 2.05in;gap:.28in;margin-top:.24in}
+.cols h3{font:italic 500 11pt/1.2 var(--serif);color:var(--copper-ink);margin-bottom:.08in}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:.07in}
+.steps li{counter-increment:s;display:grid;grid-template-columns:.24in 1fr;font:400 9pt/1.38 var(--sans);color:var(--ink-2)}
+.steps li::before{content:counter(s);font:italic 500 15pt/1 var(--serif);color:var(--copper-ink)}
+.steps b{color:var(--ink);font-weight:600}
+.towns{list-style:none;margin:0;padding:.08in 0 0;border-top:.9pt solid var(--copper-ink);font:500 11pt/1.4 var(--serif);display:grid;grid-template-columns:1fr 1fr;column-gap:.12in}
+.towns-note{margin-top:.06in;font:400 8.5pt/1.3 var(--sans);color:var(--ink-2)}
+.back .foot{position:absolute;left:0;right:0;bottom:0;height:1.42in;background:var(--night);color:var(--on-night);padding:.2in .375in .375in;display:flex;align-items:flex-end;justify-content:space-between;gap:.2in}
+.back .foot .ph small{display:block;margin-bottom:.05in;font:500 9pt/1.2 var(--sans);color:var(--on-night-2)}
+.back .foot .ph{font:700 24pt/1 var(--sans);letter-spacing:-.01em;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+.back .foot .lic{font:400 8.5pt/1.4 var(--sans);color:var(--on-night-2);text-align:right;max-width:2.1in}
+.back .foot .lic b{display:block;font-weight:600;color:var(--on-night)}
+.nw{white-space:nowrap}
+
+.screen-note{max-width:7in;margin:0 auto .5in;padding:0 .3in;font:400 14px/1.5 var(--sans);color:oklch(30% .01 170)}
+
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .sheet-wrap{display:block}
+  .sheet{box-shadow:none;break-after:page;page-break-after:always}
+  .sheet-wrap:last-child .sheet{break-after:auto;page-break-after:auto}
+  .sheet-label, .guide, .screen-note{display:none !important}
+}
+</style>
+</head>
+<body>
+<div class="sheets">
+  <div class="sheet-wrap">
+    <p class="sheet-label">Front</p>
+    <section class="sheet front" aria-label="Flyer, front">
+      <img class="photo" src="../../img/house-1536.webp" width="1536" height="1024" alt="Craftsman house on a rainy evening">
+      <div class="shade"></div>
+      <div class="brand"><img src="../../img/mark.png" width="240" height="160" alt=""><span>Pacific Plumbing</span></div>
+      <p class="where">Bellingham, WA</p>
+      <div class="lower">
+        <p class="place">Whole-home repipes, drains, water heaters, leaks</p>
+        <h1>The plumber for old houses and <em>new</em> problems.</h1>
+        <div class="band">
+          <b>Free estimate</b>
+          <span>Full price before any work starts. Asking costs nothing.</span>
+        </div>
+        <div class="contact">
+          <div>
+            <p class="callwho">Call the owner</p>
+            <a class="bigphone" href="tel:+13603186219">(360) 318-6219</a>
+            <p class="facts">You talk to the person who does the work.<br>Licensed, bonded &amp; insured.</p>
+          </div>
+          <div class="qrcol">
+            <div class="qr"><img src="../qr-flyer.svg" alt="QR code: request a free estimate"></div>
+            <p>Scan to request a free estimate</p>
+          </div>
+        </div>
+      </div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+
+  <div class="sheet-wrap">
+    <p class="sheet-label">Back</p>
+    <section class="sheet back" aria-label="Flyer, back">
+      <img class="strip" src="../../img/copper-1536.webp" width="1536" height="1024" alt="New copper water lines with brass fittings">
+      <div class="content">
+        <p class="place">What we do</p>
+        <h2>Five kinds of work. <em>One plumber.</em></h2>
+        <ul class="svc">
+          <li><b>Whole-home repiping</b><span>Our specialty. Old galvanized or polybutylene lines replaced with PEX or copper.</span></li>
+          <li><b>Drain cleaning</b><span>Sinks, tubs, toilets, main lines. No chemicals down the pipe.</span></li>
+          <li><b>Water heaters</b><span>Tank and tankless. Repair or replace, old unit hauled away.</span></li>
+          <li><b>Leak detection &amp; repair</b><span>Walls, ceilings, floors, slabs. We open only what is needed.</span></li>
+          <li><b>Repairs &amp; fixtures</b><span>Faucets, toilets, disposals, valves. Small jobs welcome.</span></li>
+        </ul>
+        <div class="cols">
+          <div>
+            <h3>How the free estimate works</h3>
+            <ol class="steps">
+              <li><span><b>Call or scan.</b> Tell us what is going on. A photo helps.</span></li>
+              <li><span><b>We come and look.</b> For a repipe, a walk-through of the whole house.</span></li>
+              <li><span><b>You get the full price before any work.</b> Then you decide. Saying no costs nothing.</span></li>
+            </ol>
+          </div>
+          <div>
+            <h3>Where we work</h3>
+            <ul class="towns">
+              <li>Bellingham</li><li>Ferndale</li>
+              <li>Lynden</li><li>Blaine</li>
+              <li>Mount&nbsp;Vernon</li><li>Burlington</li>
+              <li class="nw">Sedro-Woolley</li><li>Anacortes</li>
+            </ul>
+            <p class="towns-note">Whatcom &amp; Skagit counties</p>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <p class="ph"><small>Free estimate · call the owner</small>(360) 318-6219</p>
+        <p class="lic"><b>Licensed, bonded &amp; insured.</b>WA contractor license #: added before launch.</p>
+      </div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+</div>
+<p class="screen-note">Print: Chrome → Save as PDF, Margins none, Background graphics on. Pink line = trim, blue dashed line = safe zone. Both are preview guides and do not print.</p>
+</body>
+</html>

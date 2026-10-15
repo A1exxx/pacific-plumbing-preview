@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flyer · Direction A | Pacific Plumbing print preview</title>
+<meta name="description" content="Print-ready half-letter flyer for Pacific Plumbing, Direction A: 5.5 x 8.5 in trim with 0.125 in bleed, front and back.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Flyer: trim 5.5 x 8.5 in, bleed 0.125 in -> page 5.75 x 8.75 in. Safe zone: 0.375 in from the page edge. */
+@page{size:5.75in 8.75in;margin:0}
+:root{
+  --paper:#fbfcfb; --ink:#1b2027; --ink-2:#3d434c; --line:rgba(27,32,39,.22);
+  --orange:#ec6a1f; --orange-deep:#b8470e;
+  --grid:rgba(27,32,39,.05);
+  --cond:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;
+  --sans:"IBM Plex Sans",Arial,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
+.sheets{display:flex;flex-wrap:wrap;gap:.45in;justify-content:center;padding:.45in .3in}
+.side{display:grid;gap:.12in;justify-items:center}
+.side-label{font:500 10pt var(--mono);color:#1b2027}
+.sheet{position:relative;width:5.75in;height:8.75in;overflow:hidden;background:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:.25in .25in;background-position:.125in .125in;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.guide{position:absolute;pointer-events:none;z-index:9}
+.guide.trim{inset:.125in;outline:1px solid rgba(255,0,170,.7)}
+.guide.safe{inset:.375in;outline:1px dashed rgba(0,160,255,.75)}
+.mono{font-family:var(--mono);letter-spacing:.02em}
+
+/* ---------- front ---------- */
+.hero{position:absolute;left:0;top:0;right:0;height:3.85in;background:var(--ink);border-bottom:2px solid var(--ink)}
+.hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 45%}
+.chip{position:absolute;left:.375in;top:.375in;display:flex;align-items:center;gap:.08in;background:var(--paper);border:1.5px solid var(--ink);padding:.05in .12in .05in .07in}
+.chip img{width:.52in;height:auto;display:block}
+.chip b{display:block;font:700 14pt/1 var(--cond);letter-spacing:-.01em}
+.chip span{display:block;font:500 8pt/1.2 var(--mono);color:var(--ink-2);margin-top:.02in;letter-spacing:.04em}
+.ptag{position:absolute;left:.375in;bottom:0;background:var(--paper);border:1.5px solid var(--ink);border-bottom:0;padding:.04in .1in;font:600 8pt var(--mono);letter-spacing:.05em}
+.front .content{position:absolute;left:.375in;right:.375in;top:4.08in;bottom:.375in;display:flex;flex-direction:column}
+.kicker{display:flex;gap:.16in;font:500 8.5pt var(--mono);color:var(--ink-2);letter-spacing:.03em}
+.kicker span{display:inline-flex;align-items:center;gap:.05in}
+.kicker i{width:.07in;height:.07in;background:var(--orange);display:inline-block}
+h1{font:700 30pt/.95 var(--cond);letter-spacing:-.02em;margin-top:.1in}
+h1 em{font-style:normal;background:linear-gradient(transparent 60%,rgba(236,106,31,.6) 60%)}
+.deal{display:grid;grid-template-columns:1fr auto;margin-top:.22in;border:1.5px solid var(--ink);background:var(--paper);box-shadow:.06in .06in 0 var(--ink)}
+.offer{background:var(--orange);border-right:1.5px solid var(--ink);padding:.14in .16in .12in;position:relative;display:flex;flex-direction:column}
+.offer b{display:block;font:700 33pt/.88 var(--cond);letter-spacing:-.01em}
+.offer .stamp{align-self:flex-start;margin-top:.1in;border:2px solid var(--ink);background:var(--paper);font:600 9pt/1 var(--mono);padding:.05in .07in;transform:rotate(-4deg);letter-spacing:.04em}
+.offer p{margin-top:auto;padding-top:.08in;border-top:1.5px dashed rgba(27,32,39,.55);font:600 9pt/1.3 var(--mono)}
+.scan{padding:.12in .14in;display:grid;justify-items:center;align-content:center;gap:.06in;width:1.5in}
+.qr{background:#fff;border:1.5px solid var(--ink);padding:.09in}
+.qr img{display:block;width:1.05in;height:1.05in}
+.scan p{font:600 8.5pt/1.25 var(--mono);text-align:center}
+.phone{margin-top:auto}
+.phone span{display:block;font:500 8.5pt var(--mono);color:var(--ink-2);letter-spacing:.06em}
+.phone b{display:block;font:700 40pt/1 var(--cond);letter-spacing:-.015em;margin-top:.02in;white-space:nowrap}
+.foot-line{display:flex;justify-content:space-between;gap:.1in;margin-top:.1in;padding-top:.08in;border-top:1.5px solid var(--ink);font:500 8pt var(--mono);letter-spacing:.03em}
+
+/* ---------- back ---------- */
+.back .content{position:absolute;left:.375in;right:.375in;top:.375in;bottom:1.95in;display:flex;flex-direction:column}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:.12in;padding-bottom:.1in;border-bottom:1.5px solid var(--ink)}
+.brandrow .b{display:flex;align-items:center;gap:.08in}
+.brandrow img{width:.6in;height:auto;display:block}
+.brandrow b{display:block;font:700 17pt/1 var(--cond);letter-spacing:-.01em}
+.brandrow small{display:block;font:500 8pt var(--mono);color:var(--ink-2);margin-top:.02in;letter-spacing:.04em}
+.brandrow .stamp{border:2px solid var(--orange);color:var(--orange-deep);font:600 9pt/1 var(--mono);padding:.05in .08in;transform:rotate(-4deg);letter-spacing:.04em;background:var(--paper)}
+.blk{margin-top:.22in}
+.nw{white-space:nowrap}
+.blk h2{font:600 8.5pt var(--mono);letter-spacing:.07em;color:var(--ink-2);padding-bottom:.05in;border-bottom:1.5px solid var(--ink)}
+.svc li{display:grid;grid-template-columns:.34in 1fr;padding:.065in 0;border-bottom:1px solid var(--line);list-style:none}
+.svc .n{font:500 8.5pt/1.6 var(--mono);color:var(--ink-2)}
+.svc b{font:700 12pt/1.1 var(--cond)}
+.svc b em{font-style:normal;font:600 7.5pt var(--mono);background:var(--orange);border:1px solid var(--ink);padding:.01in .04in;margin-left:.06in;vertical-align:.02in;letter-spacing:.04em}
+.svc p{font:400 9pt/1.3 var(--sans);color:var(--ink);margin-top:.01in}
+.log{list-style:none;border-left:1.5px solid var(--ink);margin:.08in 0 0 .04in}
+.log li{position:relative;display:grid;grid-template-columns:1.05in 1fr;gap:.08in;padding:.06in 0 .06in .16in}
+.log li::before{content:"";position:absolute;left:-.05in;top:.085in;width:.08in;height:.08in;background:var(--paper);border:1.2px solid var(--ink)}
+.log li:last-child::before{background:var(--orange)}
+.log .code{font:600 8.5pt/1.4 var(--mono);letter-spacing:.04em}
+.log .code span{color:var(--ink-2);font-weight:500;margin-right:.04in}
+.log p{font:400 9.5pt/1.3 var(--sans)}
+.log p b{font-weight:600}
+.area{display:grid;grid-template-columns:1fr 1fr;gap:.2in;margin-top:.08in}
+.area h3{font:600 8.5pt var(--mono);letter-spacing:.05em}
+.area p{font:500 10pt/1.35 var(--sans);margin-top:.02in}
+.band{position:absolute;left:0;right:0;bottom:0;height:1.72in;background:var(--ink);color:#fff}
+.band .in{position:absolute;left:.375in;right:.375in;top:.22in;bottom:.375in;display:grid;grid-template-columns:1fr auto;align-items:end;gap:.15in}
+.band .lbl{display:block;font:500 8.5pt var(--mono);color:#d6d9de;letter-spacing:.06em}
+.band .ph{display:block;font:700 34pt/1 var(--cond);letter-spacing:-.015em;margin-top:.03in;white-space:nowrap}
+.band .claims{grid-column:1/-1;display:flex;justify-content:space-between;gap:.1in;padding-top:.08in;border-top:1px solid rgba(255,255,255,.4);font:500 8pt/1.35 var(--mono);color:#f0f1f3;letter-spacing:.02em}
+.band .est{font:600 9pt/1.3 var(--mono);color:var(--ink);background:var(--orange);border:1.5px solid #fff;padding:.06in .08in;text-align:center;max-width:1.6in}
+
+.note{font:400 13px/1.5 var(--mono);text-align:center;color:#1b2027;padding:0 16px 32px}
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .side{display:block}
+  .side-label,.guide,.note{display:none}
+  .sheet{box-shadow:none;break-after:page;page-break-after:always}
+  .side:last-child .sheet{break-after:auto;page-break-after:auto}
+}
+</style>
+</head>
+<body>
+<div class="sheets">
+
+  <section class="side" aria-label="Front">
+    <p class="side-label">FRONT · 5.5 x 8.5 in trim · 0.125 in bleed</p>
+    <div class="sheet front">
+      <div class="guide trim"></div><div class="guide safe"></div>
+      <div class="hero">
+        <img src="../../img/hero-1536.webp" width="1536" height="1024" alt="Plumber kneeling at an open kitchen sink cabinet, rain and fir trees outside the window">
+        <div class="chip"><img src="../../img/mark.png" width="240" height="160" alt=""><div><b>Pacific Plumbing</b><span>BELLINGHAM · WA</span></div></div>
+        <p class="ptag">LICENSED · BONDED · INSURED</p>
+      </div>
+      <div class="content">
+        <p class="kicker"><span><i></i>WHATCOM COUNTY</span><span><i></i>SKAGIT COUNTY</span><span><i></i>OWNER-OPERATED</span></p>
+        <h1>Plumbing fixed <em>right</em>,<br>priced before we start.</h1>
+        <div class="deal">
+          <div class="offer">
+            <b>FREE<br>ESTIMATE</b>
+            <span class="stamp">$0 TO ASK</span>
+            <p>FULL PRICE BEFORE ANY WORK</p>
+          </div>
+          <div class="scan">
+            <div class="qr"><img src="../qr-flyer.svg" alt="QR code: request a free estimate"></div>
+            <p>Scan to request a free estimate</p>
+          </div>
+        </div>
+        <div class="phone"><span>OR CALL THE OWNER</span><b>(360) 318-6219</b></div>
+        <p class="foot-line"><span>Bellingham · Whatcom &amp; Skagit counties</span><span>Clean-up included</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="side" aria-label="Back">
+    <p class="side-label">BACK · 5.5 x 8.5 in trim · 0.125 in bleed</p>
+    <div class="sheet back">
+      <div class="guide trim"></div><div class="guide safe"></div>
+      <div class="content">
+        <div class="brandrow">
+          <div class="b"><img src="../../img/mark.png" width="240" height="160" alt="Pacific Plumbing logo"><div><b>Pacific Plumbing</b><small>BELLINGHAM · WA · OWNER-OPERATED</small></div></div>
+          <span class="stamp">FREE ESTIMATE</span>
+        </div>
+
+        <div class="blk">
+          <h2>WHAT WE FIX</h2>
+          <ol class="svc">
+            <li><span class="n">01</span><div><b>Whole-home repiping<em>SPECIALTY</em></b><p>Old galvanized, poly or leaking copper replaced with PEX or copper.</p></div></li>
+            <li><span class="n">02</span><div><b>Drain cleaning</b><p>Sinks, tubs, showers, toilets and main lines. No chemicals.</p></div></li>
+            <li><span class="n">03</span><div><b>Water heaters</b><p>Repair or replace, tank and tankless. Old unit hauled away.</p></div></li>
+            <li><span class="n">04</span><div><b>Leak detection &amp; repair</b><p>Walls, ceilings, floors and slabs. We open only what is needed.</p></div></li>
+            <li><span class="n">05</span><div><b>Repairs &amp; fixtures</b><p>Faucets, toilets, disposals, valves, hose bibs. Small jobs welcome.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="blk">
+          <h2>HOW THE FREE ESTIMATE WORKS</h2>
+          <ol class="log">
+            <li><span class="code"><span>#01</span>REQUEST</span><p><b>Call, or scan the code</b> on the front.</p></li>
+            <li><span class="code"><span>#02</span>INSPECT</span><p><b>We look at the problem</b> and explain it in plain words.</p></li>
+            <li><span class="code"><span>#03</span>QUOTE</span><p><b>You get the full price</b> before any work starts.</p></li>
+            <li><span class="code"><span>#04</span>YOUR CALL</span><p><b>Yes:</b> we schedule it. <b>No:</b> you owe nothing.</p></li>
+          </ol>
+        </div>
+
+        <div class="blk">
+          <h2>SERVICE AREA</h2>
+          <div class="area">
+            <div><h3>WHATCOM COUNTY</h3><p>Bellingham, Ferndale, Lynden, Blaine</p></div>
+            <div><h3>SKAGIT COUNTY</h3><p>Mount Vernon, Burlington, <span class="nw">Sedro-Woolley</span>, Anacortes</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="band">
+        <div class="in">
+          <div><span class="lbl">CALL THE OWNER</span><span class="ph">(360) 318-6219</span></div>
+          <p class="est">FREE ESTIMATE<br>$0 TO ASK</p>
+          <p class="claims"><span>Licensed, bonded &amp; insured</span><span>WA contractor license #: added before launch</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<p class="note">Print: Chrome → Save as PDF, Margins none, Background graphics on. Pink line = trim, blue dashed = safe zone (both hidden in the PDF).</p>
+</body>
+</html>

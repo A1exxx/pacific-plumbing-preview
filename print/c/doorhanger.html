@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Door hanger · Direction C · Pacific Plumbing</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+/* Trim 4.25 x 11 in + 0.125 in bleed = 4.5 x 11.25 in page. Safe zone: 0.375 in from the page edge.
+   Door-knob hole: 1.25 in circle, center 1.5 in below the trim top (1.625 in from the page top), centered. */
+@page{size:4.5in 11.25in;margin:0}
+:root{
+  --white:oklch(98.6% 0.004 200);
+  --ink:oklch(17% 0.01 230);
+  --ink-2:oklch(36% 0.012 230);
+  --teal:oklch(72% 0.13 200);
+  --teal-deep:oklch(46% 0.09 205);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;color:var(--ink);font-stretch:100%}
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;padding:32px 16px}
+.sheet{position:relative;width:4.5in;height:11.25in;overflow:hidden;background:var(--white);box-shadow:0 20px 50px -20px oklch(17% .01 230 / .5);break-after:page;page-break-after:always}
+.sheet:last-child{break-after:auto;page-break-after:auto}
+.abs{position:absolute}
+.x{left:.375in;right:.375in}
+
+/* screen-only guides */
+.guide{position:absolute;pointer-events:none;z-index:20}
+.guide.trim{inset:.125in;outline:1px dashed oklch(60% .25 330)}
+.guide.safe{inset:.375in;outline:1px dotted oklch(65% .15 200)}
+.die{position:absolute;z-index:21;left:1.625in;top:1in;width:1.25in;height:1.25in;border-radius:50%;border:1.2px dashed oklch(100% 0 0 / .9);box-shadow:0 0 0 1.2px oklch(17% .01 230 / .25)}
+
+/* shared pieces */
+.top{position:absolute;left:0;right:0;top:0;background:var(--ink)}
+.badge{display:inline-flex;align-items:center;gap:.1in;padding:.07in .16in .07in .08in;border-radius:.12in;background:var(--white)}
+.badge img{width:.82in;height:auto}
+.badge b{display:block;font-weight:850;font-stretch:112%;font-size:14.5pt;line-height:.98;letter-spacing:-.01em}
+.badge small{display:block;margin-top:2pt;font-size:8pt;font-weight:600;color:var(--ink-2)}
+.band{position:absolute;left:0;right:0;bottom:0;background:var(--teal);clip-path:path("M0,22 C72,0 144,44 216,22 C288,0 360,44 432,22 L432,3000 L0,3000 Z")}
+.sticker{position:absolute;z-index:3;border-radius:50%;background:var(--teal);color:var(--ink);display:grid;place-content:center;text-align:center;text-transform:uppercase;font-weight:800;font-stretch:112%;line-height:1;transform:rotate(-10deg);border:.05in solid var(--white);box-shadow:0 .08in .16in -.06in oklch(17% .01 230 / .55)}
+.sticker span{display:block;font-weight:900;font-stretch:118%;letter-spacing:-.02em}
+.qrbox{background:#fff;border-radius:.08in;padding:.09in;line-height:0}
+.qrbox img{display:block;width:100%;height:auto}
+
+/* ---------- FRONT ---------- */
+.front .top{height:4.62in}
+.front .brand{top:4.2in;display:flex;z-index:2}
+.front .badge{box-shadow:0 .06in .14in -.05in oklch(17% .01 230 / .45)}
+.front h1{top:2.62in;color:var(--white);font-weight:900;font-stretch:118%;font-size:35pt;line-height:.9;letter-spacing:-.035em}
+.front h1 span{display:block}
+.front h1 .t{color:var(--teal)}
+.front .band{top:6.66in}
+.front .photo{left:0;right:0;top:4.62in;height:2.5in;overflow:hidden}
+.front .photo img{width:100%;height:100%;object-fit:cover;object-position:46% 40%}
+.front .sticker{right:.36in;top:4.06in;width:1.42in;height:1.42in;font-size:11pt}
+.front .sticker span{font-size:29pt}
+.front .offer{top:7.4in;font-weight:800;font-stretch:106%;font-size:11.5pt;line-height:1.22}
+.front .phone{top:7.98in}
+.front .phone small{display:block;font-weight:800;font-stretch:112%;font-size:10pt;text-transform:uppercase;letter-spacing:.04em}
+.front .phone b{display:block;font-weight:900;font-stretch:108%;font-size:30pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.front .scan{top:8.84in;display:flex;align-items:center;gap:.16in}
+.front .scan .qrbox{width:1.18in;flex:none}
+.front .scan p{font-weight:850;font-stretch:112%;font-size:13pt;line-height:1.08;letter-spacing:-.01em}
+.front .towns{top:10.22in;font-weight:700;font-size:9pt;line-height:1.4}
+.towns span{white-space:nowrap}
+
+/* ---------- BACK ---------- */
+.back .top{height:4.2in}
+.back h2.sorry{top:2.62in;color:var(--white);font-weight:900;font-stretch:118%;font-size:30pt;line-height:.92;letter-spacing:-.035em}
+.back h2.sorry .t{color:var(--teal)}
+.back .sorry-sub{top:3.62in;color:oklch(88% .01 230);font-size:9.5pt;line-height:1.35}
+.back .write{top:4.42in}
+.write .row{display:flex;gap:.2in}
+.write .line{flex:1;display:flex;align-items:flex-end;gap:.08in;height:.38in;border-bottom:1.2px solid var(--ink);font-weight:800;font-stretch:110%;font-size:9pt;padding-bottom:2pt}
+.write .line.blank{border-bottom-color:oklch(17% .01 230 / .55)}
+.back .svc{top:6.66in}
+.svc h3{font-weight:900;font-stretch:118%;font-size:15pt;letter-spacing:-.02em;line-height:1;margin-bottom:.08in}
+.svc ol{list-style:none;display:grid}
+.svc li{display:flex;align-items:baseline;gap:.12in;padding:.055in 0;border-top:2px solid var(--ink);font-weight:850;font-stretch:112%;font-size:12.5pt;line-height:1.1;letter-spacing:-.01em}
+.svc li i{font-style:normal;font-weight:900;font-stretch:118%;font-size:9pt;color:var(--teal-deep);width:.22in;flex:none}
+.svc li em{margin-left:auto;font-style:normal;font-size:8pt;font-weight:800;text-transform:uppercase;letter-spacing:.03em;background:var(--teal);padding:1pt 4pt;border-radius:3pt}
+.back .trust{top:8.98in;font-weight:700;font-size:8.5pt;line-height:1.35}
+.back .band{top:9.42in}
+.back .contact{top:9.76in;display:flex;align-items:center;justify-content:space-between;gap:.14in}
+.back .contact small{display:block;font-weight:800;font-stretch:112%;font-size:8.5pt;text-transform:uppercase;letter-spacing:.04em}
+.back .contact b{display:block;font-weight:900;font-stretch:108%;font-size:21pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.back .contact p{margin-top:3pt;font-size:8.5pt;font-weight:700}
+.back .contact .qrbox{width:.86in;flex:none;padding:.07in}
+.back .lic{top:10.62in;font-size:8pt;font-weight:600}
+
+.note{max-width:4.5in;margin:0 auto 40px;padding:12px 14px;border-radius:10px;background:#fff;font:14px/1.45 system-ui,sans-serif;color:#222}
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .sheet{box-shadow:none;margin:0}
+  .guide,.note{display:none}
+  .no-die .die{display:none}
+}
+</style>
+</head>
+<body>
+<script>if(/[?&]die=0/.test(location.search))document.documentElement.classList.add('no-die')</script>
+<div class="sheets">
+
+  <!-- FRONT -->
+  <section class="sheet front" aria-label="Door hanger, front">
+    <div class="top"></div>
+    <div class="die" aria-hidden="true"></div>
+    <div class="abs x brand"><span class="badge"><img src="../../img/mark.png" width="240" height="160" alt="Pacific Plumbing orca logo"><span><b>Pacific<br>Plumbing</b><small>Bellingham, WA</small></span></span></div>
+    <h1 class="abs x"><span>Real fix.</span><span>Fair price.</span><span class="t">Local.</span></h1>
+    <figure class="abs photo"><img src="../../img/hero-1536.webp" width="1536" height="1024" alt=""></figure>
+    <div class="band"></div>
+    <div class="sticker"><span>Free</span>estimate</div>
+    <p class="abs x offer">Know the full price before any work starts.<br>Asking costs nothing.</p>
+    <div class="abs x phone"><small>Call the owner</small><b>(360) 318-6219</b></div>
+    <div class="abs x scan">
+      <div class="qrbox"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
+      <p>Scan to request a free estimate</p>
+    </div>
+    <p class="abs x towns"><span>Bellingham ·</span> <span>Ferndale ·</span> <span>Lynden ·</span> <span>Blaine ·</span> <span>Mount Vernon ·</span> <span>Burlington ·</span> <span>Sedro-Woolley ·</span> <span>Anacortes</span></p>
+    <div class="guide trim"></div><div class="guide safe"></div>
+  </section>
+
+  <!-- BACK -->
+  <section class="sheet back" aria-label="Door hanger, back">
+    <div class="top"></div>
+    <div class="die" aria-hidden="true"></div>
+    <h2 class="abs x sorry">Sorry we<br><span class="t">missed you.</span></h2>
+    <p class="abs x sorry-sub">We stopped by about your plumbing. Call us back, or scan the code below to request a free estimate.</p>
+    <div class="abs x write">
+      <div class="row"><span class="line">Date</span><span class="line">Time</span></div>
+      <div class="row"><span class="line">Notes</span></div>
+      <div class="row"><span class="line blank"></span></div>
+      <div class="row"><span class="line blank"></span></div>
+      <div class="row"><span class="line">Your plumber</span></div>
+    </div>
+    <div class="abs x svc">
+      <h3>What we fix</h3>
+      <ol>
+        <li><i>01</i>Whole-home repiping<em>Specialty</em></li>
+        <li><i>02</i>Drain cleaning</li>
+        <li><i>03</i>Water heaters</li>
+        <li><i>04</i>Leak detection &amp; repair</li>
+        <li><i>05</i>Repairs &amp; fixtures</li>
+      </ol>
+    </div>
+    <p class="abs x trust">Licensed, bonded &amp; insured. Owner-operated. Price agreed before work starts. Clean-up included.</p>
+    <div class="band"></div>
+    <div class="abs x contact">
+      <div><small>Call</small><b>(360) 318-6219</b><p>Free estimate. Scan or call.</p></div>
+      <div class="qrbox"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
+    </div>
+    <p class="abs x lic">WA contractor license #: added before launch</p>
+    <div class="guide trim"></div><div class="guide safe"></div>
+  </section>
+</div>
+
+<p class="note">Print: Chrome → Save as PDF, Margins none, Background graphics on. On screen: pink dashes show the trim, blue dots the safe zone, the white dashed circle the door-knob hole. Trim and safe-zone guides are hidden when printing; the hole outline prints so proofs show it. For the print-shop file open this page with ?die=0 to hide it.</p>
+</body>
+</html>

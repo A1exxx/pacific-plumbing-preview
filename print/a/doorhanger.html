@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Door hanger · Direction A | Pacific Plumbing print preview</title>
+<meta name="description" content="Print-ready door hanger for Pacific Plumbing, Direction A: 4.25 x 11 in trim with 0.125 in bleed, front and back.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Door hanger: trim 4.25 x 11 in, bleed 0.125 in -> page 4.5 x 11.25 in.
+   Safe zone: 0.375 in from the page edge. Knob hole: 1.25 in, center 1.5 in below trim top (1.625 in from page top), centered.
+   Keep-out around the hole: 0.25 in (radius 0.875 in from center -> y 0.75..2.5 in, x 1.375..3.125 in). */
+@page{size:4.5in 11.25in;margin:0}
+:root{
+  --paper:#fbfcfb; --ink:#1b2027; --ink-2:#3d434c; --line:rgba(27,32,39,.22);
+  --orange:#ec6a1f; --orange-ink:#2a1a10; --orange-deep:#b8470e;
+  --grid:rgba(27,32,39,.05);
+  --cond:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;
+  --sans:"IBM Plex Sans",Arial,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
+.sheets{display:flex;flex-wrap:wrap;gap:.45in;justify-content:center;padding:.45in .3in}
+.side{display:grid;gap:.12in;justify-items:center}
+.side-label{font:500 10pt var(--mono);color:#1b2027}
+.sheet{position:relative;width:4.5in;height:11.25in;overflow:hidden;background:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:.25in .25in;background-position:.125in .125in;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.mono{font-family:var(--mono);letter-spacing:.02em}
+
+/* guides: screen only */
+.guide{position:absolute;pointer-events:none;z-index:9}
+.guide.trim{inset:.125in;outline:1px solid rgba(255,0,170,.7)}
+.guide.safe{inset:.375in;outline:1px dashed rgba(0,160,255,.75)}
+.die{position:absolute;z-index:10;width:1.25in;height:1.25in;left:1.625in;top:1in;border-radius:50%;border:1.2px dashed #1b2027;background:rgba(255,255,255,.55)}
+.die-keep{position:absolute;z-index:8;width:1.75in;height:1.75in;left:1.375in;top:.75in;border-radius:50%;outline:1px dotted rgba(0,160,255,.6);outline-offset:0}
+
+/* top zone beside the hole */
+.top-l,.top-r{position:absolute;top:1.02in;width:.95in}
+.top-l{left:.375in}
+.top-r{right:.375in;text-align:right}
+.top-l img{width:.95in;height:auto;display:block}
+.top-r p{font:500 8pt/1.35 var(--mono);color:var(--ink-2);letter-spacing:.04em}
+.top-r .no{display:block;margin-top:.1in;border-bottom:1px solid var(--ink);height:.22in;font:500 8pt var(--mono);text-align:left;color:var(--ink)}
+.top-l p{font:500 8pt/1.3 var(--mono);color:var(--ink-2);margin-top:.06in;letter-spacing:.04em}
+
+.content{position:absolute;left:.375in;right:.375in;top:2.55in;bottom:.375in;display:flex;flex-direction:column}
+
+/* front */
+.brandline{display:flex;align-items:baseline;justify-content:space-between;gap:.1in;padding-bottom:.08in;border-bottom:1.5px solid var(--ink)}
+.brandline b{font:700 21pt/1 var(--cond);letter-spacing:-.01em}
+.brandline span{font:500 8pt var(--mono);color:var(--ink-2);letter-spacing:.05em}
+.hook{font:700 35pt/.94 var(--cond);letter-spacing:-.02em;margin-top:.22in}
+.sub{font:500 12.5pt/1.3 var(--sans);margin-top:.1in}
+.offer{position:relative;margin-top:.3in;background:var(--orange);border:2px solid var(--ink);box-shadow:.06in .06in 0 var(--ink);padding:.16in .18in .14in;color:var(--orange-ink)}
+.offer b{display:block;font:700 56pt/.86 var(--cond);letter-spacing:-.01em;color:var(--ink)}
+.offer .line{display:block;margin-top:.1in;padding-top:.08in;border-top:1.5px dashed rgba(27,32,39,.55);font:600 9.5pt/1.3 var(--mono);color:var(--ink);letter-spacing:.02em}
+.offer .stamp{position:absolute;right:.16in;top:.2in;transform:rotate(-7deg);border:2.5px solid var(--ink);background:var(--paper);color:var(--ink);font:600 10pt/1 var(--mono);padding:.06in .08in;letter-spacing:.04em}
+.phone{margin-top:.32in}
+.phone span{display:block;font:500 8.5pt var(--mono);color:var(--ink-2);letter-spacing:.06em}
+.phone b{display:block;font:700 39pt/1 var(--cond);letter-spacing:-.015em;margin-top:.03in;white-space:nowrap}
+.qr-row{display:flex;align-items:center;gap:.18in;margin-top:.26in;padding-top:.24in;border-top:1px solid var(--line)}
+.qr{flex:none;background:#fff;border:1.5px solid var(--ink);padding:.1in}
+.qr img{display:block;width:1.2in;height:1.2in}
+.qr-row b{display:block;font:700 15pt/1.1 var(--cond)}
+.qr-row span{display:block;font:400 8.5pt/1.35 var(--mono);color:var(--ink-2);margin-top:.05in}
+.towns{margin-top:auto;font:500 8pt/1.5 var(--mono);color:var(--ink);letter-spacing:.02em;padding-top:.1in}
+.stubline{display:flex;justify-content:space-between;gap:.1in;margin-top:.12in;padding-top:.1in;border-top:1.5px dashed var(--ink);font:600 8pt var(--mono);letter-spacing:.05em}
+
+/* back */
+.sorry{font:700 32pt/.95 var(--cond);letter-spacing:-.02em}
+.ticket{margin-top:.2in;border:1.5px solid var(--ink);background:var(--paper)}
+.ticket-h{display:flex;justify-content:space-between;align-items:center;padding:.07in .12in;border-bottom:1.5px dashed var(--line);font:600 8.5pt var(--mono);letter-spacing:.05em}
+.ticket-h em{font-style:normal;color:var(--orange-deep)}
+.wl{display:flex;align-items:flex-end;gap:.08in;height:.4in;padding:0 .12in .06in;font:500 9.5pt var(--sans);white-space:nowrap}
+.wl i{flex:1;border-bottom:1px solid var(--ink);height:1px}
+.wl i.s{flex:.55}
+.callback{margin-top:.2in}
+.callback span{display:block;font:500 8.5pt var(--mono);color:var(--ink-2);letter-spacing:.06em}
+.callback b{display:block;font:700 30pt/1 var(--cond);letter-spacing:-.015em;margin-top:.02in}
+.svcs{margin-top:.2in}
+.svcs h3{font:600 8.5pt var(--mono);letter-spacing:.06em;padding-bottom:.05in;border-bottom:1.5px solid var(--ink)}
+.svcs ol{list-style:none}
+.svcs li{display:grid;grid-template-columns:.2in .3in 1fr;align-items:center;padding:.055in 0;border-bottom:1px solid var(--line);font:600 11pt/1.15 var(--cond)}
+.svcs li i{width:.13in;height:.13in;border:1.2px solid var(--ink);display:block}
+.svcs li .mono{font:500 8pt var(--mono);color:var(--ink-2)}
+.back-foot{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:.15in;padding-top:.14in;border-top:1.5px solid var(--ink)}
+.back-foot p{font:500 9pt/1.4 var(--sans);flex:1}
+.back-foot .mono{display:block;font:500 8pt/1.4 var(--mono);color:var(--ink-2);margin-top:.04in}
+.back-foot b{display:block;font:700 13pt/1.1 var(--cond);margin-bottom:.04in}
+.back-foot .qr{padding:.07in}
+.back-foot .qr img{width:.78in;height:.78in}
+.back-foot .qr-cap{font:500 8pt/1.3 var(--mono);text-align:center;margin-top:.04in;width:.95in}
+
+.note{font:400 13px/1.5 var(--mono);text-align:center;color:#1b2027;padding:0 16px 32px}
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .side{display:block}
+  .side-label,.guide,.die-keep,.note{display:none}
+  .die{display:none}
+  .show-die .die{display:block}
+  .sheet{box-shadow:none;break-after:page;page-break-after:always}
+  .side:last-child .sheet{break-after:auto;page-break-after:auto}
+}
+</style>
+</head>
+<body>
+<div class="sheets">
+
+  <section class="side" aria-label="Front">
+    <p class="side-label">FRONT · 4.25 x 11 in trim · 0.125 in bleed</p>
+    <div class="sheet">
+      <div class="guide trim"></div><div class="guide safe"></div><div class="die-keep" aria-hidden="true"></div>
+      <div class="die" aria-hidden="true"></div>
+
+      <div class="top-l"><img src="../../img/mark.png" width="240" height="160" alt="Pacific Plumbing logo"></div>
+      <div class="top-r"><p>SERVICE TAG</p><span class="no">No.</span></div>
+
+      <div class="content">
+        <div class="brandline"><b>Pacific Plumbing</b><span>BELLINGHAM · WA</span></div>
+        <h1 class="hook">Leak, clog or<br>no hot water?</h1>
+        <p class="sub">Get the full price before any work starts.</p>
+        <div class="offer">
+          <span class="stamp">$0 TO ASK</span>
+          <b>FREE<br>ESTIMATE</b>
+          <span class="line">PRICE AGREED BEFORE ANY WORK</span>
+        </div>
+        <div class="phone"><span>CALL THE OWNER</span><b>(360) 318-6219</b></div>
+        <div class="qr-row">
+          <div class="qr"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
+          <p><b>Scan to request a free estimate</b><span>Or call the number above.</span></p>
+        </div>
+        <p class="towns">Bellingham · Ferndale · Lynden · Blaine<br>Mount Vernon · Burlington · Sedro-Woolley · Anacortes</p>
+        <div class="stubline"><span>LICENSED · BONDED · INSURED</span><span>OWNER-OPERATED</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="side" aria-label="Back">
+    <p class="side-label">BACK · 4.25 x 11 in trim · 0.125 in bleed</p>
+    <div class="sheet">
+      <div class="guide trim"></div><div class="guide safe"></div><div class="die-keep" aria-hidden="true"></div>
+      <div class="die" aria-hidden="true"></div>
+
+      <div class="top-l"><p>PACIFIC<br>PLUMBING</p></div>
+      <div class="top-r"><p>VISIT<br>NOTE</p></div>
+
+      <div class="content">
+        <h2 class="sorry">Sorry we<br>missed you.</h2>
+        <div class="ticket">
+          <p class="ticket-h"><span>VISIT LOG</span><em>FILLED IN BY HAND</em></p>
+          <div class="wl"><span>We stopped by on</span><i></i><span>at</span><i class="s"></i></div>
+          <div class="wl"><span>About</span><i></i></div>
+          <div class="wl"><span>Notes</span><i></i></div>
+          <div class="wl"><i></i></div>
+          <div class="wl"><i></i></div>
+          <div class="wl"><span>Your plumber</span><i></i></div>
+        </div>
+        <div class="callback"><span>CALL US BACK</span><b>(360) 318-6219</b></div>
+        <div class="svcs">
+          <h3>WHAT WE FIX</h3>
+          <ol>
+            <li><i></i><span class="mono">01</span>Whole-home repiping</li>
+            <li><i></i><span class="mono">02</span>Drain cleaning</li>
+            <li><i></i><span class="mono">03</span>Water heaters, tank and tankless</li>
+            <li><i></i><span class="mono">04</span>Leak detection &amp; repair</li>
+            <li><i></i><span class="mono">05</span>Repairs &amp; fixtures</li>
+          </ol>
+        </div>
+        <div class="back-foot">
+          <p><b>Free estimate on every job.</b>Licensed, bonded &amp; insured.<span class="mono">WA contractor license #: added before launch</span></p>
+          <div><div class="qr"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div><p class="qr-cap">Scan for a free estimate</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<p class="note">Print: Chrome → Save as PDF, Margins none, Background graphics on. Pink line = trim, blue dashed = safe zone, black dashed circle = door-knob hole (class "die", hidden in the PDF; add ?die to the URL to keep it).</p>
+<script>if (/[?&]die\b/.test(location.search)) document.documentElement.classList.add('show-die');</script>
+</body>
+</html>
