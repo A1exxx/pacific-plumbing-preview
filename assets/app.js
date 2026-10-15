@@ -90,7 +90,7 @@
       if (bad.length) { bad[0].focus(); return; }
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = 'Sending…';
+      btn.textContent = 'Sending...';
       setTimeout(() => {
         form.hidden = true;
         const done = document.querySelector('[data-success]');
