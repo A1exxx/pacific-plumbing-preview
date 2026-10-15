@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Три направления | Pacific Plumbing</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../img/favicon.png">
+<style>
+:root{--bg:oklch(97% .004 220);--ink:oklch(20% .012 230);--ink-2:oklch(42% .012 230);--line:oklch(20% .012 230 / .12)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{width:min(1100px,100% - 32px);margin:0 auto;padding:28px 0 48px}
+h1{font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
+.lead{color:var(--ink-2);margin:0 0 24px;max-width:60ch}
+.grid{display:grid;gap:16px}
+.card{display:grid;grid-template-rows:auto 1fr;text-decoration:none;color:inherit;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px var(--line);transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px var(--line),0 18px 40px -24px oklch(20% .012 230 / .45)}
+.thumb{aspect-ratio:16/10;display:grid;place-items:end start;padding:14px;color:#fff;font-weight:700;font-size:1.4rem;background-size:cover;background-position:center}
+.a .thumb{background-color:oklch(96% .004 160);background-image:url(../img/hands-640.webp);}
+.b .thumb{background-image:linear-gradient(transparent 40%,oklch(19% .018 170 / .85)),url(../img/house-640.webp)}
+.c .thumb{background-image:linear-gradient(transparent 40%,oklch(48% .09 205 / .85)),url(../img/hero-640.webp)}
+.a .thumb span{background:oklch(66% .19 45);color:oklch(22% .03 45);padding:4px 10px}
+.body{padding:16px 16px 18px}
+.body b{display:block;font-size:1.1rem;margin-bottom:4px}
+.body p{margin:0;color:var(--ink-2);font-size:.95rem}
+.back{display:inline-block;margin-top:22px;color:var(--ink-2)}
+@media (min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Три направления первого экрана</h1>
+  <p class="lead">Откройте каждое с телефона и с компьютера. Выберите одно — по нему соберу весь сайт. Фото пока сгенерированы, потом заменим на настоящие.</p>
+  <div class="grid">
+    <a class="card a" href="a.html"><div class="thumb"><span>A</span></div><div class="body"><b>A. «Заказ-наряд»</b><p>Строгий и деловой: как квитанция мастера, оранжевая кнопка звонка, сетка как на чертеже. Ощущение «серьёзная мастерская».</p></div></a>
+    <a class="card b" href="b.html"><div class="thumb">B</div><div class="body"><b>B. «Дождливый Беллингем»</b><p>Кино-кадр дома в сумерках, медь как у новых труб, журнальный шрифт. Ощущение «местный мастер для старых домов», упор на перекладку труб.</p></div></a>
+    <a class="card c" href="c.html"><div class="thumb">C</div><div class="body"><b>C. «Касатка»</b><p>Смелый фирменный стиль от его логотипа: крупный жирный шрифт, бирюзовая волна. Ощущение «яркий местный бренд».</p></div></a>
+  </div>
+  <a class="back" href="../">Текущая версия сайта</a>
+</div>
+</body>
+</html>

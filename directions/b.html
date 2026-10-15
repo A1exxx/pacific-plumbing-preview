@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction B · Rain city | Pacific Plumbing preview</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night: oklch(19% 0.018 170);
+  --night-2: oklch(25% 0.02 170);
+  --fog: oklch(95% 0.006 150);
+  --fog-2: oklch(90% 0.008 150);
+  --ink: oklch(22% 0.015 170);
+  --ink-2: oklch(42% 0.012 170);
+  --copper: oklch(68% 0.12 52);
+  --copper-deep: oklch(56% 0.12 48);
+  --on-night: oklch(94% 0.01 150);
+  --on-night-2: oklch(80% 0.012 150);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fog);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.preview{background:var(--night);color:var(--on-night-2);text-align:center;padding:6px 12px;font-size:.78rem;border-bottom:1px solid oklch(100% 0 0 / .08)}
+.preview a{color:var(--on-night)}
+
+.hero{position:relative;min-height:min(92dvh,860px);color:var(--on-night);display:flex;flex-direction:column;background:var(--night);isolation:isolate;overflow:hidden}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:-2;transform:scale(1.04);animation:settle 2.4s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,oklch(19% .018 170 / .6) 0%,oklch(19% .018 170 / .18) 24%,oklch(19% .018 170 / .72) 52%,oklch(19% .018 170 / .95) 100%)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:46px;filter:drop-shadow(0 2px 8px oklch(0% 0 0 / .35))}
+.brand b{font:600 1.3rem/1 "Newsreader",serif;letter-spacing:-.005em}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:30px;font-weight:500}
+.nav ul a{text-decoration:none;opacity:.88}
+.nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--copper)}
+.phone{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 6px 0 16px;border-radius:999px;background:oklch(100% 0 0 / .1);border:1px solid oklch(100% 0 0 / .22);text-decoration:none;font-weight:600;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.phone span{display:none}
+.phone i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--copper);color:var(--night)}
+.phone svg{width:17px;height:17px}
+
+.hero-body{margin-top:auto;padding:0 0 30px}
+.place{font:italic 500 1.1rem/1.3 "Newsreader",serif;color:oklch(78% .11 55);margin:0 0 12px;text-shadow:0 1px 12px oklch(0% 0 0 / .5)}
+h1{font:500 clamp(2.4rem,9.4vw,5.6rem)/.98 "Newsreader",serif;letter-spacing:-.022em;margin:0;max-width:15ch;text-wrap:balance}
+h1 em{font-style:italic;color:var(--copper)}
+.lede{max-width:44ch;color:var(--on-night-2);font-size:1.06rem;margin:18px 0 0}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 24px;border-radius:999px;background:var(--copper);color:var(--night);font-weight:600;text-decoration:none;transition:background .2s,transform .15s cubic-bezier(.22,1,.36,1)}
+.btn:hover{background:oklch(73% .12 55)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:18px;height:18px}
+.link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:500;text-decoration:none;border-bottom:1px solid oklch(100% 0 0 / .35)}
+.link:hover{border-color:var(--copper)}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:4px 22px;margin:28px 0 0;padding:16px 0 0;border-top:1px solid oklch(100% 0 0 / .16);font-size:.86rem;color:var(--on-night-2)}
+.facts b{display:block;color:var(--on-night);font:500 1.1rem/1.2 "Newsreader",serif}
+
+/* specialty strip */
+.spec{display:grid;gap:0;background:var(--fog)}
+.spec-photo{aspect-ratio:16/10;overflow:hidden}
+.spec-photo img{width:100%;height:100%;object-fit:cover}
+.spec-text{padding:34px 20px 40px}
+.spec-text .place{color:var(--copper-deep)}
+.spec h2{font:500 clamp(1.9rem,6vw,3.1rem)/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0;max-width:16ch}
+.spec p{color:var(--ink-2);max-width:48ch;margin:16px 0 0}
+.list{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid oklch(22% .015 170 / .15)}
+.list a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid oklch(22% .015 170 / .15);text-decoration:none;transition:color .2s}
+.list a b{font:500 1.25rem/1.2 "Newsreader",serif}
+.list a span{font-size:.88rem;color:var(--ink-2);text-align:right}
+.list a:hover{color:var(--copper-deep)}
+.callbar{position:fixed;inset:auto 0 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:oklch(19% .018 170 / .96);z-index:5}
+.callbar a{display:flex;justify-content:center;align-items:center;min-height:50px;border-radius:999px;font-weight:600;text-decoration:none}
+.callbar a:first-child{background:var(--copper);color:var(--night)}
+.callbar a:last-child{color:var(--on-night);border:1px solid oklch(100% 0 0 / .3)}
+body{padding-bottom:72px}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+
+@media (min-width:900px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .nav{padding:22px 0}
+  .nav ul{display:flex}
+  .phone span{display:inline}
+  .hero-body{padding-bottom:48px}
+  .facts{grid-template-columns:repeat(4,auto);gap:4px 44px}
+  .spec{grid-template-columns:1fr 1fr}
+  .spec-photo{aspect-ratio:auto;min-height:100%}
+  .spec-text{padding:72px 64px 72px 56px;align-self:center}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="preview">Direction B of 3 · <a href="./">see all directions</a></div>
+<header class="hero">
+  <img src="../img/house-1536.webp" srcset="../img/house-640.webp 640w, ../img/house-960.webp 960w, ../img/house-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="Craftsman house in Bellingham on a rainy evening" fetchpriority="high">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#"><img src="../img/mark.png" width="240" height="160" alt=""><b>Pacific Plumbing</b></a>
+    <ul><li><a href="#spec">Services</a></li><li><a href="#">Service area</a></li><li><a href="#">Request a visit</a></li></ul>
+    <a class="phone" href="tel:+13603186219" aria-label="Call (360) 318-6219"><span>(360) 318-6219</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.5h3.1l1.6 4.2-2.1 1.4a12.3 12.3 0 0 0 7.1 7.1l1.4-2.1 4.2 1.6v3.1a2 2 0 0 1-2.1 2A16.9 16.9 0 0 1 3.2 5.6a2 2 0 0 1 2-2.1Z"/></svg></i></a>
+  </nav>
+  <div class="wrap hero-body">
+    <p class="place">Bellingham, Washington</p>
+    <h1>The plumber for old houses and <em>new</em> problems.</h1>
+    <p class="lede">From a dripping valve to a full repipe of a 1920s craftsman. You get a clear price first, and the owner does the work.</p>
+    <div class="cta">
+      <a class="btn" href="tel:+13603186219"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.5h3.1l1.6 4.2-2.1 1.4a12.3 12.3 0 0 0 7.1 7.1l1.4-2.1 4.2 1.6v3.1a2 2 0 0 1-2.1 2A16.9 16.9 0 0 1 3.2 5.6a2 2 0 0 1 2-2.1Z"/></svg>Call (360) 318-6219</a>
+      <a class="link" href="#">Request a visit online</a>
+    </div>
+    <dl class="facts">
+      <div><dt>Price</dt><dd style="margin:0"><b>Before work</b></dd></div>
+      <div><dt>Who comes</dt><dd style="margin:0"><b>The owner</b></dd></div>
+      <div><dt>Area</dt><dd style="margin:0"><b>Whatcom &amp; Skagit</b></dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+  <section class="spec" id="spec" aria-labelledby="spec-h">
+    <div class="spec-photo"><img src="../img/copper-960.webp" srcset="../img/copper-960.webp 960w, ../img/copper-1536.webp 1536w" sizes="(min-width:900px) 50vw, 100vw" width="1536" height="1024" loading="lazy" alt="New copper water lines with brass fittings"></div>
+    <div class="spec-text">
+      <p class="place">Our specialty</p>
+      <h2 id="spec-h">Whole-home repipes for Bellingham's older houses.</h2>
+      <p>Bellingham has a lot of homes still running on original galvanized pipe. We replace it in one planned job, and fix everything else along the way.</p>
+      <ul class="list">
+        <li><a href="#"><b>Repiping</b><span>PEX or copper</span></a></li>
+        <li><a href="#"><b>Drains</b><span>Sinks to main lines</span></a></li>
+        <li><a href="#"><b>Water heaters</b><span>Tank and tankless</span></a></li>
+        <li><a href="#"><b>Leaks</b><span>Found and fixed</span></a></li>
+        <li><a href="#"><b>Repairs</b><span>Faucets, toilets, valves</span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<div class="callbar"><a href="tel:+13603186219">Call now</a><a href="#">Request visit</a></div>
+</body>
+</html>
