@@ -47,55 +47,59 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
 .front{background:var(--teal)}
 .front .brand{top:2.58in;display:flex}
 .badge{display:inline-flex;align-items:center;gap:.12in;padding:.08in .2in .08in .1in;border-radius:.14in;background:var(--white);box-shadow:.07in .07in 0 var(--ink)}
-.badge img{width:1.42in;height:auto}
-.badge b{display:block;font-weight:900;font-stretch:115%;font-size:17pt;line-height:.96;letter-spacing:-.015em}
+.badge img{width:1.1in;height:auto}
+.badge b{display:block;font-weight:900;font-stretch:115%;font-size:16pt;line-height:.96;letter-spacing:-.015em}
 .badge small{display:block;margin-top:3pt;font-size:8.5pt;font-weight:700;color:var(--ink-2)}
-.front h1{top:3.86in;font-weight:900;font-stretch:118%;font-size:26pt;line-height:.98;letter-spacing:-.035em}
+.front h1{top:3.62in;font-weight:900;font-stretch:118%;font-size:22pt;line-height:1;letter-spacing:-.035em}
 .front h1 span{display:block}
-.front h1 .m span{display:inline;background:var(--white);padding:0 .05in;margin-left:-.05in;border-radius:.05in}
-.free{top:5.14in}
-.free b{display:block;font-weight:900;font-stretch:125%;font-size:81pt;line-height:.8;letter-spacing:-.04em}
-.free span{display:inline-block;margin-top:.12in;padding:.05in .16in .07in;border-radius:.11in;background:var(--ink);color:var(--white);font-weight:900;font-stretch:118%;font-size:29pt;line-height:1;letter-spacing:.02em;text-transform:uppercase;transform:rotate(-3deg);transform-origin:left center}
-.front .offer{top:6.98in;font-weight:800;font-stretch:106%;font-size:11.5pt;line-height:1.22}
-.front .scan{top:7.62in;display:flex;align-items:center;gap:.16in}
-.front .scan .qrbox{width:1.12in;flex:none}
-.front .scan p{font-weight:850;font-stretch:112%;font-size:13pt;line-height:1.08;letter-spacing:-.01em}
-.front .scan p small{display:block;margin-top:4pt;font-weight:700;font-stretch:100%;font-size:8.5pt;letter-spacing:0;line-height:1.3}
+.front h1 .m{display:inline;background:var(--white);padding:0 .05in;margin-left:-.05in;border-radius:.05in}
+.free{top:4.4in}
+.free b{display:block;font-weight:900;font-stretch:125%;font-size:76pt;line-height:.8;letter-spacing:-.04em}
+.free span{display:inline-block;margin-top:.1in;padding:.06in .16in .08in;border-radius:.11in;background:var(--ink);color:var(--white);font-weight:900;font-stretch:118%;font-size:22pt;line-height:1;letter-spacing:.02em;text-transform:uppercase;transform:rotate(-3deg);transform-origin:left center}
+.front .offer{top:6.28in}
+.front .offer p{font-weight:700;font-size:9.5pt;line-height:1.28}
+.front .offer strong{display:block;margin-top:.04in;font-weight:850;font-stretch:106%;font-size:11pt;line-height:1.2}
+.front .scan{top:7.06in;display:flex;align-items:center;gap:.16in}
+.front .scan .qrbox{width:2.06in;flex:none;padding:.14in;border-radius:.1in}
+.front .scan p{font-weight:900;font-stretch:112%;font-size:15pt;line-height:1.05;letter-spacing:-.01em}
+.front .scan p span{display:inline-block;background:var(--ink);color:var(--white);padding:0 .05in;border-radius:.04in}
+.front .scan p small{display:block;margin-top:.1in;font-weight:700;font-stretch:100%;font-size:8.5pt;letter-spacing:0;line-height:1.3}
 .front .band{top:9.2in}
-.front .phone{top:9.62in;color:var(--white)}
+.front .phone{top:9.58in;color:var(--white)}
 .front .phone small{display:block;font-weight:800;font-stretch:112%;font-size:9.5pt;text-transform:uppercase;letter-spacing:.04em;color:var(--teal)}
 .front .phone b{display:block;font-weight:900;font-stretch:108%;font-size:31pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
-.front .towns{top:10.38in;color:var(--ink-soft);font-weight:700;font-size:8pt;line-height:1.38}
+.front .towns{top:10.3in;color:var(--ink-soft);font-weight:700;font-size:8pt;line-height:1.38}
 .towns span{white-space:nowrap}
 
 /* ---------- BACK (white) ---------- */
 .back h2{top:2.6in;font-weight:900;font-stretch:118%;font-size:24pt;line-height:.92;letter-spacing:-.035em}
 .back h2 span{display:block}
 .back h2 .t{color:var(--teal-deep)}
-.steps{top:3.42in;list-style:none;counter-reset:s}
-.steps li{display:flex;align-items:center;gap:.14in;padding:.07in 0;border-top:2px solid var(--ink);font-weight:800;font-stretch:108%;font-size:11.5pt;line-height:1.15;counter-increment:s}
-.steps li::before{content:counter(s);display:grid;place-content:center;width:.3in;height:.3in;flex:none;border-radius:50%;background:var(--teal);font-weight:900;font-stretch:118%;font-size:11pt}
+.steps{top:3.32in;list-style:none;counter-reset:s}
+.steps li{display:flex;align-items:center;gap:.14in;padding:.055in 0;border-top:2px solid var(--ink);font-weight:800;font-stretch:108%;font-size:11.5pt;line-height:1.15;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-content:center;width:.27in;height:.27in;flex:none;border-radius:50%;background:var(--teal);font-weight:900;font-stretch:118%;font-size:10.5pt}
 .steps li:last-child{border-bottom:2px solid var(--ink)}
 .steps li:last-child::before{background:var(--ink);color:var(--teal)}
-.note-card{top:5.42in;padding:.1in .14in .14in;border:3px solid var(--ink);border-radius:.17in;background:var(--white);box-shadow:.08in .08in 0 var(--teal)}
+.note-card{top:5.08in;padding:.1in .14in .14in;border:3px solid var(--ink);border-radius:.17in;background:var(--white);box-shadow:.08in .08in 0 var(--teal)}
 .note-card h3{font-weight:900;font-stretch:118%;font-size:11pt;letter-spacing:-.01em;line-height:1}
 .write .row{display:flex;gap:.2in}
-.write .line{flex:1;display:flex;align-items:flex-end;gap:.08in;height:.36in;border-bottom:1.2px solid var(--ink);font-weight:800;font-stretch:110%;font-size:9pt;padding-bottom:2pt}
+.write .line{flex:1;display:flex;align-items:flex-end;gap:.08in;height:.34in;border-bottom:1.2px solid var(--ink);font-weight:800;font-stretch:110%;font-size:9pt;padding-bottom:2pt}
 .write .line.blank{border-bottom-color:oklch(17% .01 230 / .55)}
-.back .svc{top:7.22in}
+.back .svc{top:6.7in}
 .svc h3{font-weight:900;font-stretch:118%;font-size:14pt;letter-spacing:-.02em;line-height:1}
 .svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:.07in;margin-top:.1in}
 .svc li{padding:.055in .08in;border:2px solid var(--ink);border-radius:.1in;font-weight:850;font-stretch:110%;font-size:9.5pt;line-height:1.05;white-space:nowrap}
 .svc li.top{background:var(--ink);color:var(--white)}
 .svc li.top em{font-style:normal;color:var(--teal)}
-.back .trust{top:8.66in;font-weight:700;font-size:8.5pt;line-height:1.35}
-.back .band{top:9.12in}
-.back .contact{top:9.52in;display:flex;align-items:center;justify-content:space-between;gap:.14in;color:var(--white)}
-.back .contact small{display:block;font-weight:800;font-stretch:112%;font-size:8.5pt;text-transform:uppercase;letter-spacing:.04em;color:var(--teal)}
-.back .contact b{display:block;font-weight:900;font-stretch:108%;font-size:22pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
-.back .contact p{margin-top:4pt;font-size:8.5pt;font-weight:700;color:var(--ink-soft)}
-.back .contact .qrbox{width:.86in;flex:none;padding:.07in}
-.back .lic{top:10.64in;font-size:8pt;font-weight:600;color:var(--ink-soft)}
+.back .trust{top:8.08in;font-weight:700;font-size:8.5pt;line-height:1.35}
+.back .band{top:8.44in}
+.back .contact{top:8.82in;display:flex;align-items:center;justify-content:space-between;gap:.12in;color:var(--white)}
+.back .contact .go{font-weight:900;font-stretch:112%;font-size:17pt;line-height:1;letter-spacing:-.015em}
+.back .contact small{display:block;margin-top:.1in;font-weight:800;font-stretch:112%;font-size:8.5pt;text-transform:uppercase;letter-spacing:.04em;color:var(--teal)}
+.back .contact b{display:block;font-weight:900;font-stretch:108%;font-size:18pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.back .contact .more{margin-top:5pt;font-size:8.5pt;font-weight:700;line-height:1.3;color:var(--ink-soft)}
+.back .contact .qrbox{width:1.52in;flex:none;padding:.12in}
+.back .lic{top:10.56in;font-size:8pt;font-weight:600;color:var(--ink-soft)}
 
 .note{max-width:4.5in;margin:0 auto 40px;padding:12px 14px;border-radius:10px;background:#fff;font:14px/1.45 system-ui,sans-serif;color:#222}
 @media print{
@@ -115,15 +119,18 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
   <section class="sheet front" aria-label="Door hanger 3, front">
     <div class="die" aria-hidden="true"></div>
     <div class="abs x brand"><span class="badge"><img src="mark-print.png" width="240" height="160" alt="Pacific Plumbing orca logo"><span><b>Pacific<br>Plumbing</b><small>Bellingham, WA</small></span></span></div>
-    <h1 class="abs x"><span>Bellingham's</span><span class="m"><span>owner-run</span></span><span>plumber.</span></h1>
-    <div class="abs x free"><b>FREE</b><span>Estimate</span></div>
-    <p class="abs x offer">Know the full price before any work starts.<br>Asking costs nothing.</p>
+    <h1 class="abs x"><span>Bellingham's</span><span><span class="m">owner-run</span> plumber.</span></h1>
+    <div class="abs x free"><b>FREE</b><span>Plumbing<br>check-up</span></div>
+    <div class="abs x offer">
+      <p>We look at your pipes, water heater, drains and shut-off valves, and tell you what we find. No charge, no pressure.</p>
+      <strong>Free estimate on any repair.</strong>
+    </div>
     <div class="abs x scan">
-      <div class="qrbox"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
-      <p>Scan for a free estimate<small>The owner does the work.<br>Licensed, bonded &amp; insured.</small></p>
+      <div class="qrbox"><img src="../qr-dh3.svg" alt="QR code: book a free plumbing check-up online"></div>
+      <p>Scan to book your <span>FREE</span> check-up<small>The owner does the work.<br>Licensed, bonded<br>&amp; insured.</small></p>
     </div>
     <div class="band"></div>
-    <div class="abs x phone"><small>Call the owner</small><b>(360) 318-6219</b></div>
+    <div class="abs x phone"><small>Or call the owner</small><b>(360) 318-6219</b></div>
     <p class="abs x towns"><span>Bellingham ·</span> <span>Ferndale ·</span> <span>Lynden ·</span> <span>Blaine ·</span> <span>Mount Vernon ·</span> <span>Burlington ·</span> <span>Sedro-Woolley ·</span> <span>Anacortes</span></p>
     <div class="guide trim"></div><div class="guide safe"></div>
   </section>
@@ -132,12 +139,12 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
   <section class="sheet back" aria-label="Door hanger 3, back">
     <div class="wave-top"></div>
     <div class="die on-white" aria-hidden="true"></div>
-    <h2 class="abs x"><span>How the free</span><span class="t">estimate works</span></h2>
+    <h2 class="abs x"><span>How the free</span><span class="t">check-up works</span></h2>
     <ol class="abs x steps">
-      <li>Call, or scan and send a request.</li>
-      <li>We come out and look at the job.</li>
-      <li>You get the full price before any work.</li>
-      <li>Yes or no. Asking costs nothing.</li>
+      <li>Scan to book, or call the owner.</li>
+      <li>We come out and do the check-up.</li>
+      <li>We tell you what we find. No charge.</li>
+      <li>Need a repair? Free estimate first.</li>
     </ol>
     <div class="abs x note-card write">
       <h3>Sorry we missed you</h3>
@@ -158,8 +165,8 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
     <p class="abs x trust">Licensed, bonded &amp; insured. Owner-operated. Price agreed before work starts. Clean-up included.</p>
     <div class="band"></div>
     <div class="abs x contact">
-      <div><small>Call the owner</small><b>(360) 318-6219</b><p>Free estimate. Call or scan.</p></div>
-      <div class="qrbox"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
+      <div><p class="go">Scan to book</p><small>or call</small><b>(360) 318-6219</b><p class="more">Free check-up.<br>Free estimate on any repair.</p></div>
+      <div class="qrbox"><img src="../qr-dh3.svg" alt="QR code: book a free plumbing check-up online"></div>
     </div>
     <p class="abs x lic">WA contractor license #: added before launch</p>
     <div class="guide trim"></div><div class="guide safe"></div>

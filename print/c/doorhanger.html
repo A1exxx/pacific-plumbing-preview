@@ -48,50 +48,55 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
 .qrbox img{display:block;width:100%;height:auto}
 
 /* ---------- FRONT ---------- */
-.front .top{height:4.62in}
-.front .brand{top:4.2in;display:flex;z-index:2}
+.front .top{height:4.42in}
+.front .brand{top:4.04in;display:flex;z-index:2}
 .front .badge{box-shadow:0 .06in .14in -.05in oklch(17% .01 230 / .45)}
 .front h1{top:2.62in;color:var(--white);font-weight:900;font-stretch:118%;font-size:35pt;line-height:.9;letter-spacing:-.035em}
 .front h1 span{display:block}
 .front h1 .t{color:var(--teal)}
-.front .band{top:6.66in}
-.front .photo{left:0;right:0;top:4.62in;height:2.5in;overflow:hidden}
-.front .photo img{width:100%;height:100%;object-fit:cover;object-position:46% 40%}
-.front .sticker{right:.36in;top:4.06in;width:1.42in;height:1.42in;font-size:11pt}
+.front .band{top:5.92in}
+.front .photo{left:0;right:0;top:4.42in;height:1.86in;overflow:hidden}
+.front .photo img{width:100%;height:100%;object-fit:cover;object-position:46% 36%}
+.front .sticker{right:.36in;top:3.86in;width:1.42in;height:1.42in;font-size:10.5pt}
 .front .sticker span{font-size:29pt}
-.front .offer{top:7.4in;font-weight:800;font-stretch:106%;font-size:11.5pt;line-height:1.22}
-.front .phone{top:7.98in}
+.front .offer{top:6.3in}
+.front .offer b{display:block;font-weight:900;font-stretch:118%;font-size:17pt;line-height:1;letter-spacing:-.025em}
+.front .offer p{margin-top:.05in;font-weight:650;font-size:10pt;line-height:1.25}
+.front .offer strong{display:block;margin-top:.04in;font-weight:850;font-stretch:106%;font-size:11pt;line-height:1.2}
+.front .scan{top:7.42in;display:flex;align-items:center;gap:.16in}
+.front .scan .qrbox{width:2.06in;flex:none;padding:.14in;border-radius:.1in}
+.front .scan p{font-weight:900;font-stretch:112%;font-size:15pt;line-height:1.05;letter-spacing:-.01em}
+.front .scan p span{display:inline-block;background:var(--ink);color:var(--white);padding:0 .05in;border-radius:.04in}
+.front .phone{top:9.62in}
 .front .phone small{display:block;font-weight:800;font-stretch:112%;font-size:10pt;text-transform:uppercase;letter-spacing:.04em}
 .front .phone b{display:block;font-weight:900;font-stretch:108%;font-size:30pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
-.front .scan{top:8.84in;display:flex;align-items:center;gap:.16in}
-.front .scan .qrbox{width:1.18in;flex:none}
-.front .scan p{font-weight:850;font-stretch:112%;font-size:13pt;line-height:1.08;letter-spacing:-.01em}
-.front .towns{top:10.22in;font-weight:700;font-size:9pt;line-height:1.4}
+.front .towns{top:10.42in;font-weight:700;font-size:9pt;line-height:1.4}
 .towns span{white-space:nowrap}
 
 /* ---------- BACK ---------- */
-.back .top{height:4.2in}
+.back .top{height:4.02in}
 .back h2.sorry{top:2.62in;color:var(--white);font-weight:900;font-stretch:118%;font-size:30pt;line-height:.92;letter-spacing:-.035em}
 .back h2.sorry .t{color:var(--teal)}
-.back .sorry-sub{top:3.62in;color:oklch(88% .01 230);font-size:9.5pt;line-height:1.35}
-.back .write{top:4.42in}
+.back .sorry-sub{top:3.5in;color:oklch(88% .01 230);font-size:9.5pt;line-height:1.35}
+.back .write{top:4.16in}
 .write .row{display:flex;gap:.2in}
-.write .line{flex:1;display:flex;align-items:flex-end;gap:.08in;height:.38in;border-bottom:1.2px solid var(--ink);font-weight:800;font-stretch:110%;font-size:9pt;padding-bottom:2pt}
+.write .line{flex:1;display:flex;align-items:flex-end;gap:.08in;height:.35in;border-bottom:1.2px solid var(--ink);font-weight:800;font-stretch:110%;font-size:9pt;padding-bottom:2pt}
 .write .line.blank{border-bottom-color:oklch(17% .01 230 / .55)}
-.back .svc{top:6.66in}
+.back .svc{top:6.08in}
 .svc h3{font-weight:900;font-stretch:118%;font-size:15pt;letter-spacing:-.02em;line-height:1;margin-bottom:.08in}
 .svc ol{list-style:none;display:grid}
-.svc li{display:flex;align-items:baseline;gap:.12in;padding:.055in 0;border-top:2px solid var(--ink);font-weight:850;font-stretch:112%;font-size:12.5pt;line-height:1.1;letter-spacing:-.01em}
+.svc li{display:flex;align-items:baseline;gap:.12in;padding:.045in 0;border-top:2px solid var(--ink);font-weight:850;font-stretch:112%;font-size:12pt;line-height:1.1;letter-spacing:-.01em}
 .svc li i{font-style:normal;font-weight:900;font-stretch:118%;font-size:9pt;color:var(--teal-deep);width:.22in;flex:none}
 .svc li em{margin-left:auto;font-style:normal;font-size:8pt;font-weight:800;text-transform:uppercase;letter-spacing:.03em;background:var(--teal);padding:1pt 4pt;border-radius:3pt}
-.back .trust{top:8.98in;font-weight:700;font-size:8.5pt;line-height:1.35}
-.back .band{top:9.42in}
-.back .contact{top:9.76in;display:flex;align-items:center;justify-content:space-between;gap:.14in}
-.back .contact small{display:block;font-weight:800;font-stretch:112%;font-size:8.5pt;text-transform:uppercase;letter-spacing:.04em}
-.back .contact b{display:block;font-weight:900;font-stretch:108%;font-size:21pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
-.back .contact p{margin-top:3pt;font-size:8.5pt;font-weight:700}
-.back .contact .qrbox{width:.86in;flex:none;padding:.07in}
-.back .lic{top:10.62in;font-size:8pt;font-weight:600}
+.back .trust{top:7.98in;font-weight:700;font-size:8.5pt;line-height:1.35}
+.back .band{top:8.4in}
+.back .contact{top:8.8in;display:flex;align-items:center;justify-content:space-between;gap:.12in}
+.back .contact .go{font-weight:900;font-stretch:112%;font-size:17pt;line-height:1;letter-spacing:-.015em}
+.back .contact small{display:block;margin-top:.1in;font-weight:800;font-stretch:112%;font-size:8.5pt;text-transform:uppercase;letter-spacing:.04em}
+.back .contact b{display:block;font-weight:900;font-stretch:108%;font-size:18pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.back .contact .more{margin-top:5pt;font-size:8.5pt;font-weight:700;line-height:1.3}
+.back .contact .qrbox{width:1.52in;flex:none;padding:.12in}
+.back .lic{top:10.5in;font-size:8pt;font-weight:600}
 
 .note{max-width:4.5in;margin:0 auto 40px;padding:12px 14px;border-radius:10px;background:#fff;font:14px/1.45 system-ui,sans-serif;color:#222}
 @media print{
@@ -115,13 +120,17 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
     <h1 class="abs x"><span>Real fix.</span><span>Fair price.</span><span class="t">Local.</span></h1>
     <figure class="abs photo"><img src="../../img/hero-1536.webp" width="1536" height="1024" alt=""></figure>
     <div class="band"></div>
-    <div class="sticker"><span>Free</span>estimate</div>
-    <p class="abs x offer">Know the full price before any work starts.<br>Asking costs nothing.</p>
-    <div class="abs x phone"><small>Call the owner</small><b>(360) 318-6219</b></div>
-    <div class="abs x scan">
-      <div class="qrbox"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
-      <p>Scan to request a free estimate</p>
+    <div class="sticker"><span>Free</span>check-up</div>
+    <div class="abs x offer">
+      <b>Free plumbing check-up</b>
+      <p>We look at your pipes, water heater, drains and shut-off valves, and tell you what we find. No charge, no pressure.</p>
+      <strong>Free estimate on any repair.</strong>
     </div>
+    <div class="abs x scan">
+      <div class="qrbox"><img src="../qr-dh1.svg" alt="QR code: book a free plumbing check-up online"></div>
+      <p>Scan to book your <span>FREE</span> check-up</p>
+    </div>
+    <div class="abs x phone"><small>Or call the owner</small><b>(360) 318-6219</b></div>
     <p class="abs x towns"><span>Bellingham ·</span> <span>Ferndale ·</span> <span>Lynden ·</span> <span>Blaine ·</span> <span>Mount Vernon ·</span> <span>Burlington ·</span> <span>Sedro-Woolley ·</span> <span>Anacortes</span></p>
     <div class="guide trim"></div><div class="guide safe"></div>
   </section>
@@ -131,7 +140,7 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
     <div class="top"></div>
     <div class="die" aria-hidden="true"></div>
     <h2 class="abs x sorry">Sorry we<br><span class="t">missed you.</span></h2>
-    <p class="abs x sorry-sub">We stopped by about your plumbing. Call us back, or scan the code below to request a free estimate.</p>
+    <p class="abs x sorry-sub">We stopped by about your plumbing. Scan the code below to book a free check-up, or call us back.</p>
     <div class="abs x write">
       <div class="row"><span class="line">Date</span><span class="line">Time</span></div>
       <div class="row"><span class="line">Notes</span></div>
@@ -152,8 +161,8 @@ body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;co
     <p class="abs x trust">Licensed, bonded &amp; insured. Owner-operated. Price agreed before work starts. Clean-up included.</p>
     <div class="band"></div>
     <div class="abs x contact">
-      <div><small>Call</small><b>(360) 318-6219</b><p>Free estimate. Scan or call.</p></div>
-      <div class="qrbox"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
+      <div><p class="go">Scan to book</p><small>or call</small><b>(360) 318-6219</b><p class="more">Free check-up.<br>Free estimate on any repair.</p></div>
+      <div class="qrbox"><img src="../qr-dh1.svg" alt="QR code: book a free plumbing check-up online"></div>
     </div>
     <p class="abs x lic">WA contractor license #: added before launch</p>
     <div class="guide trim"></div><div class="guide safe"></div>

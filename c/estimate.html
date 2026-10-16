@@ -78,6 +78,7 @@
             <label for="f-service">Kind of job <small>(optional)</small></label>
             <select id="f-service" name="service">
               <option value="">Not sure yet</option>
+              <option value="checkup">Free plumbing check-up</option>
               <option value="repipe">Whole-home repiping</option>
               <option value="drains">Drain cleaning</option>
               <option value="water-heaters">Water heater</option>
@@ -172,9 +173,22 @@
    Preselect the job type and prefill the problem box; app.js only knows some of these keys. */
 (function () {
   var s = new URLSearchParams(location.search).get('service');
-  var topics = { repipe: 'Repipe quote: ', drains: 'Clogged drain: ', 'water-heaters': 'Water heater: ', leaks: 'Possible leak: ', repairs: 'Repair: ' };
+  var topics = { checkup: 'Free plumbing check-up. ', repipe: 'Repipe quote: ', drains: 'Clogged drain: ', 'water-heaters': 'Water heater: ', leaks: 'Possible leak: ', repairs: 'Repair: ' };
   var sel = document.getElementById('f-service');
   var issue = document.getElementById('f-issue');
+  if (s === 'checkup') {
+    var h = document.querySelector('.est-head h1');
+    if (h) h.innerHTML = '<span>Your free</span><span class="t">plumbing</span><span class="t">check-up.</span>';
+    var st = document.querySelector('.est-head .sticker');
+    if (st) st.innerHTML = '<span>Free</span>check-up';
+    var fh = document.querySelector('.form h2');
+    if (fh) fh.textContent = 'Book your free check-up';
+    var lead = document.querySelector('.est-head p');
+    if (lead) lead.textContent = 'We look at your pipes, water heater, drains and shut-off valves, and tell you what we find. No charge, no pressure. Free estimate on any repair.';
+    var b = document.querySelector('form [type="submit"]');
+    if (b) b.textContent = 'Book my free check-up';
+    document.title = 'Free plumbing check-up in Bellingham | Pacific Plumbing';
+  }
   if (topics[s]) {
     sel.value = s;
     if (!issue.value) issue.value = topics[s];
