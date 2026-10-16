@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business card · Direction C · Pacific Plumbing</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+/* US business card: trim 3.5 x 2 in + 0.125 in bleed = 3.75 x 2.25 in page. Safe zone: 0.125 in inside the trim (0.25 in from the page edge). */
+@page{size:3.75in 2.25in;margin:0}
+:root{
+  --white:oklch(98.6% 0.004 200);
+  --ink:oklch(17% 0.01 230);
+  --ink-2:oklch(36% 0.012 230);
+  --ink-soft:oklch(86% 0.01 230);
+  --teal:oklch(72% 0.13 200);
+  --teal-deep:oklch(46% 0.09 205);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;color:var(--ink);font-stretch:100%}
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;padding:32px 16px}
+.sheet{position:relative;width:3.75in;height:2.25in;overflow:hidden;background:var(--white);box-shadow:0 20px 50px -20px oklch(17% .01 230 / .5);break-after:page;page-break-after:always}
+.sheet:last-child{break-after:auto;page-break-after:auto}
+.abs{position:absolute}
+.x{left:.25in;right:.25in}
+.guide{position:absolute;pointer-events:none;z-index:20}
+.guide.trim{inset:.125in;outline:1px dashed oklch(60% .25 330)}
+.guide.safe{inset:.25in;outline:1px dotted oklch(65% .15 200)}
+.wave{position:absolute;left:0;right:0;bottom:0;clip-path:path("M0,10 C40,0 80,20 120,10 C160,0 200,20 240,10 C280,0 320,20 360,10 L360,3000 L0,3000 Z")}
+
+/* ---------- FRONT (ink) ---------- */
+.front{background:var(--ink);color:var(--white)}
+.front .brand{top:.4in;display:flex;align-items:center;gap:.14in}
+.front .badge{display:block;flex:none;padding:.05in .07in;border-radius:.1in;background:var(--white);line-height:0}
+.front .badge img{width:.96in;height:auto}
+.front .brand b{display:block;font-weight:900;font-stretch:118%;font-size:22pt;line-height:.92;letter-spacing:-.03em}
+.front .brand b span{display:block}
+.front .brand b .t{color:var(--teal)}
+.front .tag{top:1.42in;font-weight:700;font-stretch:106%;font-size:8pt;letter-spacing:.01em;color:var(--ink-soft)}
+.front .wave{top:1.8in;background:var(--teal)}
+
+/* ---------- BACK (white) ---------- */
+.back .top{top:.27in;display:flex;justify-content:space-between;align-items:flex-start;gap:.14in}
+.back .chip{display:inline-block;padding:1.5pt 5pt;border-radius:3pt;background:var(--teal);font-weight:800;font-stretch:112%;font-size:7.5pt;letter-spacing:.04em;text-transform:uppercase;line-height:1.2}
+.back .phone{display:block;margin-top:.05in;font-weight:900;font-stretch:108%;font-size:19.5pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.back .web{display:block;margin-top:.06in;font-weight:800;font-stretch:104%;font-size:9pt;line-height:1.1}
+.back .trust{display:block;margin-top:.04in;font-weight:600;font-size:7.5pt;line-height:1.25;color:var(--ink-2)}
+.back .qrbox{flex:none;width:.72in;padding:.05in;border-radius:.07in;background:#fff;box-shadow:0 0 0 1.5px var(--ink);line-height:0}
+.back .qrbox img{display:block;width:100%;height:auto}
+.back .rule{top:1.4in;height:2px;background:var(--ink)}
+.back .towns{top:1.47in;font-weight:700;font-size:7pt;line-height:1.3}
+.towns span{white-space:nowrap}
+.back .lic{top:1.82in;font-weight:600;font-size:7pt;line-height:1.1;color:var(--ink-2)}
+
+.note{max-width:3.75in;margin:0 auto 40px;padding:12px 14px;border-radius:10px;background:#fff;font:14px/1.45 system-ui,sans-serif;color:#222}
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .sheet{box-shadow:none;margin:0}
+  .guide,.note{display:none}
+}
+</style>
+</head>
+<body>
+<div class="sheets">
+
+  <!-- FRONT -->
+  <section class="sheet front" aria-label="Business card, front">
+    <div class="abs x brand">
+      <span class="badge"><img src="mark-print.png" width="240" height="160" alt="Pacific Plumbing orca logo"></span>
+      <b><span>Pacific</span><span class="t">Plumbing</span></b>
+    </div>
+    <p class="abs x tag">Owner-operated · Bellingham, WA</p>
+    <div class="wave"></div>
+    <div class="guide trim"></div><div class="guide safe"></div>
+  </section>
+
+  <!-- BACK -->
+  <section class="sheet back" aria-label="Business card, back">
+    <div class="abs x top">
+      <div>
+        <span class="chip">Free estimates</span>
+        <b class="phone">(360) 318-6219</b>
+        <span class="web">pacificplumbingwa.com</span>
+        <span class="trust">Licensed, bonded &amp; insured</span>
+      </div>
+      <div class="qrbox"><img src="../qr-flyer.svg" alt="QR code: request a free estimate"></div>
+    </div>
+    <div class="abs x rule"></div>
+    <p class="abs x towns"><span>Bellingham ·</span> <span>Ferndale ·</span> <span>Lynden ·</span> <span>Blaine ·</span> <span>Mount Vernon ·</span> <span>Burlington ·</span> <span>Sedro-Woolley ·</span> <span>Anacortes</span></p>
+    <p class="abs x lic">WA contractor license #: added before launch</p>
+    <div class="guide trim"></div><div class="guide safe"></div>
+  </section>
+</div>
+
+<p class="note">Print: Chrome → Save as PDF, Margins none, Background graphics on. On screen: pink dashes show the trim, blue dots the safe zone (guides are hidden when printing).</p>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flyer 2 · Price first · Direction C · Pacific Plumbing</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+/* Variant 2 "Price first". Half-letter flyer: trim 5.5 x 8.5 in + 0.125 in bleed = 5.75 x 8.75 in page. Safe zone: 0.375 in from the page edge. */
+@page{size:5.75in 8.75in;margin:0}
+:root{
+  --white:oklch(98.6% 0.004 200);
+  --ink:oklch(17% 0.01 230);
+  --ink-2:oklch(36% 0.012 230);
+  --ink-soft:oklch(86% 0.01 230);
+  --teal:oklch(72% 0.13 200);
+  --teal-deep:oklch(46% 0.09 205);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:oklch(88% .01 220);font-family:"Archivo",system-ui,sans-serif;color:var(--ink);font-stretch:100%}
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;padding:32px 16px}
+.sheet{position:relative;width:5.75in;height:8.75in;overflow:hidden;background:var(--white);box-shadow:0 20px 50px -20px oklch(17% .01 230 / .5);break-after:page;page-break-after:always}
+.sheet:last-child{break-after:auto;page-break-after:auto}
+.abs{position:absolute}
+.x{left:.375in;right:.375in}
+.guide{position:absolute;pointer-events:none;z-index:20}
+.guide.trim{inset:.125in;outline:1px dashed oklch(60% .25 330)}
+.guide.safe{inset:.375in;outline:1px dotted oklch(65% .15 200)}
+
+/* waves: same curve as variant 1, flipped with scaleY(-1) when the wave is a bottom edge */
+.wave{position:absolute;left:0;right:0;clip-path:path("M0,24 C92,0 184,48 276,24 C368,0 460,48 552,24 L552,3000 L0,3000 Z")}
+.wave.flip{transform:scaleY(-1)}
+.badge{display:inline-flex;align-items:center;gap:.1in;padding:.07in .16in .07in .08in;border-radius:.12in;background:var(--white)}
+.badge img{width:.82in;height:auto}
+.badge b{display:block;font-weight:850;font-stretch:112%;font-size:14.5pt;line-height:.98;letter-spacing:-.01em}
+.badge small{display:block;margin-top:2pt;font-size:8pt;font-weight:600;color:var(--ink-2)}
+.qrbox{background:#fff;border-radius:.08in;padding:.085in;line-height:0}
+.qrbox img{display:block;width:100%;height:auto}
+
+/* ring sticker, as on the website hero */
+.ring{position:absolute;z-index:4;border-radius:50%;background:var(--teal);color:var(--ink);display:grid;place-content:center;text-align:center;transform:rotate(-10deg);border:.055in solid var(--white);box-shadow:0 .08in .18in -.06in oklch(17% .01 230 / .55)}
+.ring svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ring text{font-family:"Archivo",sans-serif;font-weight:800;font-stretch:112%;font-size:9.6px;letter-spacing:.04em;fill:var(--ink)}
+.ring .core{font-weight:900;font-stretch:118%;letter-spacing:-.02em;text-transform:uppercase;line-height:1}
+
+/* ---------- FRONT ---------- */
+.front .photo{left:0;right:0;top:2.98in;height:3.3in}
+.front .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+.front .teal{top:0;height:3.6in;z-index:1;background:var(--teal)}
+.front .white{top:5.92in;bottom:0;z-index:1;background:var(--white)}
+.front .brand{top:.375in;z-index:2;display:flex}
+.front h1{top:1.2in;z-index:2;font-weight:900;font-stretch:118%;font-size:47pt;line-height:.9;letter-spacing:-.035em}
+.front h1 span{display:block}
+.front .sub{top:2.6in;z-index:2;max-width:3.1in;font-size:10.5pt;line-height:1.32;font-weight:600}
+.front .ring{right:.4in;top:2.42in;width:1.66in;height:1.66in}
+.front .ring .core{font-size:23pt}
+.front .offer{top:6.28in;z-index:2;font-weight:800;font-stretch:106%;font-size:12pt;line-height:1.22}
+.front .phone{top:6.76in;z-index:2}
+.front .phone small{display:block;font-weight:800;font-stretch:112%;font-size:10pt;text-transform:uppercase;letter-spacing:.04em;color:var(--teal-deep)}
+.front .phone b{display:block;font-weight:900;font-stretch:110%;font-size:34pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.front .scan{top:7.44in;z-index:2;display:flex;align-items:center;gap:.16in}
+.front .scan .qrbox{width:.88in;flex:none;padding:.07in;box-shadow:0 0 0 2px var(--ink)}
+.front .scan p{font-weight:850;font-stretch:112%;font-size:12pt;line-height:1.1;letter-spacing:-.01em}
+.front .scan p small{display:block;margin-top:3pt;font-weight:600;font-stretch:100%;font-size:8.5pt;letter-spacing:0;color:var(--ink-2)}
+
+/* ---------- BACK ---------- */
+.back .head{top:.375in;display:flex;align-items:center;justify-content:space-between;gap:.2in}
+.back h2{font-weight:900;font-stretch:118%;font-size:25pt;line-height:.95;letter-spacing:-.035em}
+.back .head img{width:.72in;height:auto;flex:none}
+.back .lead{top:.84in;font-size:9.5pt;font-weight:600;line-height:1.3;color:var(--ink-2)}
+.pick{top:1.16in;padding:.04in .14in;border:3px solid var(--ink);border-radius:.17in;background:var(--white);box-shadow:.08in .08in 0 var(--teal);list-style:none}
+.pick li{display:flex;align-items:center;gap:.14in;padding:.085in 0;border-top:2px solid var(--ink)}
+.pick li:first-child{border-top:0}
+.pick .ic{display:grid;place-content:center;width:.4in;height:.4in;flex:none;border:2px solid var(--ink);border-radius:.1in;color:var(--teal-deep)}
+.pick .ic svg{width:.24in;height:.24in}
+.pick b{display:block;font-weight:850;font-stretch:110%;font-size:13pt;line-height:1.05;letter-spacing:-.01em}
+.pick b em{font-style:normal;margin-left:5pt;font-size:8pt;font-weight:800;text-transform:uppercase;letter-spacing:.03em;background:var(--teal);padding:1pt 4pt;border-radius:3pt;vertical-align:2pt}
+.pick span{display:block;margin-top:2pt;font-size:9pt;line-height:1.25;color:var(--ink-2)}
+.back .how{left:0;right:0;top:4.52in;height:.78in;background:var(--ink);color:var(--white);padding:.15in .375in 0;font-size:10pt;font-weight:600;line-height:1.35}
+.how b{font-weight:900;font-stretch:118%;letter-spacing:-.01em;color:var(--teal)}
+.back .area{top:5.46in}
+.area h3{font-weight:900;font-stretch:118%;font-size:12.5pt;letter-spacing:-.02em}
+.area .cols{display:grid;grid-template-columns:1fr 1fr;gap:.2in;margin-top:.08in}
+.area p{font-weight:800;font-stretch:112%;font-size:8.5pt;text-transform:uppercase;letter-spacing:.05em;color:var(--teal-deep)}
+.area ul{list-style:none;margin-top:.03in;font-weight:900;font-stretch:118%;font-size:17.5pt;line-height:1.04;letter-spacing:-.03em}
+.area li{white-space:nowrap}
+.area li.home span{background:var(--teal);padding:0 3pt;border-radius:3pt}
+.back .band{top:7.06in;bottom:0;background:var(--teal)}
+.back .contact{top:7.34in;display:flex;align-items:flex-end;justify-content:space-between;gap:.2in}
+.back .contact small{display:block;font-weight:800;font-stretch:112%;font-size:9pt;text-transform:uppercase;letter-spacing:.04em}
+.back .contact b{display:block;font-weight:900;font-stretch:110%;font-size:27pt;line-height:1;letter-spacing:-.02em;white-space:nowrap}
+.back .contact p{font-size:8.5pt;font-weight:700;line-height:1.35;text-align:right;white-space:nowrap}
+.back .lic{top:8.14in;font-size:8pt;font-weight:600}
+
+.note{max-width:5.75in;margin:0 auto 40px;padding:12px 14px;border-radius:10px;background:#fff;font:14px/1.45 system-ui,sans-serif;color:#222}
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .sheet{box-shadow:none;margin:0}
+  .guide,.note{display:none}
+}
+</style>
+</head>
+<body>
+<div class="sheets">
+
+  <!-- FRONT -->
+  <section class="sheet front" aria-label="Flyer 2, front">
+    <figure class="abs photo"><img src="../../img/hero-1536.webp" width="1536" height="1024" alt=""></figure>
+    <div class="wave flip teal"></div>
+    <div class="wave white"></div>
+    <div class="abs x brand"><span class="badge"><img src="mark-print.png" width="240" height="160" alt="Pacific Plumbing orca logo"><span><b>Pacific<br>Plumbing</b><small>Owner-operated · Bellingham, WA</small></span></span></div>
+    <h1 class="abs x"><span>Get the</span><span>price first.</span></h1>
+    <p class="abs x sub">Bellingham's owner-run plumber for leaks, drains, water heaters and whole-home repipes.</p>
+    <div class="ring" aria-label="Free estimate">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="ring-front" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#ring-front" textLength="292" lengthAdjust="spacing">FREE ESTIMATE · PRICE FIRST · OWNER ON SITE · </textPath></text></svg>
+      <span class="core">Free</span>
+    </div>
+    <p class="abs x offer">The estimate is free. You get the full price before any work starts, and you decide.</p>
+    <div class="abs x phone"><small>Call the owner</small><b>(360) 318-6219</b></div>
+    <div class="abs x scan">
+      <div class="qrbox"><img src="../qr-flyer.svg" alt="QR code: request a free estimate"></div>
+      <p>Scan for a free estimate<small>Or call. Same free estimate either way.</small></p>
+    </div>
+    <div class="guide trim"></div><div class="guide safe"></div>
+  </section>
+
+  <!-- BACK -->
+  <section class="sheet back" aria-label="Flyer 2, back">
+    <div class="abs x head">
+      <h2>What's going on?</h2>
+      <img src="mark-print.png" width="240" height="160" alt="Pacific Plumbing orca logo">
+    </div>
+    <p class="abs x lead">Find your problem. Then call or scan for a free estimate.</p>
+    <ul class="abs x pick">
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5s-6 6.6-6 10.7a6 6 0 0 0 12 0C18 10.1 12 3.5 12 3.5Z"/><path d="M9.2 14.6a2.9 2.9 0 0 0 2.6 2.6"/></svg></span><div><b>A leak</b><span>Found and fixed in walls, ceilings, floors and slabs.</span></div></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8 9.5h8M7.5 12h9M8 14.5h8"/></svg></span><div><b>Clogged drain</b><span>Sinks, tubs, toilets and main lines. No chemicals down the pipe.</span></div></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-3.6 0-6-2.4-6-5.8 0-3.9 3.6-5.7 4.1-10.2 3.2 2.1 7.9 5.6 7.9 10.2 0 3.4-2.4 5.8-6 5.8Z"/><path d="M12 21c-1.6 0-2.7-1.1-2.7-2.7 0-1.8 1.6-2.6 2.7-4.4 1.1 1.8 2.7 2.6 2.7 4.4 0 1.6-1.1 2.7-2.7 2.7Z"/></svg></span><div><b>No hot water</b><span>Water heater repair or replacement, tank and tankless.</span></div></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5h8a5 5 0 0 1 5 5v8"/><path d="M3.5 12h8a.5.5 0 0 1 .5.5v8"/><path d="M3.5 5.5v8.5M10.5 20.5h8"/></svg></span><div><b>Old pipes<em>Specialty</em></b><span>Whole-home repiping with PEX or copper, pressure tested.</span></div></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="18" cy="12" r="1.4"/></svg></span><div><b>Something else</b><span>Faucets, toilets, disposals, valves. Small jobs welcome.</span></div></li>
+    </ul>
+    <p class="abs how"><b>Free estimate:</b> we come out and look at the job, you get the full price before any work, and you say yes or no. Asking costs nothing.</p>
+    <div class="abs x area">
+      <h3>Where we work</h3>
+      <div class="cols">
+        <div><p>Whatcom County</p><ul><li class="home"><span>Bellingham</span></li><li>Ferndale</li><li>Lynden</li><li>Blaine</li></ul></div>
+        <div><p>Skagit County</p><ul><li>Mount Vernon</li><li>Burlington</li><li>Sedro-Woolley</li><li>Anacortes</li></ul></div>
+      </div>
+    </div>
+    <div class="wave band"></div>
+    <div class="abs x contact">
+      <div><small>Call the owner</small><b>(360) 318-6219</b></div>
+      <p>Licensed, bonded &amp; insured<br>Price agreed up front<br>Clean-up included</p>
+    </div>
+    <p class="abs x lic">WA contractor license #: added before launch</p>
+    <div class="guide trim"></div><div class="guide safe"></div>
+  </section>
+</div>
+
+<p class="note">Print: Chrome → Save as PDF, Margins none, Background graphics on. On screen: pink dashes show the trim, blue dots the safe zone (guides are hidden when printing).</p>
+</body>
+</html>
