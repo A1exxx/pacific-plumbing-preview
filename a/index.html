@@ -43,7 +43,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="preview">Design preview · Direction A · <a href="../directions/">see all directions</a></div>
+<div class="preview">Design preview · Option A · <a href="../choose/">see all options</a></div>
 
 <header class="site-head" data-header>
   <div class="wrap nav">
@@ -64,12 +64,20 @@
       </div>
       <aside class="ticket" aria-labelledby="tk-h">
         <div class="ticket-head"><b id="tk-h">FREE ESTIMATE</b><span class="stamp">$0 to ask</span></div>
+        <div class="pick">
+          <p class="pick-h"><b id="pick-h">What’s the problem?</b><span class="mono">Tap one</span></p>
+          <ul class="pick-list" aria-labelledby="pick-h">
+            <li><a href="estimate.html?service=leaks"><i aria-hidden="true"></i><span>A leak</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></li>
+            <li><a href="estimate.html?service=drains"><i aria-hidden="true"></i><span>Clogged drain</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></li>
+            <li><a href="estimate.html?service=water-heaters"><i aria-hidden="true"></i><span>No hot water</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></li>
+            <li><a href="estimate.html?service=repipe"><i aria-hidden="true"></i><span>Old pipes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></li>
+            <li class="wide"><a href="estimate.html"><i aria-hidden="true"></i><span>Something else</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></li>
+          </ul>
+        </div>
         <dl class="rows">
           <div><dt>Estimate</dt><dd>Free, before any work</dd></div>
           <div><dt>Who comes</dt><dd>The owner, not a call center</dd></div>
           <div><dt>Price</dt><dd>Yours to approve first</dd></div>
-          <div class="wide-only"><dt>Area</dt><dd>Bellingham to Anacortes</dd></div>
-          <div class="wide-only"><dt>Clean-up</dt><dd>Included</dd></div>
         </dl>
         <div class="ticket-foot">
           <a class="btn btn-primary" href="estimate.html">Get a free estimate</a>
@@ -78,7 +86,7 @@
       </aside>
       <figure class="photo hero-photo">
         <img src="../img/hands-1024.webp" srcset="../img/hands-640.webp 640w, ../img/hands-1024.webp 1024w" sizes="(min-width:900px) 1200px, 100vw" width="1024" height="1280" alt="Plumber's hands with a red pipe wrench on a steel toolbox" fetchpriority="high">
-        <figcaption class="tag mono">LICENSED · BONDED · INSURED</figcaption>
+        <figcaption class="owner"><i aria-hidden="true"></i><span><b>The owner does the work</b><span class="mono">Licensed, bonded &amp; insured</span></span></figcaption>
       </figure>
     </div>
   </section>

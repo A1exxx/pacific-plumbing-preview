@@ -127,9 +127,32 @@ svg.i{width:18px;height:18px;flex:none}
 .hero-body{padding-bottom:28px}
 .hero .place{text-shadow:0 1px 12px oklch(0% 0 0 / .55)}
 .hero .lede{margin-top:16px}
-.facts{display:grid;grid-template-columns:repeat(2, auto);justify-content:start;gap:8px 28px;margin:26px 0 0;padding:16px 0 0;border-top:1px solid oklch(100% 0 0 / .16);font-size:.86rem;color:var(--on-night-2)}
-.facts dd{margin:0}
-.facts b{display:block;color:var(--on-night);font:500 1.1rem/1.2 var(--serif)}
+.wide-only{display:none}
+
+/* problem picker: solid fog panel, thin copper rules, no blur */
+.pick{margin-top:22px;background:var(--fog);color:var(--ink);border-radius:14px;padding:16px 16px 4px;overflow:hidden;box-shadow:0 26px 50px -26px oklch(0% 0 0 / .8)}
+.pick-title{font:500 1.62rem/1.08 var(--serif);letter-spacing:-.012em}
+.pick-title em{font-style:italic;color:var(--copper-ink)}
+.pick-sub{margin-top:4px;font-size:.9rem;color:var(--ink-2)}
+.pick-list{--rule:oklch(56% .12 48 / .42);list-style:none;display:grid;grid-template-columns:1fr 1fr;margin-top:10px;border-top:1px solid var(--rule)}
+.pick-list li{border-bottom:1px solid var(--rule)}
+.pick-list li:nth-child(odd):not(.wide){border-right:1px solid var(--rule)}
+.pick-list li.wide{grid-column:1 / -1;border-bottom:0}
+.pick-list a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;padding:4px 6px 4px 0;font:500 1.14rem/1.15 var(--serif);text-decoration:none;transition:background-color .2s, color .2s}
+.pick-list li:nth-child(even) a{padding-left:12px}
+.pick-list a svg{width:16px;height:16px;flex:none;color:var(--copper-deep);transition:transform .25s var(--ease)}
+.pick-list a:hover{color:var(--copper-ink)}
+.pick-list a:hover span{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--copper)}
+.pick-list a:hover svg{transform:translateX(3px)}
+.pick-list a:active{background:var(--fog-2)}
+.pick-list a:focus-visible{outline-offset:-3px;border-radius:8px}
+
+/* owner line: logo seal, no face (no real photo of the owner yet) */
+.owner{display:flex;align-items:center;gap:12px;margin-top:18px;line-height:1.2}
+.owner .seal{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--night-2);box-shadow:inset 0 0 0 1px var(--copper)}
+.owner .seal img{width:31px}
+.owner b{display:block;font:500 1.14rem/1.2 var(--serif);color:var(--on-night)}
+.owner small{display:block;margin-top:3px;font-size:.86rem;color:var(--on-night-2)}
 
 /* ---------- Specialty + service index (home) ---------- */
 .spec{display:grid;background:var(--fog)}
@@ -307,13 +330,15 @@ svg.i{width:18px;height:18px;flex:none}
 .reveal.pre{opacity:0;transform:translateY(18px)}
 
 
-/* phones: photo sits on top, text on solid night below it */
+/* phones: photo band on top, text and picker on solid night below it */
 @media (max-width:899px){
-  .hero-img{height:52%;bottom:auto;object-position:50% 50%}
-  .hero::after{background:linear-gradient(180deg, oklch(19% .018 170 / .86) 0%, oklch(19% .018 170 / .55) 10%, oklch(19% .018 170 / .08) 20%, oklch(19% .018 170 / .12) 31%, oklch(19% .018 170 / .75) 42%, var(--night) 52%)}
+  .hero{display:block;min-height:0;padding-top:232px}
+  .hero-img{height:306px;bottom:auto;object-position:50% 50%}
+  .hero::after{background:linear-gradient(180deg, oklch(19% .018 170 / .86) 0px, oklch(19% .018 170 / .45) 62px, oklch(19% .018 170 / .04) 118px, oklch(19% .018 170 / .1) 170px, oklch(19% .018 170 / .72) 246px, var(--night) 306px)}
+  .hero .cta{display:none}
+  .hero .lede{margin-top:12px}
 }
 @media (max-width:599px){
-  .facts{display:none}
   .foot-tag{display:none}
   .foot-phone{font-size:1.8rem}
 }
@@ -337,12 +362,27 @@ svg.i{width:18px;height:18px;flex:none}
   .phone{padding:4px 4px 4px 18px}
   .phone span{display:inline}
 
+  /* the house sits right of the headline: photo fills the right 70%, night on the left */
   .hero{min-height:min(92svh, 860px)}
+  .hero-img{left:auto;right:0;width:70%;object-position:58% 40%}
   .hero::after{background:
-    linear-gradient(90deg, oklch(19% .018 170 / .72) 0%, oklch(19% .018 170 / .45) 38%, oklch(19% .018 170 / 0) 66%),
-    linear-gradient(180deg, oklch(19% .018 170 / .8) 0%, oklch(19% .018 170 / .5) 11%, oklch(19% .018 170 / .12) 26%, oklch(19% .018 170 / .4) 55%, oklch(19% .018 170 / .92) 100%)}
-  .hero-body{padding-bottom:52px}
-  .facts{grid-template-columns:repeat(4, auto);gap:4px 44px}
+    linear-gradient(90deg, var(--night) 0%, var(--night) 31%, oklch(19% .018 170 / .55) 45%, oklch(19% .018 170 / 0) 64%),
+    linear-gradient(180deg, oklch(19% .018 170 / .78) 0%, oklch(19% .018 170 / .2) 14%, oklch(19% .018 170 / 0) 30%, oklch(19% .018 170 / .3) 62%, oklch(19% .018 170 / .9) 100%)}
+  .h1{font-size:clamp(3.4rem, 6.2vw, 5.4rem)}
+  .wide-only{display:inline}
+  .hero-body{display:grid;grid-template-columns:minmax(0, 1fr) auto;column-gap:40px;align-items:end;padding-bottom:40px}
+  .hero-copy{grid-column:1;grid-row:1}
+  .hero .lede{max-width:50ch}
+  .owner{grid-column:2;grid-row:1;align-self:end;margin:0 0 6px;padding:8px 22px 8px 8px;border-radius:999px;background:oklch(19% .018 170 / .9);border:1px solid oklch(100% 0 0 / .14)}
+  .pick{grid-column:1 / -1;grid-row:2;display:grid;grid-template-columns:auto 1fr;margin-top:40px;padding:0;border-radius:8px}
+  .pick-head{display:flex;flex-direction:column;justify-content:center;padding:18px 28px 18px 26px}
+  .pick-title{font-size:1.8rem;white-space:nowrap}
+  .pick-sub{white-space:nowrap}
+  .pick-list{grid-template-columns:repeat(4, 1fr) 1.25fr;margin:0;border-top:0}
+  .pick-list li, .pick-list li:nth-child(odd):not(.wide), .pick-list li.wide{grid-column:auto;border:0;border-left:1px solid var(--rule)}
+  .pick-list a, .pick-list li:nth-child(even) a{height:100%;min-height:92px;gap:10px;padding:12px 18px 12px 20px;font-size:1.3rem}
+  .pick-list a svg{width:18px;height:18px}
+  .pick-list a:hover{background:var(--paper)}
 
   .section{padding:104px 0}
   .spec{grid-template-columns:1fr 1fr}

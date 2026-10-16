@@ -56,29 +56,33 @@ body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
 .brandline{display:flex;align-items:baseline;justify-content:space-between;gap:.1in;padding-bottom:.08in;border-bottom:1.5px solid var(--ink)}
 .brandline b{font:700 21pt/1 var(--cond);letter-spacing:-.01em}
 .brandline span{font:500 8pt var(--mono);color:var(--ink-2);letter-spacing:.05em}
-.hook{font:700 35pt/.94 var(--cond);letter-spacing:-.02em;margin-top:.22in}
-.sub{font:500 12.5pt/1.3 var(--sans);margin-top:.1in}
-.offer{position:relative;margin-top:.3in;background:var(--orange);border:2px solid var(--ink);box-shadow:.06in .06in 0 var(--ink);padding:.16in .18in .14in;color:var(--orange-ink)}
-.offer b{display:block;font:700 56pt/.86 var(--cond);letter-spacing:-.01em;color:var(--ink)}
-.offer .line{display:block;margin-top:.1in;padding-top:.08in;border-top:1.5px dashed rgba(27,32,39,.55);font:600 9.5pt/1.3 var(--mono);color:var(--ink);letter-spacing:.02em}
-.offer .stamp{position:absolute;right:.16in;top:.2in;transform:rotate(-7deg);border:2.5px solid var(--ink);background:var(--paper);color:var(--ink);font:600 10pt/1 var(--mono);padding:.06in .08in;letter-spacing:.04em}
-.phone{margin-top:.32in}
+.hook{font:700 32pt/.94 var(--cond);letter-spacing:-.02em;margin-top:.2in}
+.offer{position:relative;margin-top:.24in;background:var(--orange);border:2px solid var(--ink);box-shadow:.06in .06in 0 var(--ink);padding:.13in .18in .12in;color:var(--ink)}
+.offer b{display:block;font:700 60pt/.82 var(--cond);letter-spacing:-.01em;color:var(--ink)}
+.offer b span{display:block;margin-top:.06in;font-size:25pt;line-height:1;letter-spacing:0;white-space:nowrap}
+.offer p{margin-top:.08in;font:500 9.5pt/1.3 var(--sans);color:var(--ink)}
+.offer .line{display:block;margin-top:.08in;padding-top:.07in;border-top:1.5px dashed rgba(27,32,39,.55);font:600 9.5pt/1.3 var(--mono);color:var(--ink);letter-spacing:.02em}
+.offer .stamp{position:absolute;right:.16in;top:.18in;transform:rotate(-7deg);border:2.5px solid var(--ink);background:var(--paper);color:var(--ink);font:600 10pt/1 var(--mono);padding:.06in .08in;letter-spacing:.04em}
+/* QR: code 1.75 in (front) / 1.25 in (back); the svg has no margin of its own, so the white padding is the quiet zone */
+.qr-row{display:flex;align-items:center;gap:.16in;margin-top:.26in}
+.qr{flex:none;background:#fff;border:1.5px solid var(--ink);padding:.14in;line-height:0}
+.qr img{display:block;width:1.75in;height:1.75in}
+.qr-row .go{display:block;font:700 18pt/1.16 var(--cond);letter-spacing:-.01em}
+.qr-row .go em{font-style:normal;background:var(--orange);border:1.5px solid var(--ink);padding:0 .04in}
+.qr-row .aim{display:block;font:500 8.5pt/1.35 var(--mono);color:var(--ink-2);margin-top:.1in;letter-spacing:.02em}
+.phone{margin-top:.22in;padding-top:.14in;border-top:1px solid var(--line)}
 .phone span{display:block;font:500 8.5pt var(--mono);color:var(--ink-2);letter-spacing:.06em}
-.phone b{display:block;font:700 39pt/1 var(--cond);letter-spacing:-.015em;margin-top:.03in;white-space:nowrap}
-.qr-row{display:flex;align-items:center;gap:.18in;margin-top:.26in;padding-top:.24in;border-top:1px solid var(--line)}
-.qr{flex:none;background:#fff;border:1.5px solid var(--ink);padding:.1in}
-.qr img{display:block;width:1.2in;height:1.2in}
-.qr-row b{display:block;font:700 15pt/1.1 var(--cond)}
-.qr-row span{display:block;font:400 8.5pt/1.35 var(--mono);color:var(--ink-2);margin-top:.05in}
+.phone b{display:block;font:700 38pt/1 var(--cond);letter-spacing:-.015em;margin-top:.03in;white-space:nowrap}
 .towns{margin-top:auto;font:500 8pt/1.5 var(--mono);color:var(--ink);letter-spacing:.02em;padding-top:.1in}
 .stubline{display:flex;justify-content:space-between;gap:.1in;margin-top:.12in;padding-top:.1in;border-top:1.5px dashed var(--ink);font:600 8pt var(--mono);letter-spacing:.05em}
 
 /* back */
 .sorry{font:700 32pt/.95 var(--cond);letter-spacing:-.02em}
-.ticket{margin-top:.2in;border:1.5px solid var(--ink);background:var(--paper)}
+.sorry-sub{margin-top:.1in;font:500 10pt/1.35 var(--sans);color:var(--ink)}
+.ticket{margin-top:.18in;border:1.5px solid var(--ink);background:var(--paper)}
 .ticket-h{display:flex;justify-content:space-between;align-items:center;padding:.07in .12in;border-bottom:1.5px dashed var(--line);font:600 8.5pt var(--mono);letter-spacing:.05em}
 .ticket-h em{font-style:normal;color:var(--orange-deep)}
-.wl{display:flex;align-items:flex-end;gap:.08in;height:.4in;padding:0 .12in .06in;font:500 9.5pt var(--sans);white-space:nowrap}
+.wl{display:flex;align-items:flex-end;gap:.08in;height:.38in;padding:0 .12in .06in;font:500 9.5pt var(--sans);white-space:nowrap}
 .wl i{flex:1;border-bottom:1px solid var(--ink);height:1px}
 .wl i.s{flex:.55}
 .callback{margin-top:.2in}
@@ -90,13 +94,16 @@ body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
 .svcs li{display:grid;grid-template-columns:.2in .3in 1fr;align-items:center;padding:.055in 0;border-bottom:1px solid var(--line);font:600 11pt/1.15 var(--cond)}
 .svcs li i{width:.13in;height:.13in;border:1.2px solid var(--ink);display:block}
 .svcs li .mono{font:500 8pt var(--mono);color:var(--ink-2)}
-.back-foot{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:.15in;padding-top:.14in;border-top:1.5px solid var(--ink)}
-.back-foot p{font:500 9pt/1.4 var(--sans);flex:1}
-.back-foot .mono{display:block;font:500 8pt/1.4 var(--mono);color:var(--ink-2);margin-top:.04in}
-.back-foot b{display:block;font:700 13pt/1.1 var(--cond);margin-bottom:.04in}
-.back-foot .qr{padding:.07in}
-.back-foot .qr img{width:.78in;height:.78in}
-.back-foot .qr-cap{font:500 8pt/1.3 var(--mono);text-align:center;margin-top:.04in;width:.95in}
+.back-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:.14in;padding-top:.16in;border-top:1.5px solid var(--ink)}
+.bf-text{flex:1;min-width:0}
+.bf-text .go{display:block;font:700 21pt/1 var(--cond);letter-spacing:-.01em}
+.bf-text .or{display:block;margin-top:.1in;font:500 8.5pt var(--mono);color:var(--ink-2);letter-spacing:.06em}
+.bf-text .num{display:block;margin-top:.02in;font:700 22pt/1 var(--cond);letter-spacing:-.015em;white-space:nowrap}
+.bf-text .more{margin-top:.1in;font:500 9pt/1.35 var(--sans)}
+.back-foot .qr{padding:.12in}
+.back-foot .qr img{width:1.25in;height:1.25in}
+.lic{margin-top:.12in;padding-top:.08in;border-top:1.5px dashed var(--ink);font:600 8pt/1.45 var(--mono);letter-spacing:.03em}
+.lic span{display:block;font-weight:500;color:var(--ink-2)}
 
 .note{font:400 13px/1.5 var(--mono);text-align:center;color:#1b2027;padding:0 16px 32px}
 @media print{
@@ -126,17 +133,17 @@ body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
       <div class="content">
         <div class="brandline"><b>Pacific Plumbing</b><span>BELLINGHAM · WA</span></div>
         <h1 class="hook">Leak, clog or<br>no hot water?</h1>
-        <p class="sub">Get the full price before any work starts.</p>
         <div class="offer">
-          <span class="stamp">$0 TO ASK</span>
-          <b>FREE<br>ESTIMATE</b>
-          <span class="line">PRICE AGREED BEFORE ANY WORK</span>
+          <span class="stamp">NO CHARGE</span>
+          <b>FREE<span>PLUMBING CHECK-UP</span></b>
+          <p>We look at your pipes, water heater, drains and shut-off valves, and tell you what we find. No pressure.</p>
+          <span class="line">FREE ESTIMATE ON ANY REPAIR</span>
         </div>
-        <div class="phone"><span>CALL THE OWNER</span><b>(360) 318-6219</b></div>
         <div class="qr-row">
-          <div class="qr"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div>
-          <p><b>Scan to request a free estimate</b><span>Or call the number above.</span></p>
+          <div class="qr"><img src="../qr-a-dh.svg" alt="QR code: book a free plumbing check-up"></div>
+          <p><span class="go">Scan to book your <em>FREE</em> check-up</span><span class="aim">Point your phone camera at the code.</span></p>
         </div>
+        <div class="phone"><span>OR CALL THE OWNER</span><b>(360) 318-6219</b></div>
         <p class="towns">Bellingham · Ferndale · Lynden · Blaine<br>Mount Vernon · Burlington · Sedro-Woolley · Anacortes</p>
         <div class="stubline"><span>LICENSED · BONDED · INSURED</span><span>OWNER-OPERATED</span></div>
       </div>
@@ -154,6 +161,7 @@ body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
 
       <div class="content">
         <h2 class="sorry">Sorry we<br>missed you.</h2>
+        <p class="sorry-sub">We stopped by about your plumbing. Scan the code below to book a free check-up, or call us back.</p>
         <div class="ticket">
           <p class="ticket-h"><span>VISIT LOG</span><em>FILLED IN BY HAND</em></p>
           <div class="wl"><span>We stopped by on</span><i></i><span>at</span><i class="s"></i></div>
@@ -163,7 +171,6 @@ body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
           <div class="wl"><i></i></div>
           <div class="wl"><span>Your plumber</span><i></i></div>
         </div>
-        <div class="callback"><span>CALL US BACK</span><b>(360) 318-6219</b></div>
         <div class="svcs">
           <h3>WHAT WE FIX</h3>
           <ol>
@@ -175,9 +182,15 @@ body{font-family:var(--sans);color:var(--ink);background:#c9ccc9}
           </ol>
         </div>
         <div class="back-foot">
-          <p><b>Free estimate on every job.</b>Licensed, bonded &amp; insured.<span class="mono">WA contractor license #: added before launch</span></p>
-          <div><div class="qr"><img src="../qr-doorhanger.svg" alt="QR code: request a free estimate"></div><p class="qr-cap">Scan for a free estimate</p></div>
+          <div class="bf-text">
+            <span class="go">Scan to book</span>
+            <span class="or">OR CALL</span>
+            <span class="num">(360) 318-6219</span>
+            <p class="more">Free plumbing check-up.<br>Free estimate on any repair.</p>
+          </div>
+          <div class="qr"><img src="../qr-a-dh.svg" alt="QR code: book a free plumbing check-up"></div>
         </div>
+        <p class="lic">LICENSED · BONDED · INSURED · OWNER-OPERATED<span>WA contractor license #: added before launch</span></p>
       </div>
     </div>
   </section>

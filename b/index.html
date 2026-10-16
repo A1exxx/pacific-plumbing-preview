@@ -49,7 +49,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="preview">Design preview · Direction B · <a href="../directions/">see all directions</a></div>
+<div class="preview">Design preview · Option B · <a href="../choose/">see all options</a></div>
 
 <header class="site-head is-over" data-header>
   <nav class="wrap nav" aria-label="Main">
@@ -76,19 +76,29 @@
   <section class="hero" aria-labelledby="hero-h">
     <img class="hero-img" src="../img/house-960.webp" srcset="../img/house-640.webp 640w, ../img/house-960.webp 960w, ../img/house-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="Craftsman house on a rainy evening, porch lights on" fetchpriority="high">
     <div class="wrap hero-body">
-      <p class="place">Bellingham, Washington</p>
-      <h1 class="h1" id="hero-h">The plumber for old houses and <em>new</em> problems.</h1>
-      <p class="lede">From a dripping valve to a full repipe of a 1920s craftsman. The estimate is free, the price comes first, and the owner does the work.</p>
-      <div class="cta">
-        <a class="btn" href="estimate.html">Get a free estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="link" href="tel:+13603186219">or call (360) 318-6219</a>
+      <div class="hero-copy">
+        <p class="place">Bellingham, Washington</p>
+        <h1 class="h1" id="hero-h">The plumber for old houses and <em>new</em> problems.</h1>
+        <p class="lede"><span class="wide-only">From a dripping valve to a full repipe of a 1920s craftsman. </span>The estimate is free, and you get the full price before any work starts.</p>
+        <div class="cta">
+          <a class="btn" href="estimate.html">Get a free estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="link" href="tel:+13603186219">or call (360) 318-6219</a>
+        </div>
       </div>
-      <dl class="facts">
-        <div><dt>Estimate</dt><dd><b>Free</b></dd></div>
-        <div><dt>Price</dt><dd><b>Before work</b></dd></div>
-        <div><dt>Who comes</dt><dd><b>The owner</b></dd></div>
-        <div><dt>Area</dt><dd><b>Whatcom &amp; Skagit</b></dd></div>
-      </dl>
+      <nav class="pick" aria-labelledby="pick-h">
+        <div class="pick-head">
+          <p class="pick-title" id="pick-h">What's <em>going on?</em></p>
+          <p class="pick-sub">Choose one to start a free estimate.</p>
+        </div>
+        <ul class="pick-list">
+          <li><a href="estimate.html?service=leaks"><span>A leak</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="estimate.html?service=drains"><span>Clogged drain</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="estimate.html?service=water-heaters"><span>No hot water</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="estimate.html?service=repipe"><span>Old pipes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li class="wide"><a href="estimate.html"><span>Something else</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        </ul>
+      </nav>
+      <p class="owner"><span class="seal" aria-hidden="true"><img src="../img/mark.png" width="240" height="160" alt=""></span><span><b>The owner does the work</b><small>Licensed, bonded &amp; insured</small></span></p>
     </div>
   </section>
 

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacific Plumbing: три варианта сайта</title>
+<meta name="description" content="Три варианта нового сайта и печатных материалов для Pacific Plumbing. Посмотрите и выберите один.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Pacific Plumbing: три варианта сайта и печати">
+<meta property="og:image" content="shots/c-index-desktop.webp">
+<link rel="icon" href="../img/favicon.png">
+<style>
+:root{--bg:oklch(97.6% .004 210);--card:oklch(99.7% .002 210);--ink:oklch(18% .012 230);--ink-2:oklch(42% .012 230);--line:oklch(18% .012 230 / .12);--teal:oklch(72% .13 200);--a:oklch(66% .19 45);--b:oklch(66% .12 52);--c:oklch(72% .13 200)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+.top{padding:22px 0 6px;display:flex;align-items:center;gap:12px}
+.top img{width:56px}
+.top b{font-size:1.05rem;line-height:1.15}
+.top small{display:block;color:var(--ink-2);font-weight:500}
+h1{font-size:clamp(1.7rem,6vw,2.7rem);line-height:1.06;letter-spacing:-.015em;margin:14px 0 0}
+.lead{margin:12px 0 0;color:var(--ink-2);max-width:62ch}
+.same{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.same li{padding:7px 12px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);font-size:.92rem;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;transition:transform .15s,background-color .2s}
+.btn:hover{background:oklch(28% .015 230)}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{background:oklch(94% .006 210)}
+.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 0}
+.nav a{display:grid;gap:2px;padding:12px;border-radius:12px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-weight:800;font-size:1.1rem}
+.nav a small{font-weight:500;font-size:.8rem;color:var(--ink-2);line-height:1.25}
+.opt{padding:34px 0 10px;scroll-margin-top:12px}
+.opt-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.letter{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;font-weight:900;font-size:1.6rem;color:var(--ink)}
+.a .letter{background:var(--a)} .b .letter{background:var(--b)} .c .letter{background:var(--c)}
+.opt h2{margin:0;font-size:clamp(1.35rem,4.6vw,1.9rem);letter-spacing:-.01em;line-height:1.1}
+.opt h2 small{display:block;font-size:.95rem;font-weight:500;color:var(--ink-2);letter-spacing:0;margin-top:3px}
+.feel{margin:12px 0 0;max-width:62ch;color:var(--ink-2)}
+.screens{display:grid;grid-template-columns:.42fr 1fr;gap:12px;margin:16px 0 0;align-items:start}
+.screens a{display:block;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 18px 40px -26px oklch(18% .012 230 / .45);background:#fff}
+.cap{margin:6px 2px 0;font-size:.82rem;color:var(--ink-2)}
+.print-h{margin:22px 0 8px;font-size:1.05rem}
+.print{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:start}
+.print a{display:block;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#fff}
+.more{margin:12px 0 0;border-radius:12px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.more summary{cursor:pointer;min-height:48px;display:flex;align-items:center;padding:0 14px;font-weight:700;list-style:none}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"+";margin-left:auto;font-size:1.3rem;color:var(--ink-2)}
+.more[open] summary::after{content:"−"}
+.more .inner{padding:0 14px 14px}
+.more .print{grid-template-columns:repeat(4,1fr)}
+.more .card2{grid-template-columns:1fr 1fr}
+.opt .cta{margin-top:14px}
+.answer{margin:34px 0 0;padding:20px;border-radius:16px;background:var(--ink);color:#fff}
+.answer h2{margin:0;font-size:1.35rem}
+.answer p{margin:8px 0 0;color:oklch(85% .01 230)}
+.answer b{color:var(--teal)}
+footer{padding:26px 0 40px;color:var(--ink-2);font-size:.88rem}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+@media (min-width:820px){
+  .screens{grid-template-columns:.3fr 1fr;gap:18px}
+  .print{grid-template-columns:repeat(4,minmax(0,170px))}
+  .more .print{grid-template-columns:repeat(6,minmax(0,150px))}
+  .more .card2{grid-template-columns:repeat(2,minmax(0,300px))}
+}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="top"><img src="../img/mark.png" width="240" height="160" alt=""><b>Pacific Plumbing<small>Bellingham, WA</small></b></div>
+  <h1>Новый сайт и печать: три варианта на выбор</h1>
+  <p class="lead">Все три варианта умеют одно и то же: заявка в одно касание, бесплатная проверка водопровода, кнопка звонка, удобно с телефона. Отличаются стилем. Посмотрите и выберите один — его доведём до запуска.</p>
+  <ul class="same" aria-label="Что есть во всех вариантах">
+    <li>Выбор проблемы на первом экране</li>
+    <li>Free plumbing check-up</li>
+    <li>Free estimate</li>
+    <li>Звонок одной кнопкой</li>
+    <li>Вешалка на дверь с QR</li>
+  </ul>
+  <div class="cta">
+    <a class="btn" href="show.html">Листать всё на весь экран →</a>
+  </div>
+  <nav class="nav" aria-label="Варианты">
+    <a href="#a">A<small>«Заказ-наряд»</small></a>
+    <a href="#b">B<small>«Дождливый Беллингем»</small></a>
+    <a href="#c">C<small>«Касатка»</small></a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="opt a" id="a" aria-labelledby="h-a">
+    <div class="opt-head"><span class="letter" aria-hidden="true">A</span><h2 id="h-a">Вариант A<small>«Заказ-наряд» — серьёзная мастерская</small></h2></div>
+    <p class="feel">Строгий и деловой: оформлен как квитанция мастера со штампом «бесплатно», оранжевые кнопки, сетка как на чертеже. Для тех, кто ценит порядок и чёткую цену.</p>
+    <div class="screens">
+      <div><a href="../a/"><img src="shots/a-index-phone.webp" width="780" height="1688" loading="lazy" alt="Вариант A на телефоне"></a><p class="cap">Телефон</p></div>
+      <div><a href="../a/"><img src="shots/a-index-desktop.webp" width="1440" height="900" loading="lazy" alt="Вариант A на компьютере"></a><p class="cap">Компьютер</p></div>
+    </div>
+    <h3 class="print-h">Печать в стиле A</h3>
+    <div class="print">
+      <a href="show.html?v=a#7"><img src="../print/previews/a-doorhanger-p1.png" loading="lazy" alt="Вешалка A, лицо"></a>
+      <a href="show.html?v=a#8"><img src="../print/previews/a-doorhanger-p2.png" loading="lazy" alt="Вешалка A, оборот"></a>
+      <a href="show.html?v=a#9"><img src="../print/previews/a-flyer-p1.png" loading="lazy" alt="Листовка A, лицо"></a>
+      <a href="show.html?v=a#10"><img src="../print/previews/a-flyer-p2.png" loading="lazy" alt="Листовка A, оборот"></a>
+    </div>
+    <p class="cap">Вешалка на ручку двери (лицо и оборот) и листовка</p>
+    <div class="cta">
+      <a class="btn" href="../a/">Открыть сайт A</a>
+      <a class="btn ghost" href="show.html?v=a">Листать вариант A</a>
+    </div>
+  </section>
+
+  <section class="opt b" id="b" aria-labelledby="h-b">
+    <div class="opt-head"><span class="letter" aria-hidden="true">B</span><h2 id="h-b">Вариант B<small>«Дождливый Беллингем» — мастер для старых домов</small></h2></div>
+    <p class="feel">Кино-кадр дома в сумерках, медь как у новых труб, журнальный шрифт. Про ваш город и ваши дома, упор на замену старых труб. Самый «дорогой» на вид.</p>
+    <div class="screens">
+      <div><a href="../b/"><img src="shots/b-index-phone.webp" width="780" height="1688" loading="lazy" alt="Вариант B на телефоне"></a><p class="cap">Телефон</p></div>
+      <div><a href="../b/"><img src="shots/b-index-desktop.webp" width="1440" height="900" loading="lazy" alt="Вариант B на компьютере"></a><p class="cap">Компьютер</p></div>
+    </div>
+    <h3 class="print-h">Печать в стиле B</h3>
+    <div class="print">
+      <a href="show.html?v=b#7"><img src="../print/previews/b-doorhanger-p1.png" loading="lazy" alt="Вешалка B, лицо"></a>
+      <a href="show.html?v=b#8"><img src="../print/previews/b-doorhanger-p2.png" loading="lazy" alt="Вешалка B, оборот"></a>
+      <a href="show.html?v=b#9"><img src="../print/previews/b-flyer-p1.png" loading="lazy" alt="Листовка B, лицо"></a>
+      <a href="show.html?v=b#10"><img src="../print/previews/b-flyer-p2.png" loading="lazy" alt="Листовка B, оборот"></a>
+    </div>
+    <p class="cap">Вешалка на ручку двери (лицо и оборот) и листовка</p>
+    <div class="cta">
+      <a class="btn" href="../b/">Открыть сайт B</a>
+      <a class="btn ghost" href="show.html?v=b">Листать вариант B</a>
+    </div>
+  </section>
+
+  <section class="opt c" id="c" aria-labelledby="h-c">
+    <div class="opt-head"><span class="letter" aria-hidden="true">C</span><h2 id="h-c">Вариант C<small>«Касатка» — яркий местный бренд</small></h2></div>
+    <p class="feel">Построен от вашего логотипа с касаткой: крупный жирный шрифт, бирюзовая волна, круглая наклейка «бесплатно». Лучше всего запоминается на двери и на машине.</p>
+    <div class="screens">
+      <div><a href="../c/"><img src="shots/c-index-phone.webp" width="780" height="1688" loading="lazy" alt="Вариант C на телефоне"></a><p class="cap">Телефон</p></div>
+      <div><a href="../c/"><img src="shots/c-index-desktop.webp" width="1440" height="900" loading="lazy" alt="Вариант C на компьютере"></a><p class="cap">Компьютер</p></div>
+    </div>
+    <h3 class="print-h">Печать в стиле C</h3>
+    <div class="print">
+      <a href="show.html?v=c#7"><img src="../print/previews/c-doorhanger-p1.png" loading="lazy" alt="Вешалка C, лицо"></a>
+      <a href="show.html?v=c#8"><img src="../print/previews/c-doorhanger-p2.png" loading="lazy" alt="Вешалка C, оборот"></a>
+      <a href="show.html?v=c#13"><img src="../print/previews/c-flyer-p1.png" loading="lazy" alt="Листовка C, лицо"></a>
+      <a href="show.html?v=c#14"><img src="../print/previews/c-flyer-p2.png" loading="lazy" alt="Листовка C, оборот"></a>
+    </div>
+    <p class="cap">Вешалка на ручку двери (лицо и оборот) и листовка</p>
+    <details class="more">
+      <summary>Ещё варианты печати в стиле C: две вешалки, листовка, визитка</summary>
+      <div class="inner">
+        <div class="print">
+          <a href="show.html?v=c#9"><img src="../print/previews/c-doorhanger-2-p1.png" loading="lazy" alt="Вешалка C2, лицо"></a>
+          <a href="show.html?v=c#10"><img src="../print/previews/c-doorhanger-2-p2.png" loading="lazy" alt="Вешалка C2, оборот"></a>
+          <a href="show.html?v=c#11"><img src="../print/previews/c-doorhanger-3-p1.png" loading="lazy" alt="Вешалка C3, лицо"></a>
+          <a href="show.html?v=c#12"><img src="../print/previews/c-doorhanger-3-p2.png" loading="lazy" alt="Вешалка C3, оборот"></a>
+          <a href="show.html?v=c#15"><img src="../print/previews/c-flyer-2-p1.png" loading="lazy" alt="Листовка C2, лицо"></a>
+          <a href="show.html?v=c#16"><img src="../print/previews/c-flyer-2-p2.png" loading="lazy" alt="Листовка C2, оборот"></a>
+        </div>
+        <div class="print card2" style="margin-top:8px">
+          <a href="show.html?v=c#17"><img src="../print/previews/c-businesscard-p1.png" loading="lazy" alt="Визитка, лицо"></a>
+          <a href="show.html?v=c#18"><img src="../print/previews/c-businesscard-p2.png" loading="lazy" alt="Визитка, оборот"></a>
+        </div>
+      </div>
+    </details>
+    <div class="cta">
+      <a class="btn" href="../c/">Открыть сайт C</a>
+      <a class="btn ghost" href="show.html?v=c">Листать вариант C</a>
+    </div>
+  </section>
+
+  <section class="answer" aria-labelledby="h-ans">
+    <h2 id="h-ans">Как ответить</h2>
+    <p>Напишите букву: <b>A</b>, <b>B</b> или <b>C</b>. Если нравится сайт одного варианта, а печать другого, так и напишите. Можно добавить, что поменять.</p>
+    <p>Фото на макетах временные. Перед запуском и печатью поставим ваши настоящие фото, номер лицензии и логотип.</p>
+  </section>
+</main>
+<footer class="wrap">Pacific Plumbing · предпросмотр, в поиске не показывается</footer>
+</body>
+</html>
