@@ -47,8 +47,7 @@ button, input, select, textarea{font:inherit;color:inherit}
 svg.i{width:18px;height:18px;flex:none}
 
 /* ---------- Preview bar ---------- */
-.preview{background:var(--night-deep);color:var(--on-night-2);text-align:center;padding:7px 12px;font-size:.78rem;line-height:1.45;border-bottom:1px solid var(--line-night)}
-.preview a{color:var(--on-night);text-underline-offset:3px;text-decoration-color:var(--copper)}
+.preview{background:var(--night-deep);color:var(--on-night-2);text-align:center;padding:4px 12px;font-size:.74rem;line-height:1.4;letter-spacing:.01em;border-bottom:1px solid var(--line-night)}
 
 /* ---------- Header ---------- */
 .site-head{position:sticky;top:0;z-index:30;color:var(--on-night);background:var(--night);transition:background-color .35s var(--ease), box-shadow .35s var(--ease)}
@@ -60,11 +59,13 @@ svg.i{width:18px;height:18px;flex:none}
 .brand img{width:42px;filter:drop-shadow(0 2px 8px oklch(0% 0 0 / .35))}
 .brand b{font:600 1.16rem/1 var(--serif);letter-spacing:-.005em;white-space:nowrap}
 .nav-links{display:none;list-style:none;gap:30px;font-weight:500}
-.nav-links a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.nav-links a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;white-space:nowrap}
 .nav-links a:hover, .nav-links a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px;text-decoration-color:var(--copper)}
+.nav-links .nav-offer{color:var(--copper-glow)}
+.xl-only{display:none}
 .phone{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:4px;border-radius:999px;background:oklch(100% 0 0 / .08);border:1px solid oklch(100% 0 0 / .22);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums;transition:border-color .2s, background-color .2s}
 .phone:hover{border-color:var(--copper);background:oklch(100% 0 0 / .12)}
-.phone span{display:none}
+.phone span{display:none;white-space:nowrap}
 .phone i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--copper);color:var(--night)}
 .phone svg{width:17px;height:17px}
 
@@ -129,6 +130,14 @@ svg.i{width:18px;height:18px;flex:none}
 .hero .lede{margin-top:16px}
 .wide-only{display:none}
 
+/* free check-up: the headline offer. Copper rule, serif title, primary copper button */
+.offer{margin-top:22px;padding:16px 0 2px;border-top:1px solid var(--copper)}
+.offer-title{font:500 1.5rem/1.12 var(--serif);letter-spacing:-.01em;color:var(--on-night)}
+.offer-title em{font-style:italic;color:var(--copper)}
+.offer-text{margin-top:6px;max-width:48ch;font-size:.98rem;line-height:1.5;color:var(--on-night-2)}
+.offer .cta{margin-top:14px;gap:10px 18px}
+.offer .btn{padding:0 22px}
+
 /* problem picker: solid fog panel, thin copper rules, no blur */
 .pick{margin-top:22px;background:var(--fog);color:var(--ink);border-radius:14px;padding:16px 16px 4px;overflow:hidden;box-shadow:0 26px 50px -26px oklch(0% 0 0 / .8)}
 .pick-title{font:500 1.62rem/1.08 var(--serif);letter-spacing:-.012em}
@@ -183,6 +192,17 @@ svg.i{width:18px;height:18px;flex:none}
 .steps b{color:var(--ink);font-weight:600}
 .how .arrow{margin-top:20px}
 
+/* ---------- Free check-up (home): ruled list, not cards ---------- */
+.checkup-list{margin-top:22px}
+.looks-h{font:600 .82rem/1.3 var(--sans);letter-spacing:.02em;color:var(--ink-2);margin-bottom:8px}
+.looks{list-style:none;border-top:1px solid var(--copper-deep)}
+.looks li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid oklch(56% .12 48 / .42)}
+.looks b{font:500 1.3rem/1.2 var(--serif);letter-spacing:-.005em}
+.looks span{font-size:.88rem;color:var(--ink-2);text-align:right}
+.checkup-foot{margin-top:18px}
+.checkup-foot > p{color:var(--ink-2);max-width:46ch}
+.checkup .cta{margin-top:18px}
+
 /* ---------- Service area ---------- */
 .towns{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;margin-top:24px}
 .towns h3{font:600 .82rem/1.3 var(--sans);letter-spacing:.02em;color:var(--ink-2);padding-top:12px;border-top:1px solid var(--copper-deep);margin-bottom:8px}
@@ -202,6 +222,8 @@ svg.i{width:18px;height:18px;flex:none}
 .page-top{padding:44px 0 48px}
 .page-top--night{background:var(--night);color:var(--on-night)}
 .page-top .lede{margin-top:16px}
+.nudge{margin-top:14px;color:var(--on-night-2)}
+.nudge a{padding-block:10px;white-space:nowrap;font-weight:600;color:var(--copper-glow);text-underline-offset:4px;text-decoration-color:var(--copper)}
 .page-top .index{margin-top:30px}
 .page-top .index a{min-height:58px}
 .page-top .index b{font-size:1.4rem}
@@ -234,6 +256,10 @@ svg.i{width:18px;height:18px;flex:none}
 .svc.night .signs, .svc.night .signs li{border-color:var(--line-night)}
 .svc.night .signs li::before{border-color:var(--copper)}
 .svc .cta{margin-top:28px}
+.svc-check{margin-top:16px;max-width:50ch;font-size:.95rem;color:var(--ink-2)}
+.svc-check a{padding-block:10px;font-weight:600;color:var(--copper-ink);text-underline-offset:4px;text-decoration-color:var(--copper)}
+.svc.night .svc-check{color:var(--on-night-2)}
+.svc.night .svc-check a{color:var(--copper-glow)}
 
 .urgent-band{padding:52px 0}
 .urgent-band .h2{max-width:22ch}
@@ -242,7 +268,7 @@ svg.i{width:18px;height:18px;flex:none}
 /* ---------- Estimate page ---------- */
 .est{padding:40px 0 64px}
 .est-grid{display:grid;gap:36px}
-.note{border-left:2px solid var(--copper-deep);padding:4px 0 4px 16px}
+.note{border-top:1px solid var(--copper-deep);padding:14px 0 2px}
 .note b{display:block;font:500 1.3rem/1.2 var(--serif);margin-bottom:6px}
 .note p{color:var(--ink-2)}
 .note a{font-weight:600;white-space:nowrap}
@@ -332,11 +358,29 @@ svg.i{width:18px;height:18px;flex:none}
 
 /* phones: photo band on top, text and picker on solid night below it */
 @media (max-width:899px){
-  .hero{display:block;min-height:0;padding-top:232px}
-  .hero-img{height:306px;bottom:auto;object-position:50% 50%}
-  .hero::after{background:linear-gradient(180deg, oklch(19% .018 170 / .86) 0px, oklch(19% .018 170 / .45) 62px, oklch(19% .018 170 / .04) 118px, oklch(19% .018 170 / .1) 170px, oklch(19% .018 170 / .72) 246px, var(--night) 306px)}
-  .hero .cta{display:none}
-  .hero .lede{margin-top:12px}
+  .hero{display:block;min-height:0;padding-top:196px}
+  .hero-img{height:266px;bottom:auto;object-position:50% 50%}
+  .hero::after{background:linear-gradient(180deg, oklch(19% .018 170 / .86) 0px, oklch(19% .018 170 / .45) 54px, oklch(19% .018 170 / .04) 103px, oklch(19% .018 170 / .1) 148px, oklch(19% .018 170 / .72) 214px, var(--night) 266px)}
+  .hero .lede{display:none}
+  /* keep home near 5 phone screens: the call bar already carries "Call now" */
+  .section{padding:40px 0}
+  .checkup .link, .closing .link, .closing .lede, .spec-text > p:not(.place), .why .small{display:none}
+  .looks li{padding:8px 0}
+  .spec-photo{aspect-ratio:2/1}
+  .rows > div{padding:12px 0}
+  .steps{gap:14px}
+  .closing-text{padding:40px 0}
+  .foot{padding:28px 0 16px}
+  .foot-grid{gap:14px}
+  .foot-links{gap:0 18px}
+  .pick{margin-top:18px}
+  .owner{margin-top:14px}
+  .checkup-list{margin-top:18px}
+  .checkup-foot{margin-top:14px}
+  .checkup .cta{margin-top:16px}
+}
+@media (min-width:900px){
+  .narrow-only{display:none}
 }
 @media (max-width:599px){
   .foot-tag{display:none}
@@ -355,8 +399,8 @@ svg.i{width:18px;height:18px;flex:none}
   :root{--head-h:84px}
   body{padding-bottom:0}
   .callbar, .menu{display:none}
-  .nav{gap:28px}
-  .nav-links{display:flex}
+  .nav{gap:20px}
+  .nav-links{display:flex;gap:20px}
   .brand img{width:46px}
   .brand b{font-size:1.3rem}
   .phone{padding:4px 4px 4px 18px}
@@ -368,11 +412,16 @@ svg.i{width:18px;height:18px;flex:none}
   .hero::after{background:
     linear-gradient(90deg, var(--night) 0%, var(--night) 31%, oklch(19% .018 170 / .55) 45%, oklch(19% .018 170 / 0) 64%),
     linear-gradient(180deg, oklch(19% .018 170 / .78) 0%, oklch(19% .018 170 / .2) 14%, oklch(19% .018 170 / 0) 30%, oklch(19% .018 170 / .3) 62%, oklch(19% .018 170 / .9) 100%)}
-  .h1{font-size:clamp(3.4rem, 6.2vw, 5.4rem)}
+  .h1{font-size:clamp(3.2rem, 5.6vw, 5rem)}
   .wide-only{display:inline}
   .hero-body{display:grid;grid-template-columns:minmax(0, 1fr) auto;column-gap:40px;align-items:end;padding-bottom:40px}
   .hero-copy{grid-column:1;grid-row:1}
-  .hero .lede{max-width:50ch}
+  .hero .lede{max-width:56ch;margin-top:14px;font-size:1rem}
+  .offer{margin-top:24px;padding-left:20px}
+  .offer-title{font-size:1.8rem}
+  .offer-text{font-size:1.04rem;max-width:52ch}
+  .offer .cta{margin-top:18px;gap:12px 24px}
+  .offer .btn{padding:0 26px}
   .owner{grid-column:2;grid-row:1;align-self:end;margin:0 0 6px;padding:8px 22px 8px 8px;border-radius:999px;background:oklch(19% .018 170 / .9);border:1px solid oklch(100% 0 0 / .14)}
   .pick{grid-column:1 / -1;grid-row:2;display:grid;grid-template-columns:auto 1fr;margin-top:40px;padding:0;border-radius:8px}
   .pick-head{display:flex;flex-direction:column;justify-content:center;padding:18px 28px 18px 26px}
@@ -400,6 +449,15 @@ svg.i{width:18px;height:18px;flex:none}
   .how .arrow{grid-column:2;margin-left:4rem}
   .towns{margin-top:0;gap:0 48px}
   .towns li{font-size:1.75rem;line-height:1.45}
+
+  .checkup{padding:88px 0}
+  .checkup-grid{display:grid;grid-template-columns:5fr 7fr;grid-template-rows:auto 1fr;gap:0 64px;align-items:start}
+  .checkup-head{grid-column:1;grid-row:1}
+  .checkup-foot{grid-column:1;grid-row:2;margin-top:24px}
+  .checkup-list{grid-column:2;grid-row:1 / span 2;margin-top:6px}
+  .looks li{padding:16px 0}
+  .looks b{font-size:1.7rem}
+  .looks span{font-size:.95rem}
 
   .closing-photo{left:auto;width:46%}
   .closing::after{background:linear-gradient(90deg, var(--night) 0%, var(--night) 52%, oklch(19% .018 170 / .55) 64%, oklch(19% .018 170 / .1) 100%)}
@@ -436,6 +494,16 @@ svg.i{width:18px;height:18px;flex:none}
 
 @media (min-width:1200px){
   .spec-text{padding-left:80px}
+}
+@media (min-width:900px) and (max-width:1023px){
+  .phone{padding:4px}
+  .phone span{display:none}
+}
+@media (min-width:1150px){
+  .nav{gap:28px}
+  .nav-links{gap:28px}
+  .xl-only{display:inline}
+  .xl-hide{display:none}
 }
 
 @media (prefers-reduced-motion:reduce){

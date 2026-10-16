@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Door hanger 2 · Problem checklist · Direction B | Pacific Plumbing print preview</title>
+<meta name="description" content="Print-ready door hanger, variant 2 (problem checklist), for Pacific Plumbing, Direction B Rain city. Trim 4.25 x 11 in with 0.125 in bleed.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Variant 2 "Problem checklist".
+   Trim 4.25 x 11 in + 0.125 in bleed on every side = 4.5 x 11.25 in page.
+   Safe zone: 0.25 in inside trim = 0.375 in from the page edge.
+   Door-knob hole: 1.25 in circle, center 1.5 in below trim top (1.625 in from page top), centered.
+   Keep-clear: 0.25 in around the hole, so content starts at 2.5 in from the page top. */
+@page{size:4.5in 11.25in;margin:0}
+:root{
+  --night: oklch(19% 0.018 170);
+  --night-deep: oklch(15.5% 0.016 170);
+  --fog: oklch(95.5% 0.006 150);
+  --ink: oklch(22% 0.015 170);
+  --ink-2: oklch(38% 0.012 170);
+  --copper: oklch(68% 0.12 52);
+  --copper-ink: oklch(47% 0.11 46);
+  --copper-glow: oklch(80% 0.1 56);
+  --on-night: oklch(96% 0.008 150);
+  --on-night-2: oklch(86% 0.01 150);
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Public Sans", "Segoe UI", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html, body{margin:0;padding:0}
+body{background:oklch(86% 0.006 150);color:var(--ink);font-family:var(--sans);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+p, h1, h2, h3, ul{margin:0}
+img{display:block}
+
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:.45in;padding:.4in .3in}
+.sheet-wrap{display:flex;flex-direction:column;gap:8px}
+.sheet-label{font:600 12px/1.2 var(--sans);color:oklch(35% .01 170)}
+.sheet{position:relative;width:4.5in;height:11.25in;overflow:hidden;background:var(--fog);box-shadow:0 10px 30px -12px oklch(0% 0 0 / .35)}
+
+/* preview guides */
+.guide{position:absolute;pointer-events:none;z-index:20}
+.trim{inset:.125in;outline:1px solid oklch(62% .2 330 / .7)}
+.safe{inset:.375in;outline:1px dashed oklch(62% .15 250 / .7)}
+.die{position:absolute;z-index:21;width:1.25in;height:1.25in;left:1.625in;top:1in;border-radius:50%;border:1.2px dashed oklch(62% .2 330);pointer-events:none}
+
+.nw{white-space:nowrap}
+.qr{flex:none;background:#fff;border-radius:.04in;line-height:0}
+
+/* ---------- FRONT ---------- */
+.front{background:var(--night);color:var(--on-night)}
+.front .photo{position:absolute;left:0;top:0;width:4.5in;height:3.2in;object-fit:cover;object-position:22% 50%}
+.front .shade{position:absolute;left:0;right:0;top:0;height:3.25in;background:linear-gradient(180deg,
+  oklch(19% .018 170 / .35) 0in,
+  oklch(19% .018 170 / .3) 1.1in,
+  oklch(19% .018 170 / .78) 2.15in,
+  var(--night) 3.1in)}
+.front .content{position:absolute;left:.375in;right:.375in;top:2.6in;bottom:.375in;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:.1in}
+.brand img{width:.6in;height:.4in;filter:drop-shadow(0 1px 4px oklch(0% 0 0 / .5))}
+.brand span{font:600 14pt/1 var(--serif);letter-spacing:-.005em}
+.front h1{margin-top:.2in;font:500 33pt/1 var(--serif);letter-spacing:-.022em;white-space:nowrap}
+.front h1 em{font-style:italic;color:var(--copper)}
+.front .lead{margin-top:.08in;font:400 10pt/1.38 var(--sans);color:var(--on-night-2)}
+
+.pick{margin-top:.16in;padding:.03in .15in;background:var(--fog);color:var(--ink);border-radius:.05in;list-style:none}
+.pick li{display:flex;align-items:center;gap:.11in;height:.39in;border-bottom:.75pt solid oklch(22% .015 170 / .2)}
+.pick li:last-child{border-bottom:0}
+.pick .box{flex:none;width:.2in;height:.2in;border:1.2pt solid var(--ink);border-radius:.025in;background:#fff}
+.pick b{font:500 14.5pt/1 var(--serif);letter-spacing:-.01em;white-space:nowrap}
+.pick .hint{margin-left:auto;font:400 8.5pt/1.2 var(--sans);color:var(--ink-2);text-align:right;white-space:nowrap}
+.pick li.else .fill{flex:1;align-self:flex-end;margin:0 0 .1in .04in;border-bottom:.9pt solid oklch(22% .015 170 / .5)}
+
+.band{margin:.22in -.375in 0;padding:.13in .375in .15in;background:var(--copper);color:var(--night)}
+.band b{display:block;font:600 24pt/1 var(--serif);letter-spacing:-.015em;white-space:nowrap}
+.band b span{font-family:var(--sans);font-weight:700;letter-spacing:.01em}
+.band .what{display:block;margin-top:.07in;font:500 9.5pt/1.3 var(--sans)}
+.band strong{display:block;margin-top:.05in;font:700 10.5pt/1.25 var(--sans)}
+
+/* front QR: code 1.75 in, white quiet zone 0.13 in (4 modules) */
+.qr-row{display:flex;align-items:center;gap:.16in;margin-top:.2in}
+.qr-row .qr{padding:.13in}
+.qr-row .qr img{width:1.75in;height:1.75in}
+.qr-row p{font:500 15pt/1.12 var(--serif);color:var(--on-night)}
+.qr-row p em{font-style:normal;font-family:var(--sans);font-weight:700;color:var(--copper-glow)}
+.qr-row p small{display:block;margin-top:.08in;font:400 8.5pt/1.35 var(--sans);color:var(--on-night-2)}
+.callwho{margin-top:.16in;font:500 9pt/1.2 var(--sans);color:var(--on-night-2)}
+.bigphone{display:block;font:700 28pt/1.05 var(--sans);letter-spacing:-.01em;color:var(--on-night);font-variant-numeric:lining-nums tabular-nums;text-decoration:none;white-space:nowrap}
+
+/* ---------- BACK ---------- */
+.back .head{position:absolute;left:0;right:0;top:0;height:3.7in;background:var(--night);overflow:hidden}
+.back .head img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 36%}
+.back .head::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,
+  oklch(19% .018 170 / .45) 0in,
+  oklch(19% .018 170 / .55) 1.4in,
+  oklch(19% .018 170 / .9) 2.45in,
+  var(--night) 3.2in)}
+.back .hi{position:absolute;left:.375in;right:.375in;top:2.62in;color:var(--on-night)}
+.back h2{font:500 25pt/1.02 var(--serif);letter-spacing:-.02em;white-space:nowrap}
+.back h2 em{font-style:italic;color:var(--copper)}
+.back .sub{margin-top:.08in;font:400 9.5pt/1.38 var(--sans);color:var(--on-night-2)}
+.back .content{position:absolute;left:.375in;right:.375in;top:3.82in;bottom:.375in;display:flex;flex-direction:column}
+.write .row{display:grid;grid-template-columns:1fr 1fr;gap:.22in}
+.line{display:flex;align-items:flex-end;gap:.08in;height:.4in;border-bottom:.9pt solid oklch(22% .015 170 / .55);padding-bottom:.04in}
+.line i{font:italic 500 10.5pt/1 var(--serif);color:var(--copper-ink)}
+.checks{list-style:none;margin:.14in 0 .02in;padding:0;display:flex;flex-wrap:wrap;gap:.08in .22in;font:500 9.5pt/1.2 var(--sans)}
+.checks li{display:flex;align-items:center;gap:.07in}
+.checks .box{width:.15in;height:.15in;border:.9pt solid oklch(22% .015 170 / .7);border-radius:.02in;background:#fff}
+.svc{margin-top:.26in}
+.svc h3{font:italic 500 11pt/1.2 var(--serif);color:var(--copper-ink);margin-bottom:.06in}
+.svc ul{list-style:none;padding:0;border-top:.75pt solid oklch(22% .015 170 / .25)}
+.svc li{display:flex;justify-content:space-between;align-items:baseline;gap:.12in;padding:.075in 0;border-bottom:.75pt solid oklch(22% .015 170 / .25)}
+.svc li b{font:500 12.5pt/1.15 var(--serif)}
+.svc li span{font:400 8.5pt/1.25 var(--sans);color:var(--ink-2);text-align:right}
+.lic{margin-top:.14in;font:600 9pt/1.35 var(--sans)}
+.lic small{display:block;font:400 8pt/1.35 var(--sans);color:var(--ink-2)}
+.back .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:.1in;padding-top:.14in;border-top:1.2pt solid var(--copper)}
+.back .foot .go{font:500 19pt/1.05 var(--serif);letter-spacing:-.015em}
+.back .foot .go em{font-style:italic;color:var(--copper-ink)}
+.back .foot .orcall{margin-top:.1in;font:500 9pt/1.2 var(--sans);color:var(--ink-2)}
+.back .foot .ph{display:block;margin-top:.03in;font:700 19pt/1 var(--sans);letter-spacing:-.01em;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap;color:var(--ink);text-decoration:none}
+.back .foot .more{margin-top:.08in;font:400 8.5pt/1.35 var(--sans);color:var(--ink-2)}
+/* back QR: code 1.25 in, white quiet zone 0.1 in */
+.back .foot .qr{padding:.1in;box-shadow:inset 0 0 0 .75pt oklch(22% .015 170 / .2)}
+.back .foot .qr img{width:1.25in;height:1.25in}
+.back .towns{margin-top:.12in;font:400 8pt/1.4 var(--sans);color:var(--ink-2)}
+
+.screen-note{max-width:6.5in;margin:0 auto .5in;padding:0 .3in;font:400 14px/1.5 var(--sans);color:oklch(30% .01 170)}
+
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .sheet-wrap{display:block}
+  .sheet{box-shadow:none;break-after:page;page-break-after:always}
+  .sheet-wrap:last-child .sheet{break-after:auto;page-break-after:auto}
+  .sheet-label, .guide, .screen-note{display:none !important}
+  .no-die .die{display:none}
+}
+</style>
+</head>
+<body>
+<script>if(/[?&]die=0/.test(location.search))document.documentElement.classList.add('no-die')</script>
+<div class="sheets">
+  <div class="sheet-wrap">
+    <p class="sheet-label">Front</p>
+    <section class="sheet front" aria-label="Door hanger 2, front">
+      <img class="photo" src="../../img/copper-1536.webp" width="1536" height="1024" alt="Copper water lines with brass fittings">
+      <div class="shade"></div>
+      <div class="content">
+        <div class="brand"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
+        <h1>Plumbing <em>problem?</em></h1>
+        <p class="lead">Check what fits, then scan the code or call. The check-up visit is free.</p>
+        <ul class="pick">
+          <li><span class="box"></span><b>A leak</b><span class="hint">Drip, damp spot, high bill</span></li>
+          <li><span class="box"></span><b>Clogged drain</b><span class="hint">Slow, gurgling, backing up</span></li>
+          <li><span class="box"></span><b>No hot water</b><span class="hint">Or it runs out fast</span></li>
+          <li><span class="box"></span><b>Old pipes</b><span class="hint">Rusty water, low pressure</span></li>
+          <li class="else"><span class="box"></span><b>Something else</b><span class="fill"></span></li>
+        </ul>
+        <div class="band">
+          <b><span>FREE</span> plumbing check-up</b>
+          <span class="what">We look at your pipes, water heater, drains and shut-off valves, and tell you what we find. No charge, no pressure.</span>
+          <strong>Free estimate on any repair.</strong>
+        </div>
+        <div class="qr-row">
+          <div class="qr"><img src="../qr-b-dh2.svg" alt="QR code: book a free plumbing check-up"></div>
+          <p>Scan to book your <em>FREE</em> check-up<small>Point your phone camera at the code to open the booking page.</small></p>
+        </div>
+        <p class="callwho">Or call the owner</p>
+        <a class="bigphone" href="tel:+13603186219">(360) 318-6219</a>
+      </div>
+      <div class="die" aria-hidden="true"></div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+
+  <div class="sheet-wrap">
+    <p class="sheet-label">Back</p>
+    <section class="sheet back" aria-label="Door hanger 2, back">
+      <div class="head"><img src="../../img/hands-1024.webp" width="1024" height="1280" alt="A plumber's hands with a red wrench on an old toolbox"></div>
+      <div class="hi">
+        <h2>Sorry we <em>missed you.</em></h2>
+        <p class="sub">We stopped by about your plumbing. Scan the code below to book your free check-up, or call us back.</p>
+      </div>
+      <div class="content">
+        <div class="write">
+          <div class="row"><div class="line"><i>Date</i></div><div class="line"><i>Time</i></div></div>
+          <ul class="checks">
+            <li><span class="box"></span>Your free check-up</li>
+            <li><span class="box"></span>Please call us back</li>
+          </ul>
+          <div class="line"><i>Notes</i></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="svc">
+          <h3>What we do</h3>
+          <ul>
+            <li><b>Whole-home repiping</b><span>Our specialty. PEX or copper</span></li>
+            <li><b>Drain cleaning</b><span>Sinks to main lines</span></li>
+            <li><b>Water heaters</b><span>Tank and tankless</span></li>
+            <li><b>Leak detection &amp; repair</b><span>Walls, floors, slabs</span></li>
+            <li><b>Repairs &amp; fixtures</b><span>Small jobs welcome</span></li>
+          </ul>
+        </div>
+        <p class="lic">Owner-operated. Licensed, bonded &amp; insured. Price agreed before work starts.<small>WA contractor license #: added before launch</small></p>
+        <div class="foot">
+          <div>
+            <p class="go">Scan to <em>book</em></p>
+            <p class="orcall">or call the owner</p>
+            <a class="ph" href="tel:+13603186219">(360) 318-6219</a>
+            <p class="more">Free check-up.<br>Free estimate on any repair.</p>
+          </div>
+          <div class="qr"><img src="../qr-b-dh2.svg" alt="QR code: book a free plumbing check-up"></div>
+        </div>
+        <p class="towns">Bellingham · Ferndale · Lynden · Blaine · Mount&nbsp;Vernon · Burlington · <span class="nw">Sedro-Woolley</span> · Anacortes</p>
+      </div>
+      <div class="die" aria-hidden="true"></div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+</div>
+<p class="screen-note">Print: Chrome → Save as PDF, Margins none, Background graphics on. Pink line = trim, blue dashed line = safe zone, dashed circle = door-knob hole. Trim and safe-zone guides are hidden when printing; the hole outline prints so proofs show it. For the print-shop file open this page with ?die=0 to hide it.</p>
+</body>
+</html>
