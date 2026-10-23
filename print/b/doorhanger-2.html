@@ -92,31 +92,20 @@ img{display:block}
 .bigphone{display:block;font:700 28pt/1.05 var(--sans);letter-spacing:-.01em;color:var(--on-night);font-variant-numeric:lining-nums tabular-nums;text-decoration:none;white-space:nowrap}
 
 /* ---------- BACK ---------- */
-.back .head{position:absolute;left:0;right:0;top:0;height:3.7in;background:var(--night);overflow:hidden}
-.back .head img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%}
-.back .head::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,
-  oklch(19% .018 170 / .45) 0in,
-  oklch(19% .018 170 / .55) 1.4in,
-  oklch(19% .018 170 / .9) 2.45in,
-  var(--night) 3.2in)}
-.back .hi{position:absolute;left:.375in;right:.375in;top:2.62in;color:var(--on-night)}
-.back h2{font:500 25pt/1.02 var(--serif);letter-spacing:-.02em;white-space:nowrap}
-.back h2 em{font-style:italic;color:var(--copper)}
-.back .sub{margin-top:.08in;font:400 9.5pt/1.38 var(--sans);color:var(--on-night-2)}
-.back .content{position:absolute;left:.375in;right:.375in;top:3.82in;bottom:.375in;display:flex;flex-direction:column}
-.write .row{display:grid;grid-template-columns:1fr 1fr;gap:.22in}
-.line{display:flex;align-items:flex-end;gap:.08in;height:.4in;border-bottom:.9pt solid oklch(22% .015 170 / .55);padding-bottom:.04in}
-.line i{font:italic 500 10.5pt/1 var(--serif);color:var(--copper-ink)}
-.checks{list-style:none;margin:.14in 0 .02in;padding:0;display:flex;flex-wrap:wrap;gap:.08in .22in;font:500 9.5pt/1.2 var(--sans)}
-.checks li{display:flex;align-items:center;gap:.07in}
-.checks .box{width:.15in;height:.15in;border:.9pt solid oklch(22% .015 170 / .7);border-radius:.02in;background:#fff}
-.svc{margin-top:.26in}
-.svc h3{font:italic 500 11pt/1.2 var(--serif);color:var(--copper-ink);margin-bottom:.06in}
-.svc ul{list-style:none;padding:0;border-top:.75pt solid oklch(22% .015 170 / .25)}
-.svc li{display:flex;justify-content:space-between;align-items:baseline;gap:.12in;padding:.075in 0;border-bottom:.75pt solid oklch(22% .015 170 / .25)}
-.svc li b{font:500 12.5pt/1.15 var(--serif)}
-.svc li span{font:400 8.5pt/1.25 var(--sans);color:var(--ink-2);text-align:right}
-.lic{margin-top:.14in;font:600 9pt/1.35 var(--sans)}
+.back{background:var(--fog)}
+.back .top{position:absolute;left:.375in;right:.375in;top:.4in;display:flex;align-items:center;justify-content:center;gap:.1in}
+.back .top img{width:.6in;height:.4in}
+.back .top span{font:600 15pt/1 var(--serif);letter-spacing:-.005em;color:var(--ink)}
+.back .content{position:absolute;left:.375in;right:.375in;top:2.42in;bottom:.375in;display:flex;flex-direction:column}
+.back h2{font:500 24pt/1.02 var(--serif);letter-spacing:-.02em}
+.back h2 em{font-style:italic;color:var(--copper-ink)}
+.back .sub{margin-top:.07in;font:400 9.5pt/1.38 var(--sans);color:var(--ink-2)}
+.tiles{list-style:none;margin:.17in 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.16in .16in}
+.tiles li{display:flex;flex-direction:column;min-width:0}
+.tiles img{width:100%;height:1.1in;object-fit:cover;border-radius:.05in}
+.tiles b{margin-top:.07in;font:500 12pt/1.1 var(--serif);letter-spacing:-.005em}
+.tiles span{margin-top:.025in;font:400 8.3pt/1.3 var(--sans);color:var(--ink-2)}
+.lic{margin-top:.18in;font:600 9pt/1.35 var(--sans)}
 .lic small{display:block;font:400 8pt/1.35 var(--sans);color:var(--ink-2)}
 .back .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:.1in;padding-top:.14in;border-top:1.2pt solid var(--copper)}
 .back .foot .go{font:500 19pt/1.05 var(--serif);letter-spacing:-.015em}
@@ -125,9 +114,8 @@ img{display:block}
 .back .foot .ph{display:block;margin-top:.03in;font:700 19pt/1 var(--sans);letter-spacing:-.01em;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap;color:var(--ink);text-decoration:none}
 .back .foot .more{margin-top:.08in;font:400 8.5pt/1.35 var(--sans);color:var(--ink-2)}
 /* back QR: code 1.25 in, white quiet zone 0.1 in */
-.back .foot .qr{padding:.1in;box-shadow:inset 0 0 0 .75pt oklch(22% .015 170 / .2)}
+.back .foot .qr{padding:.1in;background:#fff;border-radius:.04in;line-height:0;box-shadow:inset 0 0 0 .75pt oklch(22% .015 170 / .2)}
 .back .foot .qr img{width:1.25in;height:1.25in}
-.back .towns{margin-top:.12in;font:400 8pt/1.4 var(--sans);color:var(--ink-2)}
 
 .screen-note{max-width:6.5in;margin:0 auto .5in;padding:0 .3in;font:400 14px/1.5 var(--sans);color:oklch(30% .01 170)}
 
@@ -182,33 +170,19 @@ img{display:block}
   <div class="sheet-wrap">
     <p class="sheet-label">Back</p>
     <section class="sheet back" aria-label="Door hanger 2, back">
-      <div class="head"><img src="../../img/porch-1024.webp" width="1024" height="1024" alt="A plumber with a toolbox walking up to a front porch"></div>
-      <div class="hi">
-        <h2>Sorry we <em>missed you.</em></h2>
-        <p class="sub">We stopped by about your plumbing. Scan the code below to book your free check-up, or call us back.</p>
-      </div>
+      <div class="top"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
       <div class="content">
-        <div class="write">
-          <div class="row"><div class="line"><i>Date</i></div><div class="line"><i>Time</i></div></div>
-          <ul class="checks">
-            <li><span class="box"></span>Your free check-up</li>
-            <li><span class="box"></span>Please call us back</li>
-          </ul>
-          <div class="line"><i>Notes</i></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <div class="svc">
-          <h3>What we do</h3>
-          <ul>
-            <li><b>Whole-home repiping</b><span>Our specialty. PEX or copper</span></li>
-            <li><b>Drain cleaning</b><span>Sinks to main lines</span></li>
-            <li><b>Water heaters</b><span>Tank and tankless</span></li>
-            <li><b>Leak detection &amp; repair</b><span>Walls, floors, slabs</span></li>
-            <li><b>Repairs &amp; fixtures</b><span>Small jobs welcome</span></li>
-          </ul>
-        </div>
-        <p class="lic">Owner-operated. Licensed, bonded &amp; insured. Price agreed before work starts.<small>WA plumbing contractor license PACIFP*742JG</small></p>
+        <h2>What we <em>do.</em></h2>
+        <p class="sub">Old houses and new homes. One local, owner-operated plumber from the first call to the finished job.</p>
+        <ul class="tiles">
+          <li><img src="../../img/oldpipe-1024.webp" style="object-position:40% 50%" alt=""><b>Whole-home repiping</b><span>Old pipe out, PEX or copper in</span></li>
+          <li><img src="../../img/drain2-800.webp" style="object-position:50% 45%" alt=""><b>Drain cleaning</b><span>Sinks, tubs, main lines</span></li>
+          <li><img src="../../img/heater-800.webp" style="object-position:50% 40%" alt=""><b>Water heaters</b><span>Tank and tankless</span></li>
+          <li><img src="../../img/leak-800.webp" style="object-position:50% 45%" alt=""><b>Leak detection</b><span>Walls, floors, ceilings</span></li>
+          <li><img src="../../img/fixture-800.webp" style="object-position:45% 55%" alt=""><b>Faucets &amp; fixtures</b><span>Small jobs welcome</span></li>
+          <li><img src="../../img/porch-1024.webp" style="object-position:70% 35%" alt=""><b>Free check-up</b><span>We look, you decide</span></li>
+        </ul>
+        <p class="lic">Licensed, bonded &amp; insured. Price agreed before work starts.<small>WA plumbing contractor license PACIFP*742JG</small></p>
         <div class="foot">
           <div>
             <p class="go">Scan to <em>book</em></p>
@@ -218,7 +192,6 @@ img{display:block}
           </div>
           <div class="qr"><img src="../qr-b-dh2.svg" alt="QR code: book a free plumbing check-up"></div>
         </div>
-        <p class="towns">Bellingham · Ferndale · Lynden · Blaine · Mount&nbsp;Vernon · Burlington · <span class="nw">Sedro-Woolley</span> · Anacortes</p>
       </div>
       <div class="die" aria-hidden="true"></div>
       <div class="guide trim" aria-hidden="true"></div>
