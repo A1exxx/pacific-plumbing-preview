@@ -80,11 +80,15 @@ img{display:block}
 .towns{margin-top:.14in;padding-top:.09in;border-top:.75pt solid oklch(100% 0 0 / .22);font:400 8.5pt/1.4 var(--sans);color:var(--on-night-2)}
 .nw{white-space:nowrap}
 /* gift-card pocket: holds a standard 3.375 x 2.125 in card; copper corners mark the four corner slits */
-.gift{position:relative;margin-top:.2in}
-.gift-h{font:600 17pt/1.05 var(--serif);letter-spacing:-.01em;padding-right:.62in}
-.gift-h span{font-family:var(--sans);font-weight:700;letter-spacing:.01em;color:var(--copper-glow)}
-.gift-sub{margin-top:.05in;font:500 10pt/1.3 var(--sans);color:var(--on-night-2);padding-right:.62in}
-.gift .arrow{position:absolute;right:.02in;top:.04in;width:.56in;height:.6in;color:var(--copper)}
+.gift{position:relative;margin-top:.2in;padding-top:.04in}
+.gift .branch{position:absolute;left:-.3in;top:-.06in;width:1.05in;height:1.2in;color:var(--copper)}
+.gift-h{position:relative;text-align:center;padding:0 .5in 0 .55in}
+.gift-h .w{display:block;font:500 25pt/1 var(--serif);letter-spacing:-.015em;color:var(--on-night)}
+.gift-h .g{display:block;margin-top:.03in;font:italic 500 20pt/1.02 var(--serif);color:var(--copper)}
+.gift-h .g b{font-weight:600;color:var(--copper-glow)}
+.gift-h .f{display:block;margin-top:.03in;font:italic 500 17pt/1.02 var(--serif);color:var(--on-night)}
+.gift-h .f span{font:700 10pt/1 var(--sans);font-style:normal;letter-spacing:.08em;background:var(--copper);color:var(--night);padding:.035in .07in .025in;border-radius:.03in;vertical-align:.04in;margin-right:.06in}
+.gift .arrow{position:absolute;right:-.12in;top:.1in;width:.78in;height:1.12in;color:var(--copper)}
 .pocket{position:relative;width:3.4in;height:2.16in;margin:.16in auto 0;border-radius:.05in;background:var(--fog);outline:1.1pt dashed oklch(100% 0 0 / .55);outline-offset:.05in;display:grid;place-items:center}
 .pocket .c{position:absolute;width:.44in;height:.44in;background:var(--copper)}
 .pocket .tl{left:0;top:0;clip-path:polygon(0 0,100% 0,0 100%)}
@@ -151,9 +155,20 @@ img{display:block}
           <strong>Free estimate on any repair.</strong>
         </div>
         <div class="gift">
-          <p class="gift-h"><span>FREE</span> Woods Coffee gift card</p>
-          <p class="gift-sub">$6 already on it. It's yours, no strings.</p>
-          <svg class="arrow" viewBox="0 0 56 60" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6c24 2 36 16 36 44"/><path d="M31 40l11 12 11-12"/></svg>
+          <svg class="branch" viewBox="0 0 100 115" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 108C30 84 46 60 58 30 64 16 72 8 84 4"/>
+            <path d="M44 66c-14-2-24-12-26-26 14 2 24 12 26 26z"/><path d="M44 66c-2-10-12-17-21-24"/>
+            <path d="M52 48c10-10 24-12 36-8-8 11-22 16-36 8z"/><path d="M52 48c11-4 22-6 33-8"/>
+            <path d="M36 82c-12 4-24 0-32-9 12-5 24-2 32 9z"/><path d="M36 82c-10-3-20-6-29-9"/>
+            <path d="M64 24c-3-12 2-22 12-26 2 12-3 22-12 26z"/><path d="M64 24c2-9 6-17 11-24"/>
+            <path d="M24 92c4 10 2 18-6 22-3-9-1-17 6-22z"/>
+            <g fill="currentColor" stroke="none"><circle cx="50" cy="56" r="3.6"/><circle cx="55" cy="61" r="3.4"/><circle cx="47" cy="62" r="3.2"/><circle cx="60" cy="38" r="3.2"/><circle cx="66" cy="42" r="3"/><circle cx="30" cy="90" r="3.2"/><circle cx="36" cy="94" r="3"/></g>
+          </svg>
+          <p class="gift-h"><span class="w">Woods Coffee</span><span class="g">Gift Card with <b>$6</b> on it</span><span class="f"><span>FREE</span>right here</span></p>
+          <svg class="arrow" viewBox="0 0 78 112" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 8c30-4 54 10 50 32-3 16-26 18-28 6-2-11 20-14 30 0 9 13 6 36-6 56"/>
+            <path d="M44 88l14 16 10-20"/>
+          </svg>
           <div class="pocket"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><p>Your $6 Woods Coffee card<br>goes in this pocket</p></div>
         </div>
         <div class="qr-row">
