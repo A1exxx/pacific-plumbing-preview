@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Door hanger with gift card · Retro PNW | Pacific Plumbing print preview</title>
+<meta name="description" content="Print-ready door hanger with a gift-card pocket for Pacific Plumbing, retro Pacific Northwest poster style. Trim 4.25 x 11 in with 0.125 in bleed.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+/* Trim 4.25 x 11 in + 0.125 in bleed = 4.5 x 11.25 in page. Safe zone 0.375 in from the page edge.
+   Door-knob hole: 1.25 in circle, top 1 in, centered. Gift pocket = real card 3.375 x 2.125 in. */
+@page{size:4.5in 11.25in;margin:0}
+:root{
+  --cream: oklch(95% 0.025 85);
+  --navy: oklch(27% 0.06 262);
+  --navy-2: oklch(36% 0.06 262);
+  --teal: oklch(66% 0.11 210);
+  --sun: oklch(85% 0.15 88);
+  --coral: oklch(66% 0.16 38);
+  --ink: oklch(24% 0.04 262);
+  --f: "Bricolage Grotesque", "Arial Black", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html, body{margin:0;padding:0}
+body{background:oklch(86% .01 85);color:var(--ink);font-family:var(--f);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+p, h1, h2, h3{margin:0}
+img, svg{display:block}
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:.45in;padding:.4in .3in}
+.sheet-wrap{display:flex;flex-direction:column;gap:8px}
+.sheet-label{font:600 12px/1.2 system-ui;color:oklch(35% .01 170)}
+.sheet{position:relative;width:4.5in;height:11.25in;overflow:hidden;background:var(--cream);box-shadow:0 10px 30px -12px oklch(0% 0 0 / .35)}
+.guide{position:absolute;pointer-events:none;z-index:20}
+.trim{inset:.125in;outline:1px solid oklch(62% .2 330 / .7)}
+.safe{inset:.375in;outline:1px dashed oklch(62% .15 250 / .7)}
+.die{position:absolute;z-index:21;width:1.25in;height:1.25in;left:1.625in;top:1in;border-radius:50%;border:1.2px dashed oklch(62% .2 330);pointer-events:none}
+
+/* shared bits */
+.top{position:absolute;left:0;right:0;top:0;height:.98in;background:var(--navy);display:flex;align-items:center;justify-content:center;gap:.1in;padding-top:.12in}
+.top img{width:.62in;height:.41in}
+.top span{font:800 15pt/1 var(--f);letter-spacing:.06em;color:var(--cream);text-transform:uppercase}
+.waves{position:absolute;left:0;right:0;height:.22in;color:var(--navy)}
+.band{position:absolute;left:0;right:0;bottom:0;background:var(--navy);color:var(--cream);padding:.22in .375in .4in}
+.qr-row{display:flex;align-items:center;gap:.14in}
+.qr{flex:none;background:#fff;padding:.09in;border-radius:.1in;line-height:0;box-shadow:.05in .05in 0 var(--sun)}
+.qr img{width:1.05in;height:1.05in}
+.qr-txt b{display:block;font:800 14pt/1.05 var(--f);letter-spacing:-.01em}
+.qr-txt b em{font-style:normal;color:var(--sun)}
+.qr-txt span{display:block;margin-top:.06in;font:600 8.5pt/1.2 var(--f);color:oklch(85% .03 85)}
+.qr-txt a{display:block;margin-top:.02in;font:800 19pt/1 var(--f);letter-spacing:-.01em;color:var(--cream);text-decoration:none;white-space:nowrap}
+.towns{margin-top:.13in;font:600 7.6pt/1.4 var(--f);color:oklch(80% .03 85);letter-spacing:.02em}
+
+/* ---------- FRONT ---------- */
+.arch{position:absolute;left:.42in;right:.42in;top:.7in;height:2.62in;border-radius:1.83in 1.83in .14in .14in;overflow:hidden;border:.06in solid var(--teal);background:var(--navy)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.sunburst{position:absolute;right:.22in;top:2.62in;width:1.08in;height:1.08in;color:var(--sun);transform:rotate(12deg)}
+.sunburst p{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:800 10pt/1 var(--f);color:var(--navy);transform:rotate(-4deg)}
+.sunburst p b{display:block;font-size:17pt}
+.hl{position:absolute;left:.375in;right:.375in;top:3.5in}
+.hl h1{font:800 27pt/.94 var(--f);letter-spacing:-.025em;color:var(--navy)}
+.hl h1 i{font-style:normal;display:inline-block;background:var(--sun);padding:.01in .07in .03in;border-radius:.06in;transform:rotate(-2deg);margin-top:.04in}
+.hl p{margin-top:.08in;font:600 9.5pt/1.3 var(--f);color:var(--navy-2)}
+.gift{position:absolute;left:.25in;right:.25in;top:5.12in;background:var(--coral);border-radius:.16in;padding:.14in .125in .16in;color:var(--cream)}
+.gift .gh{display:flex;align-items:center;justify-content:space-between;gap:.08in}
+.gift .gh .t{font:800 17pt/.95 var(--f);letter-spacing:-.015em}
+.gift .gh .t small{display:block;margin-top:.04in;font:700 10pt/1.1 var(--f);letter-spacing:0;color:oklch(96% .03 85)}
+.gift .six{flex:none;font:800 30pt/1 var(--f);letter-spacing:-.03em;color:var(--navy);background:var(--sun);padding:.04in .1in .05in;border-radius:.1in;transform:rotate(-5deg);box-shadow:.04in .04in 0 var(--navy)}
+.gift .free{display:inline-block;font:800 9pt/1 var(--f);letter-spacing:.14em;background:var(--navy);color:var(--sun);padding:.05in .08in .04in;border-radius:.04in;margin-bottom:.06in}
+.pocket{position:relative;width:3.375in;height:2.125in;margin:.12in auto 0;border-radius:.12in;background:var(--cream);outline:1.4pt dashed var(--cream);outline-offset:.05in;display:grid;place-items:center}
+.pocket .c{position:absolute;width:.42in;height:.42in;background:var(--navy)}
+.pocket .tl{left:0;top:0;clip-path:polygon(0 0,100% 0,0 100%)}
+.pocket .tr{right:0;top:0;clip-path:polygon(0 0,100% 0,100% 100%)}
+.pocket .bl{left:0;bottom:0;clip-path:polygon(0 0,0 100%,100% 100%)}
+.pocket .br{right:0;bottom:0;clip-path:polygon(100% 0,100% 100%,0 100%)}
+.pocket p{font:700 9pt/1.3 var(--f);color:var(--navy-2);text-align:center}
+.pocket p b{display:block;font-size:12pt;color:var(--coral)}
+
+/* ---------- BACK ---------- */
+.back .content{position:absolute;left:.375in;right:.375in;top:2.42in}
+.back h2{font:800 30pt/.92 var(--f);letter-spacing:-.03em;color:var(--navy)}
+.back h2 i{font-style:normal;color:var(--coral)}
+.back .sub{margin-top:.08in;font:600 9.5pt/1.3 var(--f);color:var(--navy-2)}
+.tiles{list-style:none;margin:.16in 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.13in}
+.tiles li{background:#fff;border-radius:.12in;overflow:hidden;box-shadow:0 0 0 1.2pt var(--navy)}
+.tiles img{width:100%;height:.86in;object-fit:cover}
+.tiles div{padding:.06in .08in .08in}
+.tiles b{display:block;font:800 10.5pt/1.05 var(--f);color:var(--navy)}
+.tiles span{display:block;margin-top:.02in;font:600 7.6pt/1.2 var(--f);color:var(--navy-2)}
+.tiles li:nth-child(1) div{border-top:.05in solid var(--teal)}
+.tiles li:nth-child(2) div{border-top:.05in solid var(--sun)}
+.tiles li:nth-child(3) div{border-top:.05in solid var(--coral)}
+.tiles li:nth-child(4) div{border-top:.05in solid var(--teal)}
+.tiles li:nth-child(5) div{border-top:.05in solid var(--sun)}
+.tiles li:nth-child(6) div{border-top:.05in solid var(--coral)}
+.lic{margin-top:.14in;font:700 8.5pt/1.35 var(--f);color:var(--navy)}
+.lic small{display:block;font:600 7.6pt/1.35 var(--f);color:var(--navy-2)}
+
+.screen-note{max-width:6.5in;margin:0 auto .5in;padding:0 .3in;font:400 14px/1.5 system-ui;color:oklch(30% .01 170)}
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .sheet-wrap{display:block}
+  .sheet{box-shadow:none;break-after:page;page-break-after:always}
+  .sheet-wrap:last-child .sheet{break-after:auto;page-break-after:auto}
+  .sheet-label, .guide, .screen-note{display:none !important}
+  .no-die .die{display:none}
+}
+</style>
+</head>
+<body>
+<script>if(/[?&]die=0/.test(location.search))document.documentElement.classList.add('no-die')</script>
+<div class="sheets">
+  <div class="sheet-wrap">
+    <p class="sheet-label">Front</p>
+    <section class="sheet front" aria-label="Door hanger with gift card, retro, front">
+      <div class="top"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
+      <div class="arch"><img src="../../img/porch-1024.webp" width="1024" height="1024" alt="A plumber with a toolbox walking up to a front porch"></div>
+      <div class="sunburst">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M50 0l7 15 15-8 1 17 17-1-8 15 15 7-15 7 8 15-17-1-1 17-15-8-7 15-7-15-15 8-1-17-17 1 8-15L0 50l15-7-8-15 17 1 1-17 15 8z"/></svg>
+        <p><span><b>FREE</b>check-up</span></p>
+      </div>
+      <div class="hl">
+        <h1>Old house? New&nbsp;home? <i>One call.</i></h1>
+        <p>We look at your pipes, water heater, drains and shut-off valves for free. Free estimate on any repair.</p>
+      </div>
+      <div class="gift">
+        <div class="gh">
+          <p class="t"><span class="free">FREE</span><br>Woods Coffee<br>Gift Card<small>$6 already on it. It's yours.</small></p>
+          <p class="six">$6</p>
+        </div>
+        <div class="pocket"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><p><b>Your coffee is on us</b>Woods Coffee card goes here</p></div>
+      </div>
+      <div class="band">
+        <div class="qr-row">
+          <div class="qr"><img src="../qr-b-dhg.svg" alt="QR code: book a free plumbing check-up"></div>
+          <div class="qr-txt"><b>Scan to book your <em>FREE</em> check-up</b><span>or call the owner</span><a href="tel:+13603186219">(360) 318-6219</a></div>
+        </div>
+        <p class="towns">Bellingham · Ferndale · Lynden · Blaine · Mount Vernon · Burlington · Sedro-Woolley · Anacortes</p>
+      </div>
+      <div class="die" aria-hidden="true"></div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+
+  <div class="sheet-wrap">
+    <p class="sheet-label">Back</p>
+    <section class="sheet back" aria-label="Door hanger with gift card, retro, back">
+      <div class="top"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
+      <div class="content">
+        <h2>What we <i>do.</i></h2>
+        <p class="sub">Old houses and new homes. One local, owner-operated plumber from the first call to the finished job.</p>
+        <ul class="tiles">
+          <li><img src="../../img/oldpipe-1024.webp" style="object-position:40% 50%" alt=""><div><b>Repiping</b><span>Old pipe out, PEX or copper in</span></div></li>
+          <li><img src="../../img/drain2-800.webp" style="object-position:50% 45%" alt=""><div><b>Drain cleaning</b><span>Sinks, tubs, main lines</span></div></li>
+          <li><img src="../../img/heater-800.webp" style="object-position:50% 40%" alt=""><div><b>Water heaters</b><span>Tank and tankless</span></div></li>
+          <li><img src="../../img/leak-800.webp" style="object-position:50% 45%" alt=""><div><b>Leak detection</b><span>Walls, floors, ceilings</span></div></li>
+          <li><img src="../../img/fixture-800.webp" style="object-position:45% 55%" alt=""><div><b>Faucets &amp; fixtures</b><span>Small jobs welcome</span></div></li>
+          <li><img src="../../img/porch-1024.webp" style="object-position:70% 35%" alt=""><div><b>Free check-up</b><span>We look, you decide</span></div></li>
+        </ul>
+        <p class="lic">Licensed, bonded &amp; insured. Price agreed before work starts.<small>WA plumbing contractor license PACIFP*742JG</small></p>
+      </div>
+      <div class="band">
+        <div class="qr-row">
+          <div class="qr"><img src="../qr-b-dhg.svg" alt="QR code: book a free plumbing check-up"></div>
+          <div class="qr-txt"><b>Scan to book your <em>FREE</em> check-up</b><span>or call the owner</span><a href="tel:+13603186219">(360) 318-6219</a></div>
+        </div>
+      </div>
+      <div class="die" aria-hidden="true"></div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+</div>
+<p class="screen-note">Print: Chrome → Save as PDF, Margins none, Background graphics on. For the print-shop file open with ?die=0. Gift-card pocket = real card 3.375 x 2.125 in; navy corners mark the corner slits.</p>
+</body>
+</html>
