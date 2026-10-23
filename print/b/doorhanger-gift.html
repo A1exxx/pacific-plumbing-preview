@@ -71,25 +71,26 @@ img{display:block}
 .callwho{margin-top:.1in;font:500 8.5pt/1.2 var(--sans);color:var(--on-night-2)}
 .bigphone{display:block;font:700 17pt/1.05 var(--sans);letter-spacing:-.01em;color:var(--on-night);font-variant-numeric:lining-nums tabular-nums;text-decoration:none;white-space:nowrap}
 /* QR: code 1.75 in, white quiet zone 0.13 in on every side */
-.qr-row{display:flex;align-items:center;gap:.16in;margin-top:.2in}
+.qr-row{display:flex;align-items:center;gap:.16in;margin-top:.13in}
 .qr{flex:none;background:#fff;padding:.13in;border-radius:.04in;line-height:0}
-.qr img{width:1.2in;height:1.2in}
+.qr img{width:1.02in;height:1.02in}
 .qr-row p{font:500 13pt/1.12 var(--serif);color:var(--on-night)}
 .qr-row p em{font-style:normal;font-family:var(--sans);font-weight:700;color:var(--copper-glow)}
 .qr-row p small{display:block;margin-top:.08in;font:400 8.5pt/1.35 var(--sans);color:var(--on-night-2)}
-.towns{margin-top:.14in;padding-top:.09in;border-top:.75pt solid oklch(100% 0 0 / .22);font:400 8.5pt/1.4 var(--sans);color:var(--on-night-2)}
+.towns{margin-top:.1in;padding-top:.08in;border-top:.75pt solid oklch(100% 0 0 / .22);font:400 8.5pt/1.4 var(--sans);color:var(--on-night-2)}
 .nw{white-space:nowrap}
 /* gift-card pocket: holds a standard 3.375 x 2.125 in card; copper corners mark the four corner slits */
-.gift{position:relative;margin-top:.2in;padding-top:.04in}
-.gift .branch{position:absolute;left:-.06in;top:.04in;width:.62in;height:.87in;color:var(--copper)}
-.gift .branch.r{left:auto;right:-.06in;transform:scaleX(-1)}
-.gift-h{position:relative;text-align:center;padding:0 .58in}
-.gift-h .w{display:block;font:500 23pt/1 var(--serif);letter-spacing:-.015em;color:var(--on-night)}
-.gift-h .g{display:block;margin-top:.04in;font:italic 500 17pt/1.02 var(--serif);color:var(--copper)}
-.gift-h .g b{font-weight:600;color:var(--copper-glow)}
-.gift-h .f{display:block;margin-top:.06in;font:italic 500 15pt/1.02 var(--serif);color:var(--on-night)}
-.gift-h .f span{font:700 10pt/1 var(--sans);font-style:normal;letter-spacing:.08em;background:var(--copper);color:var(--night);padding:.035in .07in .025in;border-radius:.03in;vertical-align:.04in;margin-right:.06in}
-.gift .arrow{display:block;margin:.03in auto 0;width:.72in;height:.82in;color:var(--on-night)}
+.gift{position:relative;margin:0 -.375in;padding:.11in .375in .14in;background:oklch(84% .14 85);color:var(--night)}
+.gift .lv{position:absolute;top:.08in;width:.5in;height:.7in}
+.gift .lv.l{left:.12in}.gift .lv.r{right:.12in;transform:scaleX(-1)}
+.gift-h{position:relative;text-align:center}
+.gift-h .free{display:inline-block;font:800 22pt/1 var(--sans);letter-spacing:.03em;padding:.02in .12in;border:2.6pt solid var(--night);border-radius:.07in;transform:rotate(-3deg)}
+.gift-h .w{margin-top:.05in;font:600 18pt/1.05 var(--serif);letter-spacing:-.01em}
+.gift-h .six{display:flex;align-items:center;justify-content:center;gap:.12in;margin-top:.06in}
+.gift-h .six b{font:700 38pt/1 var(--serif);letter-spacing:-.02em;background:var(--fog);color:var(--night);padding:.02in .14in .05in;border-radius:.09in;border:2.4pt solid var(--night);box-shadow:.06in .06in 0 var(--night);transform:rotate(-2deg)}
+.gift-h .six span{font:italic 500 15pt/1.15 var(--serif);text-align:left}
+.gift .arrow{display:block;margin:.02in auto .02in;width:.46in;height:.5in;color:var(--night)}
+.gift .pocket{outline-color:oklch(19% .018 170 / .5)}
 .pocket{position:relative;width:3.4in;height:2.16in;margin:.08in auto 0;border-radius:.05in;background:var(--fog);outline:1.1pt dashed oklch(100% 0 0 / .55);outline-offset:.05in;display:grid;place-items:center}
 .pocket .c{position:absolute;width:.44in;height:.44in;background:var(--copper)}
 .pocket .tl{left:0;top:0;clip-path:polygon(0 0,100% 0,0 100%)}
@@ -148,7 +149,6 @@ img{display:block}
       <div class="shade"></div>
       <div class="brand"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
       <div class="lower">
-        <p class="place">Bellingham, Washington</p>
         <h1>The plumber for old houses and <em>new</em> homes.</h1>
         <div class="band">
           <b><span>FREE</span> plumbing check-up</b>
@@ -156,16 +156,10 @@ img{display:block}
           <strong>Free estimate on any repair.</strong>
         </div>
         <div class="gift">
-          <svg class="branch" viewBox="0 0 60 84" aria-hidden="true"><g transform="translate(22 18) rotate(-20) scale(1.25) translate(-12 -12)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="oklch(68% .12 52)"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke="oklch(68% .12 52)" stroke-width="1.6" stroke-linecap="round"/><path d="M11 20c1-5 3.5-9 8-14" fill="none" stroke="var(--night)" stroke-width="1" stroke-linecap="round" opacity=".55"/></g><g transform="translate(42 44) rotate(35) scale(1.05) translate(-12 -12)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="oklch(78% .13 80)"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke="oklch(78% .13 80)" stroke-width="1.6" stroke-linecap="round"/><path d="M11 20c1-5 3.5-9 8-14" fill="none" stroke="var(--night)" stroke-width="1" stroke-linecap="round" opacity=".55"/></g><g transform="translate(17 66) rotate(-60) scale(0.95) translate(-12 -12)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="oklch(55% .15 35)"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke="oklch(55% .15 35)" stroke-width="1.6" stroke-linecap="round"/><path d="M11 20c1-5 3.5-9 8-14" fill="none" stroke="var(--night)" stroke-width="1" stroke-linecap="round" opacity=".55"/></g></svg>
-          <svg class="branch r" viewBox="0 0 60 84" aria-hidden="true"><g transform="translate(22 18) rotate(-20) scale(1.25) translate(-12 -12)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="oklch(68% .12 52)"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke="oklch(68% .12 52)" stroke-width="1.6" stroke-linecap="round"/><path d="M11 20c1-5 3.5-9 8-14" fill="none" stroke="var(--night)" stroke-width="1" stroke-linecap="round" opacity=".55"/></g><g transform="translate(42 44) rotate(35) scale(1.05) translate(-12 -12)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="oklch(78% .13 80)"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke="oklch(78% .13 80)" stroke-width="1.6" stroke-linecap="round"/><path d="M11 20c1-5 3.5-9 8-14" fill="none" stroke="var(--night)" stroke-width="1" stroke-linecap="round" opacity=".55"/></g><g transform="translate(17 66) rotate(-60) scale(0.95) translate(-12 -12)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="oklch(55% .15 35)"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke="oklch(55% .15 35)" stroke-width="1.6" stroke-linecap="round"/><path d="M11 20c1-5 3.5-9 8-14" fill="none" stroke="var(--night)" stroke-width="1" stroke-linecap="round" opacity=".55"/></g></svg>
-          <p class="gift-h"><span class="w">Woods Coffee</span><span class="g">Gift Card with <b>$6</b> on it</span><span class="f"><span>FREE</span>right here</span></p>
-          <svg class="arrow" viewBox="0 0 48 57" aria-hidden="true">
-            <defs><clipPath id="arw"><path d="M14 4H34V27H45L24 53 3 27H14Z"/></clipPath></defs>
-            <g transform="rotate(-8 24 28)">
-              <path clip-path="url(#arw)" d="M-50 60L10 0M-43 60L17 0M-36 60L24 0M-29 60L31 0M-22 60L38 0M-15 60L45 0M-8 60L52 0M-1 60L59 0M6 60L66 0M13 60L73 0M20 60L80 0M27 60L87 0M34 60L94 0M41 60L101 0M48 60L108 0" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <path d="M14 4H34V27H45L24 53 3 27H14Z" fill="none" stroke="currentColor" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="round"/>
-            </g>
-          </svg>
+          <svg class="lv l" viewBox="0 0 60 84" aria-hidden="true"><g transform="translate(24 20) rotate(-25) scale(1.3) translate(-12 -12)" fill="oklch(55% .15 35)" stroke="oklch(55% .15 35)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke-width="1.6" stroke-linecap="round"/></g><g transform="translate(40 52) rotate(40) scale(1) translate(-12 -12)" fill="oklch(45% .1 45)" stroke="oklch(45% .1 45)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke-width="1.6" stroke-linecap="round"/></g></svg>
+          <svg class="lv r" viewBox="0 0 60 84" aria-hidden="true"><g transform="translate(24 20) rotate(-25) scale(1.3) translate(-12 -12)" fill="oklch(55% .15 35)" stroke="oklch(55% .15 35)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke-width="1.6" stroke-linecap="round"/></g><g transform="translate(40 52) rotate(40) scale(1) translate(-12 -12)" fill="oklch(45% .1 45)" stroke="oklch(45% .1 45)"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke-width="1.6" stroke-linecap="round"/></g></svg>
+          <div class="gift-h"><p class="free">FREE</p><p class="w">Woods Coffee gift card</p><p class="six"><b>$6</b><span>already on it.<br>It's yours.</span></p></div>
+          <svg class="arrow" viewBox="0 0 48 57" aria-hidden="true"><defs><clipPath id="arw"><path d="M14 4H34V27H45L24 53 3 27H14Z"/></clipPath></defs><g transform="rotate(10 24 28)"><path clip-path="url(#arw)" d="M-50 60L10 0M-43 60L17 0M-36 60L24 0M-29 60L31 0M-22 60L38 0M-15 60L45 0M-8 60L52 0M-1 60L59 0M6 60L66 0M13 60L73 0M20 60L80 0M27 60L87 0M34 60L94 0M41 60L101 0M48 60L108 0" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M14 4H34V27H45L24 53 3 27H14Z" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linejoin="round"/></g></svg>
           <div class="pocket"><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i><p>Your $6 Woods Coffee card<br>goes in this pocket</p></div>
         </div>
         <div class="qr-row">
