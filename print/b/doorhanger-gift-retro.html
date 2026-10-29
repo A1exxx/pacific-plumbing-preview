@@ -39,7 +39,13 @@ img, svg{display:block}
 .die{position:absolute;z-index:21;width:1.25in;height:1.25in;left:1.625in;top:1in;border-radius:50%;border:1.2px dashed oklch(62% .2 330);pointer-events:none}
 
 /* shared bits */
-.top{position:absolute;left:0;right:0;top:0;height:.98in;background:var(--navy);display:flex;align-items:center;justify-content:center;gap:.1in;padding-top:.12in}
+.top{position:absolute;left:0;right:0;top:0;height:.98in;background:var(--navy)}
+.brand{display:flex;align-items:center;gap:.08in}
+.brand img{width:.58in;height:.39in}
+.brand span{font:800 13pt/1 var(--f);letter-spacing:.06em;text-transform:uppercase}
+.arch .brand{position:absolute;left:.16in;bottom:.14in;color:var(--cream);text-shadow:0 1px 6px oklch(0% 0 0 / .7)}
+.arch .shade{position:absolute;inset:auto 0 0 0;height:1.1in;background:linear-gradient(transparent,oklch(20% .05 262 / .75))}
+.back .brand{color:var(--navy);margin-bottom:.12in}
 .top img{width:.62in;height:.41in}
 .top span{font:800 15pt/1 var(--f);letter-spacing:.06em;color:var(--cream);text-transform:uppercase}
 .waves{position:absolute;left:0;right:0;height:.22in;color:var(--navy)}
@@ -55,7 +61,7 @@ img, svg{display:block}
 
 /* ---------- FRONT ---------- */
 .arch{position:absolute;left:.42in;right:.42in;top:.7in;height:2.62in;border-radius:1.83in 1.83in .14in .14in;overflow:hidden;border:.06in solid var(--teal);background:var(--navy)}
-.arch img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.arch > img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
 .sunburst{position:absolute;right:.22in;top:2.62in;width:1.08in;height:1.08in;color:var(--sun);transform:rotate(12deg)}
 .sunburst p{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:800 10pt/1 var(--f);color:var(--navy);transform:rotate(-4deg)}
 .sunburst p b{display:block;font-size:17pt}
@@ -79,13 +85,13 @@ img, svg{display:block}
 .pocket p b{display:block;font-size:12pt;color:var(--coral)}
 
 /* ---------- BACK ---------- */
-.back .content{position:absolute;left:.375in;right:.375in;top:2.42in}
+.back .content{position:absolute;left:.375in;right:.375in;top:2.72in}
 .back h2{font:800 30pt/.92 var(--f);letter-spacing:-.03em;color:var(--navy)}
 .back h2 i{font-style:normal;color:var(--coral)}
 .back .sub{margin-top:.08in;font:600 9.5pt/1.3 var(--f);color:var(--navy-2)}
 .tiles{list-style:none;margin:.16in 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.13in}
 .tiles li{background:#fff;border-radius:.12in;overflow:hidden;box-shadow:0 0 0 1.2pt var(--navy)}
-.tiles img{width:100%;height:.86in;object-fit:cover}
+.tiles img{width:100%;height:.68in;object-fit:cover}
 .tiles div{padding:.06in .08in .08in}
 .tiles b{display:block;font:800 10.5pt/1.05 var(--f);color:var(--navy)}
 .tiles span{display:block;margin-top:.02in;font:600 7.6pt/1.2 var(--f);color:var(--navy-2)}
@@ -116,8 +122,8 @@ img, svg{display:block}
   <div class="sheet-wrap">
     <p class="sheet-label">Front</p>
     <section class="sheet front" aria-label="Door hanger with gift card, retro, front">
-      <div class="top"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
-      <div class="arch"><img src="../../img/porch-1024.webp" width="1024" height="1024" alt="A plumber with a toolbox walking up to a front porch"></div>
+      <div class="top"></div>
+      <div class="arch"><img src="../../img/porch-1024.webp" width="1024" height="1024" alt="A plumber with a toolbox walking up to a front porch"><div class="shade"></div><div class="brand"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div></div>
       <div class="sunburst">
         <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M50 0l7 15 15-8 1 17 17-1-8 15 15 7-15 7 8 15-17-1-1 17-15-8-7 15-7-15-15 8-1-17-17 1 8-15L0 50l15-7-8-15 17 1 1-17 15 8z"/></svg>
         <p><span><b>FREE</b>check-up</span></p>
@@ -149,8 +155,9 @@ img, svg{display:block}
   <div class="sheet-wrap">
     <p class="sheet-label">Back</p>
     <section class="sheet back" aria-label="Door hanger with gift card, retro, back">
-      <div class="top"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
+      <div class="top"></div>
       <div class="content">
+        <div class="brand"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
         <h2>What we <i>do.</i></h2>
         <p class="sub">Old houses and new homes. A local, family-owned company from the first call to the finished job.</p>
         <ul class="tiles">

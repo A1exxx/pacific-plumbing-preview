@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mail postcard 8 x 5 · Direction B | Pacific Plumbing print preview</title>
+<meta name="description" content="Print-ready horizontal mail postcard for Pacific Plumbing. Trim 8 x 5 in with 0.125 in bleed; back has an address panel on the right.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Trim 8 x 5 in + 0.125 in bleed = 8.25 x 5.25 in page. Safe zone 0.25 in inside trim (0.375 in from page edge).
+   Back: right half is the address panel - white, nothing in the bottom 5/8 in (postal barcode zone). */
+@page{size:8.25in 5.25in;margin:0}
+:root{
+  --night: oklch(19% 0.018 170);
+  --fog: oklch(95.5% 0.006 150);
+  --ink: oklch(22% 0.015 170);
+  --ink-2: oklch(38% 0.012 170);
+  --copper: oklch(68% 0.12 52);
+  --copper-ink: oklch(47% 0.11 46);
+  --copper-glow: oklch(80% 0.1 56);
+  --on-night: oklch(96% 0.008 150);
+  --on-night-2: oklch(86% 0.01 150);
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Public Sans", "Segoe UI", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html, body{margin:0;padding:0}
+body{background:oklch(86% 0.006 150);color:var(--ink);font-family:var(--sans);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+p, h1, h2, h3{margin:0}
+img{display:block}
+.sheets{display:flex;flex-wrap:wrap;justify-content:center;gap:.45in;padding:.4in .3in}
+.sheet-wrap{display:flex;flex-direction:column;gap:8px}
+.sheet-label{font:600 12px/1.2 var(--sans);color:oklch(35% .01 170)}
+.sheet{position:relative;width:8.25in;height:5.25in;overflow:hidden;background:var(--fog);box-shadow:0 10px 30px -12px oklch(0% 0 0 / .35)}
+.guide{position:absolute;pointer-events:none;z-index:20}
+.trim{inset:.125in;outline:1px solid oklch(62% .2 330 / .7)}
+.safe{inset:.375in;outline:1px dashed oklch(62% .15 250 / .7)}
+
+/* ---------- FRONT ---------- */
+.front{background:var(--night);color:var(--on-night)}
+.front .photo{position:absolute;left:0;top:0;width:3.75in;height:100%;object-fit:cover;object-position:62% 40%}
+.front .shade{position:absolute;left:0;top:0;width:3.9in;height:100%;background:linear-gradient(90deg,transparent 0,transparent 2.6in,var(--night) 3.75in)}
+.front .r{position:absolute;left:3.75in;right:.375in;top:.4in;bottom:.375in;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:.09in}
+.brand img{width:.54in;height:.36in}
+.brand span{font:600 14pt/1 var(--serif)}
+.front h1{margin-top:.16in;font:500 27pt/1.02 var(--serif);letter-spacing:-.02em}
+.front h1 em{font-style:italic;color:var(--copper)}
+.band{margin:.14in -.375in 0 -.25in;padding:.1in .375in .12in .25in;background:var(--copper);color:var(--night)}
+.band b{display:block;font:600 20pt/1 var(--serif);letter-spacing:-.015em;white-space:nowrap}
+.band b span{font-family:var(--sans);font-weight:700}
+.band .what{display:block;margin-top:.05in;font:500 8.6pt/1.3 var(--sans)}
+.qr-row{display:flex;align-items:center;gap:.16in;margin-top:auto}
+.qr{flex:none;background:#fff;padding:.08in;border-radius:.04in;line-height:0}
+.qr img{width:1in;height:1in}
+.qr-row p{font:500 13pt/1.15 var(--serif)}
+.qr-row p em{font-style:normal;font-family:var(--sans);font-weight:700;color:var(--copper-glow)}
+.qr-row .callwho{margin-top:.07in;font:500 8.5pt/1.2 var(--sans);color:var(--on-night-2)}
+.bigphone{display:block;font:700 20pt/1.05 var(--sans);letter-spacing:-.01em;color:var(--on-night);text-decoration:none;white-space:nowrap}
+
+/* ---------- BACK ---------- */
+.back .l{position:absolute;left:0;top:0;bottom:0;width:4.125in;background:var(--night);color:var(--on-night);padding:.375in .3in .375in .375in;display:flex;flex-direction:column}
+.back h2{font:500 19pt/1.02 var(--serif);letter-spacing:-.015em}
+.back h2 em{font-style:italic;color:var(--copper)}
+.back .sub{margin-top:.05in;font:400 8.6pt/1.35 var(--sans);color:var(--on-night-2)}
+.svc{list-style:none;margin:.1in 0 0;padding:0;border-top:.75pt solid oklch(100% 0 0 / .2)}
+.svc li{display:flex;justify-content:space-between;align-items:baseline;gap:.1in;padding:.055in 0;border-bottom:.75pt solid oklch(100% 0 0 / .2)}
+.svc b{font:500 11pt/1.1 var(--serif)}
+.svc span{font:400 7.8pt/1.2 var(--sans);color:var(--on-night-2);text-align:right}
+.back .lic{margin-top:.1in;font:600 7.8pt/1.35 var(--sans)}
+.back .lic small{display:block;font:400 7.2pt/1.35 var(--sans);color:var(--on-night-2)}
+.back .call{margin-top:auto;display:flex;align-items:center;gap:.14in}
+.back .call .qr img{width:.95in;height:.95in}
+.back .call p{font:500 8.5pt/1.2 var(--sans);color:var(--on-night-2)}
+.back .call a{display:block;margin-top:.02in;font:700 17pt/1 var(--sans);color:var(--on-night);text-decoration:none;white-space:nowrap}
+/* address panel */
+.back .addr{position:absolute;left:4.125in;right:0;top:0;bottom:0;background:#fff}
+.back .ret{position:absolute;left:.25in;top:.375in;font:600 7.6pt/1.35 var(--sans);color:var(--ink)}
+.back .ret span{display:block;font-weight:400;color:var(--ink-2)}
+.back .stamp{position:absolute;right:.375in;top:.375in;width:.95in;height:.78in;border:1pt dashed oklch(22% .015 170 / .45);display:grid;place-items:center;text-align:center;font:600 6.5pt/1.3 var(--sans);color:var(--ink-2);letter-spacing:.04em}
+.back .to{position:absolute;left:.7in;right:.45in;top:2.2in;font:500 7pt/1.3 var(--sans);color:oklch(55% .01 170);letter-spacing:.08em}
+.back .zone{position:absolute;left:0;right:0;bottom:.125in;height:.625in}
+
+.screen-note{max-width:8.5in;margin:0 auto .5in;padding:0 .3in;font:400 14px/1.5 var(--sans);color:oklch(30% .01 170)}
+@media print{
+  body{background:none}
+  .sheets{display:block;padding:0}
+  .sheet-wrap{display:block}
+  .sheet{box-shadow:none;break-after:page;page-break-after:always}
+  .sheet-wrap:last-child .sheet{break-after:auto;page-break-after:auto}
+  .sheet-label, .guide, .screen-note, .to{display:none !important}
+}
+</style>
+</head>
+<body>
+<div class="sheets">
+  <div class="sheet-wrap">
+    <p class="sheet-label">Front</p>
+    <section class="sheet front" aria-label="Postcard, front">
+      <img class="photo" src="../../img/porch-1024.webp" width="1024" height="1024" alt="A plumber with a toolbox walking up to a front porch">
+      <div class="shade"></div>
+      <div class="r">
+        <div class="brand"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
+        <h1>The plumber for old houses and <em>new</em> homes.</h1>
+        <div class="band">
+          <b><span>FREE</span> plumbing check-up</b>
+          <span class="what">We inspect your pipes, water heater, drains and shut-off valves, and tell you what we find. No charge, no pressure.</span>
+        </div>
+        <div class="qr-row">
+          <div class="qr"><img src="../qr-b-fl.svg" alt="QR code: book a free plumbing check-up"></div>
+          <div><p>Scan to book your <em>FREE</em> check-up</p><p class="callwho">Or call</p><a class="bigphone" href="tel:+13603186219">(360) 318-6219</a></div>
+        </div>
+      </div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+
+  <div class="sheet-wrap">
+    <p class="sheet-label">Back</p>
+    <section class="sheet back" aria-label="Postcard, back">
+      <div class="l">
+        <h2>What we <em>do.</em></h2>
+        <p class="sub">Old houses and new homes. Bellingham, Whatcom and Skagit counties.</p>
+        <ul class="svc">
+          <li><b>Whole-home repiping</b><span>PEX or copper</span></li>
+          <li><b>Drain cleaning</b><span>Sinks to main lines</span></li>
+          <li><b>Water heaters</b><span>Tank and tankless</span></li>
+          <li><b>Leaks &amp; repairs</b><span>Walls, floors, under sinks</span></li>
+          <li><b>Faucets &amp; fixtures</b><span>Small jobs welcome</span></li>
+        </ul>
+        <p class="lic">Licensed, bonded &amp; insured. Upfront pricing, no surprises.<small>WA plumbing contractor license PACIFP*742JG</small></p>
+        <div class="call">
+          <div class="qr"><img src="../qr-b-fl.svg" alt="QR code: book a free plumbing check-up"></div>
+          <div><p>Book your free check-up or call</p><a href="tel:+13603186219">(360) 318-6219</a></div>
+        </div>
+      </div>
+      <div class="addr">
+        <p class="ret">Pacific Plumbing LLC<span>Bellingham, WA</span></p>
+        <div class="stamp">POSTAGE<br>OR PERMIT</div>
+        <p class="to">ADDRESS AREA · KEEP BOTTOM 5/8 IN CLEAR</p>
+      </div>
+      <div class="guide trim" aria-hidden="true"></div>
+      <div class="guide safe" aria-hidden="true"></div>
+    </section>
+  </div>
+</div>
+<p class="screen-note">Print: Chrome → Save as PDF, Margins none, Background graphics on. Trim 8 x 5 in, bleed 0.125 in. Back: right half is the address panel (white); the dashed box marks the postage or permit spot; the bottom 5/8 in of the right half stays empty for the postal barcode.</p>
+</body>
+</html>

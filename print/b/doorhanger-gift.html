@@ -56,7 +56,7 @@ img{display:block}
   oklch(19% .018 170 / .45) 3.1in,
   oklch(19% .018 170 / .92) 4.3in,
   var(--night) 5in)}
-.front .brand{position:absolute;left:.375in;right:.375in;top:.42in;display:flex;align-items:center;justify-content:center;gap:.1in}
+.front .brand{position:absolute;left:.375in;right:.375in;top:2.78in;display:flex;align-items:center;justify-content:center;gap:.1in}
 .front .brand img{width:.66in;height:.44in;filter:drop-shadow(0 1px 4px oklch(0% 0 0 / .5))}
 .front .brand span{font:600 17pt/1 var(--serif);letter-spacing:-.005em;text-shadow:0 1px 8px oklch(0% 0 0 / .6)}
 .front .lower{position:absolute;left:.375in;right:.375in;bottom:.39in}
@@ -71,18 +71,18 @@ img{display:block}
 .callwho{margin-top:.1in;font:500 8.5pt/1.2 var(--sans);color:var(--on-night-2)}
 .bigphone{display:block;font:700 17pt/1.05 var(--sans);letter-spacing:-.01em;color:var(--on-night);font-variant-numeric:lining-nums tabular-nums;text-decoration:none;white-space:nowrap}
 /* QR: code 1.75 in, white quiet zone 0.13 in on every side */
-.qr-row{display:flex;align-items:center;gap:.1in;margin-top:.2in}
+.qr-row{display:flex;align-items:center;gap:.1in;margin-top:.12in}
 .qr-row .txt{flex:1;min-width:0}
 .qr-row .txt p{font-size:11pt;line-height:1.15}
 .qr{flex:none;background:#fff;padding:.13in;border-radius:.04in;line-height:0}
-.qr img{width:1.05in;height:1.05in}
+.qr img{width:.95in;height:.95in}
 .qr-row p{font:500 13pt/1.12 var(--serif);color:var(--on-night)}
 .qr-row p em{font-style:normal;font-family:var(--sans);font-weight:700;color:var(--copper-glow)}
 .qr-row p small{display:block;margin-top:.08in;font:400 8.5pt/1.35 var(--sans);color:var(--on-night-2)}
 .towns{margin-top:.1in;padding-top:.08in;border-top:.75pt solid oklch(100% 0 0 / .22);font:400 8.5pt/1.4 var(--sans);color:var(--on-night-2)}
 .nw{white-space:nowrap}
 /* gift-card pocket: holds a standard 3.375 x 2.125 in card; copper corners mark the four corner slits */
-.gift{position:relative;margin-top:.16in;min-height:1.1in}
+.gift{position:relative;margin-top:.1in;min-height:1.05in}
 .gift .branch{position:absolute;left:-.22in;top:-.02in;width:.78in;height:1.1in}
 .gift-h{position:relative;text-align:center;padding:0 .5in 0 .62in}
 .gift-h .l1{display:block;font:500 21pt/1.02 var(--serif);letter-spacing:-.015em;color:var(--on-night)}
@@ -92,7 +92,7 @@ img{display:block}
 .gift-h .l1 .hl{display:inline-block;font-size:15pt;line-height:1;letter-spacing:.06em;background:oklch(84% .14 85);color:var(--night);padding:.05in .09in .04in;border-radius:.05in;transform:rotate(-3deg);vertical-align:.05in;margin-right:.06in}
 .gift-h .l3 .hl{display:inline-block;font:700 30pt/1 var(--serif);background:var(--fog);color:var(--night);padding:.01in .1in .04in;border-radius:.07in;border:2pt solid var(--night);box-shadow:.05in .05in 0 oklch(84% .14 85);transform:rotate(-2deg);vertical-align:-.04in;margin-right:.1in}
 .gift .arrow{position:absolute;right:-.2in;top:.12in;width:.72in;height:1.08in;color:oklch(84% .14 85)}
-.pocket{position:relative;width:3.375in;height:2.125in;margin:.12in auto 0;border-radius:.05in;background:var(--fog);outline:1.1pt dashed oklch(100% 0 0 / .55);outline-offset:.05in;display:grid;place-items:center}
+.pocket{position:relative;width:3.375in;height:2.125in;margin:.08in auto 0;border-radius:.05in;background:var(--fog);outline:1.1pt dashed oklch(100% 0 0 / .55);outline-offset:.05in;display:grid;place-items:center}
 .pocket .c{position:absolute;width:.44in;height:.44in;background:var(--copper)}
 .pocket .tl{left:0;top:0;clip-path:polygon(0 0,100% 0,0 100%)}
 .pocket .tr{right:0;top:0;clip-path:polygon(0 0,100% 0,100% 100%)}
@@ -107,16 +107,16 @@ img{display:block}
 
 /* ---------- BACK ---------- */
 .back{background:var(--fog)}
-.back .top{position:absolute;left:.375in;right:.375in;top:.4in;display:flex;align-items:center;justify-content:center;gap:.1in}
+.back .top{position:absolute;left:.375in;right:.375in;top:2.72in;display:flex;align-items:center;justify-content:center;gap:.1in}
 .back .top img{width:.6in;height:.4in}
 .back .top span{font:600 15pt/1 var(--serif);letter-spacing:-.005em;color:var(--ink)}
-.back .content{position:absolute;left:.375in;right:.375in;top:2.42in;bottom:.375in;display:flex;flex-direction:column}
+.back .content{position:absolute;left:.375in;right:.375in;top:3.3in;bottom:.375in;display:flex;flex-direction:column}
 .back h2{font:500 24pt/1.02 var(--serif);letter-spacing:-.02em}
 .back h2 em{font-style:italic;color:var(--copper-ink)}
 .back .sub{margin-top:.07in;font:400 9.5pt/1.38 var(--sans);color:var(--ink-2)}
 .tiles{list-style:none;margin:.17in 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.16in .16in}
 .tiles li{display:flex;flex-direction:column;min-width:0}
-.tiles img{width:100%;height:1.1in;object-fit:cover;border-radius:.05in}
+.tiles img{width:100%;height:.9in;object-fit:cover;border-radius:.05in}
 .tiles b{margin-top:.07in;font:500 12pt/1.1 var(--serif);letter-spacing:-.005em}
 .tiles span{margin-top:.025in;font:400 8.3pt/1.3 var(--sans);color:var(--ink-2)}
 .lic{margin-top:.18in;font:600 9pt/1.35 var(--sans)}
@@ -184,7 +184,7 @@ img{display:block}
       <div class="top"><img src="mark-print.png" width="480" height="320" alt=""><span>Pacific Plumbing</span></div>
       <div class="content">
         <h2>What we <em>do.</em></h2>
-        <p class="sub">Old houses and new homes. A local, family-owned company from the first call to the finished job.</p>
+        <p class="sub">Old houses and new homes. One local, owner-operated plumber from the first call to the finished job.</p>
         <ul class="tiles">
           <li><img src="../../img/real-repipe.webp" style="object-position:62% 30%" alt=""><b>Whole-home repiping</b><span>Old pipe out, PEX or copper in</span></li>
           <li><img src="../../img/drain2-800.webp" style="object-position:50% 45%" alt=""><b>Drain cleaning</b><span>Sinks, tubs, main lines</span></li>
